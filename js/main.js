@@ -215,7 +215,7 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
 
     // Reset the size of the renderer and canvas
-    renderer.setSize(window.innerWidth, window.innerHeight * 2); // Adjust to the canvas size
+    renderer.setSize(window.innerWidth, window.innerHeight * 1); // Adjust to the canvas size
 }
 
 window.addEventListener('resize', onWindowResize, false);
