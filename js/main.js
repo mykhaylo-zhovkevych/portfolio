@@ -171,40 +171,36 @@ scene.add(torusKnot);
 function animate() {
     requestAnimationFrame(animate);
 
+let canAnimate = true; // This will control whether to animate or not
 
-
-
+   
     const time = Date.now() * 0.0015;
     const hueTop = 0.6 + Math.sin(time) * 0.09;;
-    const hueBottom = 0.6 + Math.cos(time) * 0.09
+    const hueBottom = 0.6 + Math.cos(time) * 0.09 
 
-
-    const delta = 0.004;
-    sky1.rotation.x += delta * 0.25;
-    sky1.rotation.y += delta * 0.5;
-
-    sky2.rotation.x -= delta * 0.25; // Opposite rotation for visual variety
-    sky2.rotation.y -= delta * 0.5;
-
-    /*   sky3.rotation.x -= delta * 0.25; // Opposite rotation for visual variety
-      sky3.rotation.y -= delta * 0.5;
-     */
+    if (canAnimate) {
+      const delta = 0.009;
+    
+      // Example of condition to stop animations based on arbitrary z position limit
+      if (sky1.position.z < 10) {
+          canAnimate = false; // Stop further animations
+      } else {
+          sky1.position.z -= delta; // Move the object
+      }
+    
     uniformsSky1.topColor.value.setHSL(hueBottom, 0.4, 0.4);
     uniformsSky1.bottomColor.value.setHSL(hueTop, 0.4, 0.4);
 
     uniformsSky2.topColor.value.setHSL(hueBottom, 0.4, 0.4);
     uniformsSky2.bottomColor.value.setHSL(hueTop, 0.4, 0.4);
 
-    /*   uniformsSky3.topColor.value.setHSL(hueBottom, 1, 2);
-      uniformsSky3.bottomColor.value.setHSL(hueTop, 2, 9);
-     */
-    /*   torusKnot.rotation.x += 0.01;
-      torusKnot.rotation.y += 0.01;
-     */
-    /*  ellipsoid.rotation.x += 0.01;
-       ellipsoid.rotation.y += 0.01; */
-
+    sky2.position.z -= delta;
+    if (sky2.position.z < -30) {
+        sky2.position.z = -30; // Clamp the position to -30 to prevent further movement
+    }
     renderer.render(scene, camera);
+  }
+  
 }
 
 // Window resize handler
