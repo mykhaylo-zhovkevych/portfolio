@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/preloader.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <style>
+        .website-content {
+            display: none ; /* Hide initially */
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            /*top: 0;
+            left: 0;*/
+            /* justify-content: center; */
+            /*align-items: center;*/
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div class="website-content">
+    <!-- <div class="header">
+        <div class="h1">
+            <h1>website</h1>
+            <h1>content</h1>
+        </div>
+        <div class="header"></div>
+    </div> -->
+    <canvas id="effect"></canvas>
+    <header class="header">
+        <!-- <div class="header-video"> -->
+        <i class="bx bx-menu" id="menü-icon"></i>
+        <nav class="navbar container">
+            <div class="backgroundForTheNavbar">
+                <div class="innerBackgroundForTheNavbar">
+
+                    <a href="#home" class="active box">Home</a>
+                    <a href="#about " class="box">About</a>
+                    <a href="#erfahrungen" class="box">Erfahrungen</a>
+                    <a href="#portfolio" class="box">Portfolio</a>
+                    <a href="#kontakt" class="box">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+        <!-- <video id="video-bg" autoplay loop muted playsinline>
+          <source src="cool02.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video> -->
+    </header>
+    <div id="toggle" class="box">
+        <img src="/css/menu-alt-svgrepo-com.svg" alt="Menu Icon" width="24" height="24">
+    </div>
+    <div class="hero">
+        <div class="header">
+            <h1> we help brands explore vibes</h1>
+        </div>
+    </div>
+
+    <div id="square-container"></div>
+
+    <div class="content-overlay">
+        <div class="nav-header">
+            <h1>work wit us</h1>
+        </div>
+        <div class="nav-links">
+            <div class="nav-link">
+                <span>(01)</span>
+                <a href="#">home</a>
+            </div>
+            <div class="nav-link">
+                <span>(02)</span>
+                <a href="#">our studio</a>
+            </div>
+            <div class="nav-link">
+                <span>(02)</span>
+                <a href="#">projects</a>
+            </div>
+            <div class="nav-link">
+                <span>(03)</span>
+                <a href="#">community</a>
+            </div>
+        </div>
+    </div>
+    <!--<main>
+        <section class="sections" id="aboutMe">
+            <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis!
+            </div>
+        </section>
+
+        <section class="sections" id="FREEspace">
+            <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis!
+            </div>
+        </section>
+
+        <section class="sections" id="FREEspace">
+            <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis!
+            </div>
+        </section>
+        <section class="sections" id="FREEspace">
+            <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis!
+            </div>
+        </section>
+        <section class="sections" id="FREEspace">
+
+        </section>
+        <section class="sections" id="FREEspace">
+
+        </section>
+        <section class="sections" id="FREEspace">
+
+        </section>
+    </main>-->
+
+</div>
+
+<div class="loading-screen">
+    <div class="loader">
+        <div class="loader-1 bar"></div>
+        <div class="loader-2 bar"></div>
+    </div>
+    <div class="counter">
+        <div class="counter-1 digit">
+            <div class="num">0</div>
+            <div class="num num1offset1">1</div>
+        </div>
+        <div class="counter-2 digit">
+            <div class="num">0</div>
+            <div class="num num1offset2">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+            <div class="num">4</div>
+            <div class="num">5</div>
+            <div class="num">6</div>
+            <div class="num">7</div>
+            <div class="num">8</div>
+            <div class="num">9</div>
+            <div class="num">0</div>
+        </div>
+        <div class="counter-3 digit">
+            <div class="num">0</div>
+            <div class="num">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+            <div class="num">4</div>
+            <div class="num">5</div>
+            <div class="num">6</div>
+            <div class="num">7</div>
+            <div class="num">8</div>
+            <div class="num">9</div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="/js/menu.js"></script>
+<script src="https://unpkg.com/three@0.139.2/build/three.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="/js/preloader.js"></script>
+
+<script>
+    Promise.all([
+        new Promise(resolve => setTimeout(resolve, 7700)), // Ensures the preloader shows for at least 3 seconds
+        new Promise(resolve => window.onload = resolve) // Waits for all resources to load
+    ]).then(() => {
+        document.querySelector('.loading-screen').style.display = 'none';
+        document.querySelector('.website-content').style.display = 'flex';
+    });
+</script>
+</body>
+</html>
