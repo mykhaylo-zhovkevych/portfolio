@@ -45,7 +45,7 @@ canvas {
 .header-sphere {
     position: fixed; /* Keeps the header at the top */
     width: 100%;
-    z-index: 1000; /* Ensures it's above other content */
+    z-index: -1; /* Ensures it's above other content */
     background: transparent;
     display: flex;
     justify-content: center; /* Center the sphere container */
@@ -58,7 +58,7 @@ canvas {
 .sphere-container {
     position: relative;
     
-    height: 300px;
+    height: 17vh; 
     border-radius: 50%;
     background: radial-gradient(circle at 35%, #fdfdfd00, #c21c1c00); /* Simulate a 3D sphere */
     display: flex;
@@ -88,6 +88,67 @@ canvas {
     
     margin: 0 10px;
     font-weight: bold;
+}
+
+/* Use a media query for smaller screens */
+@media (max-width: 1070px) {
+    .header-sphere {
+        right: 27.5rem; /* Adjust the right position for smaller screens */
+        font-size: 1.5em;
+    }
+
+    .sphere-container {
+        width: 100%; /* Make the container full width on smaller screens */
+        justify-content: center; /* Center the navigation links */
+    }
+
+    .nav-links {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Further adjustments for even smaller screens */
+@media (max-width: 1030px) {
+    .nav-links {
+        right: 20rem; /* Adjust the right position for smaller screens */
+        font-size: 1em;
+    }
+}
+
+.nav-links a {
+    margin: 0 10px; /* Keep a consistent margin */
+}
+
+@media (max-width: 910px) {
+    .nav-links {
+        right: 16rem; /* Adjust the right position for smaller screens */
+        font-size: 1em;
+    }
+}
+
+.nav-links a {
+    margin: 0 10px; /* Keep a consistent margin */
+}
+@media (max-width: 850px) {
+    .nav-links {
+        right: 10rem; /* Adjust the right position for smaller screens */
+        font-size: 0.8em;
+    }
+}
+
+.nav-links a {
+    margin: 0 10px; /* Keep a consistent margin */
+}
+
+@media (max-width: 580px) {
+    .nav-links {
+        right: 1rem; /* Adjust the right position for smaller screens */
+        font-size: 0.8em;
+    }
+}
+
+.nav-links a {
+    margin: 0 10px; /* Keep a consistent margin */
 }
 
 

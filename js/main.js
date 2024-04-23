@@ -104,7 +104,7 @@ const skyMat1 = new THREE.ShaderMaterial({
 });
 
 const sky1 = new THREE.Mesh(skyGeo1, skyMat1);
-sky1.position.set(-2, 3, 8);
+sky1.position.set(-2, 3, 9);
 sky1.rotation.x = Math.PI / 4;  // Rotate by 45 degrees around the X-axis
 sky1.rotation.y = Math.PI / 2;  // Rotate by 90 degrees around the Y-axis
 
