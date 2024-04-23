@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const numSquares = numCols * numRows;
 
-// squareContainer updated to accommodate the  calculated number of the squares
+// squareContainer updated to accommodate the the calculated number of the squares
     squareContainer.style.width = `${numCols * squareSite}px`;
     squareContainer.style.height = `${numRows * squareSite}px`;
 
