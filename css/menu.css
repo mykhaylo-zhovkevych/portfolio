@@ -82,9 +82,9 @@ nav div p {
 .square {
     width: 10%;
     height: 10%;
-    border-style:double;
-    border-color: #fff;
-    background: #1639ff ;
+    border-style: solid;
+    border-color: #000000;
+    background: /*#1639ff*/ #008170;
     box-sizing: border-box;
     pointer-events: none;
 
@@ -99,14 +99,14 @@ nav div p {
     justify-content: center;
     align-items: center;
     gap: 5em;
-    background: #2b2231;
+    background: #232D3F;
     color: #fff;
     z-index: -1 ;
 
 }
 
 .content-overlay h1 {
-    color: #1639ff;
+    color: #008170;
     font-size: 4vw;
 }
 

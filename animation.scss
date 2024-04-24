@@ -1,0 +1,48 @@
+.container-clap {
+    width: 30%;
+    background: white;
+    border-radius: 10px;
+ 
+    // this is like the outer look of the container the container is white completely 
+    .inner {
+        background: rgb(138, 138, 245);
+        padding: 1em;
+        border-radius: 10px;
+        width: calc(100% - 3em);
+        height: 10vh;
+        clip-path: circle(10% at 30% 20%);
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            clip-path: circle(75%);
+            background: white;
+        }
+
+        span {
+            float: right;
+            color: rgb(169, 19, 206);
+            font-weight: bold;
+            transition: color 0.5s;
+            position: relative;
+            margin-right:4%;
+            
+        }
+        &:hover span {
+            color: white ;
+        }
+        h1 {
+            color: white;
+            margin: 0;
+
+        }
+        p {
+            color: rgb(191, 14, 207);
+            font-size: 1rem;
+        }
+    }
+
+     &:hover .inner {
+        clip-path: circle(75%);
+    } 
+} 
