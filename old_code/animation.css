@@ -1,0 +1,44 @@
+.container-clap {
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+}
+.container-clap .inner {
+  background: rgb(138, 138, 245);
+  padding: 1em;
+  border-radius: 10px;
+  width: calc(100% - 3em);
+  height: 10vh;
+  -webkit-clip-path: circle(10% at 30% 20%);
+          clip-path: circle(10% at 30% 20%);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.container-clap .inner:hover {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+  background: white;
+}
+.container-clap .inner span {
+  float: right;
+  color: rgb(169, 19, 206);
+  font-weight: bold;
+  transition: color 0.5s;
+  position: relative;
+  margin-right: 4%;
+}
+.container-clap .inner:hover span {
+  color: white;
+}
+.container-clap .inner h1 {
+  color: white;
+  margin: 0;
+}
+.container-clap .inner p {
+  color: rgb(191, 14, 207);
+  font-size: 1rem;
+}
+.container-clap:hover .inner {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+}/*# sourceMappingURL=animation.css02.map */

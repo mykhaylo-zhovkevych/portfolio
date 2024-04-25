@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+
+    <link rel="stylesheet" href="css02/main02.css">
+    <link rel="stylesheet" href="css02/preloader02.css">
+    <link rel="stylesheet" href="css02/menu02.css">
+
+    <style>
+    .container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw; /* Adjust width according to the number of panels you have */
+    height: 100vh; /* Full height */
+  }
+  
+  .panel {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    flex-shrink: 0; /* Prevent flexbox from shrinking the panels */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw; /* Large text so it's readable */
+    color: white;
+  }
+  
+  /* Individual panel background colors */
+  .panel:nth-child(1) { background-color: green; }
+  .panel:nth-child(2) { background-color: blue; }
+  .panel:nth-child(3) { background-color: red; }
+    </style>
+    <!---------------------------------------------------------------->
+</head>
+<body>
+<div class="website-content02">
+<!---------------------------------------------------------------->
+<!-- <canvas id="effect"></canvas> -->
+<!---------------------------------------------------------------->
+<div id="square-container02"></div>
+<!---------------------------------------------------------------->
+<header class="header">
+    <nav class="header-container">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!---------------------------------------------------------------->
+<div id="toggle02" class="box02">
+    <img src="/css/menu-alt-svgrepo-com.svg" alt="Menu Icon" width="24" height="24">
+</div>
+<!---------------------------------------------------------------->
+
+<main class="main">
+    
+    <section class="sections" id="home">
+        <h2>
+            about me
+        </h2>
+    </section>
+
+    <section class="sections" id="about">
+        
+    </section>
+
+    <section class="sections" id="portfolio">
+        <h2>My Work</h2>
+        <!-- Portfolio items go here -->
+    </section>
+
+    <section class="sections" id="contact">
+        <h2>Contact Me</h2>
+        <!-- Contact form and details -->
+    </section>
+    <div class="container">
+        <div class="panel">Panel 1</div>
+        <div class="panel">Panel 2</div>
+        <div class="panel">Panel 3</div>
+        <!-- Additional content for the Home section -->
+    </div>
+</main>
+<!---------------------------------------------------------------->
+<aside>
+    <!-- Any side content like testimonials or quick links -->
+</aside>
+<!---------------------------------------------------------------->
+<footer class="footer">
+    <p>© 2024 by Your Name. Proudly created with Your Portfolio Name</p>
+</footer>
+
+<!---------------------------------------------------------------->
+<div class="content-overlay02">
+    <div class="nav-header">
+        <h1>work wit us</h1>
+    </div>
+    <div class="nav-links">
+        <div class="nav-link">
+            <span>(01)</span>
+            <a href="#">home</a>
+        </div>
+        <div class="nav-link">
+            <span>(02)</span>
+            <a href="#">our studio</a>
+        </div>
+        <div class="nav-link">
+            <span>(02)</span>
+            <a href="#">projects</a>
+        </div>
+        <div class="nav-link">
+            <span>(03)</span>
+            <a href="#">community</a>
+        </div>
+    </div>
+    <main>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis!</p>
+        </div>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis!</p>
+        </div>
+    </main>
+</div>
+<!--------------------------------ENDE-------------------------------->
+</div>
+<!---------------------------------------------------------------->
+<div class="loading-screen02">
+    <div class="loader">
+        <div class="loader-1 bar"></div>
+        <div class="loader-2 bar"></div>
+    </div>
+    <div class="counter">
+        <div class="counter-1 digit">
+            <div class="num">0</div>
+            <div class="num num1offset1">1</div>
+        </div>
+        <div class="counter-2 digit">
+            <div class="num">0</div>
+            <div class="num num1offset2">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+            <div class="num">4</div>
+            <div class="num">5</div>
+            <div class="num">6</div>
+            <div class="num">7</div>
+            <div class="num">8</div>
+            <div class="num">9</div>
+            <div class="num">0</div>
+        </div>
+        <div class="counter-3 digit">
+            <div class="num">0</div>
+            <div class="num">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+            <div class="num">4</div>
+            <div class="num">5</div>
+            <div class="num">6</div>
+            <div class="num">7</div>
+            <div class="num">8</div>
+            <div class="num">9</div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------------------->
+<!-- Your scripts at the end of the body -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://unpkg.com/three@0.139.2/build/three.min.js"></script>
+<script src="js02/preloader02.js"></script>
+<script src="js02/menu02.js"></script>
+<script src="js02/main02.js"></script>
+<script>
+    Promise.all([
+        new Promise(resolve => setTimeout(resolve, 10700)), // Ensures the preloader shows for at least 3 seconds
+        new Promise(resolve => window.onload = resolve) // Waits for all resources to load
+    ]).then(() => {
+        document.querySelector('.loading-screen02').style.display = 'none';
+        document.querySelector('.website-content02').style.display = 'flex';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+    /*  gsap.registerPlugin(ScrollTrigger); */
+   
+     let sections = gsap.utils.toArray(".panel");
+     
+     gsap.to(sections, {
+       xPercent: -100 * (sections.length - 1),
+       ease: "none",
+       scrollTrigger: {
+         trigger: ".container",
+         pin: true,
+         scrub: 1,
+         snap: 1 / (sections.length - 1),
+         end: () => "+=" + document.querySelector(".container").offsetWidth
+       }
+     });
+   </script>
+</body>
+</html>
