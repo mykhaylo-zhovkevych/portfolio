@@ -5,7 +5,7 @@
     height: 100vh;
     width: 100vw;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 100%);
-    color: #cd0000;
+    color: #2F58CD;
     pointer-events: none;
 
 }
@@ -66,14 +66,14 @@
 
 .loader-1 {
     position: relative;
-    background: #ff0000;
+    background: #2F58CD;
     width: 200px;
 }
 
 .loader-2 {
     position: relative;
     width: 100px;
-    background: #ff0000;
+    background: #2F58CD;
 }
 .bar {
     height: 50px;
@@ -95,7 +95,7 @@
     font-weight: 400;
 }
 
-.header-revealer {
+/* .header-revealer {
     position: relative;
     top: 0;
     height: 100vh;
@@ -112,3 +112,4 @@
     top: 80px;
 
 }
+ */

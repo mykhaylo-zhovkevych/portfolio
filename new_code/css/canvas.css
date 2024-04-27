@@ -1,0 +1,52 @@
+canvas {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.ball-text {
+   position: fixed;
+   color: blue;
+   font-size: 2rem;
+   left: 10%;
+   bottom: 15%; 
+   min-height: 40%;
+   min-width: 40%;
+   padding: 1rem;
+   backdrop-filter: blur(20px);
+   box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   white-space: normal; 
+   word-wrap: break-word;
+   align-items: center;
+   
+}
+
+
+.ball-text02 {
+    position: fixed;
+    color: rgb(0, 255, 85);
+    font-size: 3rem;
+    top: 15rem;
+    left: calc(70% );  /* Adjusted for better control */
+    transform: translateX(-50%);  /* Centering the text block horizontally relative to its position */
+    width: 50%;  /* Width set to 50% of the viewport or another value that suits your design */
+    padding: 1rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    text-align: justify;  /* Optional: justifies the text within the container */
+    white-space: normal;  /* Ensures text wraps naturally */
+    overflow: auto;  /* Ensures no overflow out of the element boundary */
+    word-wrap: break-word;  /* Ensures long words do not cause layout issues */
+    display: grid;
+    grid-template-columns: 0.5fr 1fr; /* Splits the container into two columns */
+    align-items: center; /* Vertically centers content in each cell */
+    justify-items: start;
+    min-height: 20%;
+    border-radius: 0%;
+
+}
+

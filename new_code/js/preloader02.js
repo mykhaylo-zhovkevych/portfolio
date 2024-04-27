@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     animate(document.querySelector(".counter-1"), 2, 4);
 
 });
+
 // responsibel for taking the number away wehn i reaches 100
 gsap.to(".digit", {
     top: "-150px",
@@ -59,6 +60,7 @@ gsap.to(".loader", {
     delay: 6,
     duration: 0.1,
 });
+
 // rotates the bar one
 gsap.to(".loader-1", {
     rotate: 90,
@@ -73,31 +75,44 @@ gsap.to(".loader-2", {
     },
     "<"
 );
+
 gsap.to(".loader", {
     scale: 40,
     duration: 1,
     delay: 7,
     ease: "power2.inOut"
 })
+
 gsap.to(".loader", {
     rotate: 45,
     y: 600,
     x: 2000,
-    duration: 1,
+    duration: 4, // changed ------------------
     delay: 7,
     ease: "power2.inOut",
 });
-gsap.to(".loading-screen", {
-    opacity: 0,
-    duration: 0.5,
-    delay: 7.5,
+
+/* // Change background color to white
+gsap.to(".loader", {
+    backgroundColor: "#FFFFFF",
+    duration: 1.5,
     ease: "power1.inOut",
-});
-gsap.to("h1", 1.5 ,{
-    delay: 7,
-    y: -80,
-    ease: "power4.inOut",
-    stagger: {
-        amount: 0.1,
-    },
+    delay: 11.5, // Timing adjusted to after the loader animation
+}); */
+
+// Fade the loader to reveal the main page content
+gsap.fromTo(".loader", {
+    opacity: 1,
+}, {
+    opacity: 0,
+    duration: 2,
+    ease: "power1.inOut",
+    delay: 10, // Adjusted to start right after the background color change
+    onComplete: function() {
+        gsap.from(".canvas", {
+            opacity: 0,
+            duration: 1.5,
+            ease: "power2.inOut"
+        });
+    }
 });
