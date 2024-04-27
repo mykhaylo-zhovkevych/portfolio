@@ -160,7 +160,7 @@ gsap.fromTo('.ball-text', {
  */
   // GSAP Animation for '.ball-text' opacity based on scroll
 gsap.fromTo('.ball-text', {
-    x: '-100%',
+    x: '-120%',
     opacity: 0
   }, {
     x: '0%',
@@ -200,7 +200,7 @@ gsap.fromTo('.ball-text02', {
 
 
 
-/* 
+
 // Function to simulate a keypress event
 function simulateKeyPress(keyCode) {
     // Create a new event
@@ -218,7 +218,7 @@ function simulateKeyPress(keyCode) {
 // Use setTimeout to delay the simulation
 setTimeout(() => {
     simulateKeyPress(119); // ASCII code for 'w'
-}, 12000); // Delays the keypress event by 5000 milliseconds (5 seconds) */
+}, 11000); // Delays the keypress event by 5000 milliseconds (5 seconds)
 
 window.addEventListener('keypress', (event) => {
     // Check if the pressed key is 'w' (ASCII code 119)
@@ -229,7 +229,7 @@ window.addEventListener('keypress', (event) => {
             requestAnimationFrame(() => {
                 performScrollAction();
             });
-        }, 0); // Delay might need adjustment based on actual load performance
+        }); // Delay might need adjustment based on actual load performance
     }
 });
     
@@ -238,12 +238,12 @@ window.addEventListener('keypress', (event) => {
     const maxScrollTop = document.body.scrollHeight - window.innerHeight;
     const currentScrollTop = window.pageYOffset;
     const distanceToCanvasBottom = canvasBottomPosition - currentScrollTop;
-    const scrollFraction = distanceToCanvasBottom * 7; // Adjust the fraction as needed
+    const scrollFraction = distanceToCanvasBottom * 7.5; // Adjust the fraction as needed
     
     let newScrollTop = currentScrollTop + scrollFraction;
     newScrollTop = Math.min(newScrollTop, maxScrollTop); // Ensuring not to exceed the max scrollable area
     
-    window.scrollTo({ top: newScrollTop, behavior: 'smooth' });
+    window.scrollTo({ top: newScrollTop, behavior: 'instant' });
     }
 
 function render() {
