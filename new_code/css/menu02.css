@@ -11,7 +11,8 @@
 
 }
  */
-/*  #toggle02 {
+
+ #toggle02 {
     position: fixed; 
     top: 20px; 
     right: 20px;
@@ -20,9 +21,11 @@
     border-radius: 40px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    z-index: 2;
     cursor: pointer;
-    z-index: 10001; /
-} */
+    
+}
+
 
 #square-container02 {
     position: fixed;  /* Use fixed to cover the whole screen */

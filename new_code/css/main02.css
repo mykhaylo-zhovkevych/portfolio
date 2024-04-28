@@ -17,15 +17,6 @@ body, html{
     background: linear-gradient(259deg, rgba(13,99,149,1) 0%, rgba(185,202,224,1) 100%); 
 }
 
-.header {
-    display: flex;
-    max-height: 50vh; 
-    flex-direction: row;
-    height: 100vh;
-    width: 100vw;
-
-}
-
 .haupt {
     display: flex;
     max-height: 50vh; 
@@ -42,19 +33,9 @@ body, html{
     width: 100vw;
 }
 
-#toggle02 {
-    position: fixed;
-    top: 0;
-    padding: 0.5em 0em;
-   /*  background: rgba(255, 255, 255, 0.75); */
-   /*  border-radius: 40px; */
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    display: grid;
-    z-index: 2;
-    width: 100%;
-}
+
+
+
 h1 {
     font-size: 3rem;
     text-transform: uppercase;
@@ -62,7 +43,7 @@ h1 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     line-height: 2rem;
 }
-
+/* <!---------------------------------------------------------------->  */
 .char {
     transform: translateY(115px);
     transition: transform .5s;
@@ -72,4 +53,171 @@ h1 {
     aspect-ratio: 3440/100;
     filter: blur(15px); /* Adjust the px value to control the amount of blur */
     box-shadow: 0 0 10px -10px rgba(255, 255, 255, 0.25);
+}
+
+/* <!---------------------------------------------------------------->  */
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    /* padding: 0.5em 0em; */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    width: 100%;
+    padding: 1em 1em;
+    cursor:auto;
+}
+
+.header-cover {
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 30%;
+    height: 6rem;
+    border-radius: 20px;
+
+}
+
+:root {
+    --clr: rgb(0, 255, 85);
+    
+    }
+    
+    .navigation {
+        width: 350px;
+        height: 70px;
+        background: #ffffff00;
+        position: relative;  /* This is critical for absolute positioning of children */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin: auto; 
+        
+    }
+
+.navigation ul {
+    display: flex;
+    justify-content: space-between; /* This will ensure spacing is distributed evenly */
+    width: 100%;
+    padding: 0; /* Ensure no default padding is causing issues */
+}
+.navigation ul li {
+
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navigation ul li  a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.navigation ul li  a .icon {
+    position: relative;
+    display: block;
+    line-height: 80px;
+    font-size: 1.8em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+
+}
+
+.navigation ul li.active  a .icon {
+   
+
+}
+
+.navigation ul li a .text {
+    position: fixed;
+    color:var(--clr);
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+}
+
+.indicator {
+    position: absolute;
+    top: -37.5%;  /* Adjust this if the alignment is off, might need to adjust based on height */
+    transform: translateY(-50%); /* Center vertically */
+    width: 70px;
+    height: 70px;
+    background: #2289ff60;
+    border-radius: 50%;
+    /* border: 6px solid #1c0edb9f; */
+    transition: transform 0.5s ease;
+    /* Initialize left position based on active element or center if none */
+    left: 0; /* Adjust this based on actual item width and position */
+}
+
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: -30px;
+    width: 25px;
+    height: 20px;
+    background: transparent;
+   /*  border-top-right-radius: 40px; */
+    border: 5px solid transparent;
+   /*  border-top-color: #1100ffd2; 
+    border-right-color: #1100ff9f;  */
+
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    right: 30px;
+    width: 25px;
+    height: 20px;
+    background: transparent;
+   /*  border-top-left-radius: 40px; */
+    border: 5px solid transparent;
+   /*  border-top-color: #1100ffd2; 
+    border-left-color: #1100ff9f;  */
+
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(70px * 4));
 }

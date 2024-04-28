@@ -20,20 +20,50 @@
     <div id="square-container02"></div>
     <!---------------------------------------------------------------->
     <!---------------------------------------------------------------->
-     <header id="toggle02" >
-        <nav class="header-container">
+    <header class="header" >
+        <div class="header-cover"> 
+        <div class="navigation">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="list active">
+                    <a href="#">
+                    <span class="icon"> <ion-icon name="home-outline"></ion-icon> </span>
+                    <span class="text">Home </span>
+                </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                    <span class="icon"> <ion-icon name="person-outline"></ion-icon> </span>
+                    <span class="text">profile</span>
+                </a href="#">
+                </li>
+                <li class="list ">
+                    <a href="#">
+                    <span class="icon" ><ion-icon name="briefcase-outline"></ion-icon> </span>
+                    <span class="text">messyage</span>
+                </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                    <span class="icon"> <ion-icon name="shield-checkmark-outline"></ion-icon> </span>
+                    <span class="text">projcts</span>
+                </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                    <span class="icon"> <ion-icon name="call-outline"></ion-icon> </span>
+                    <span class="text">contact</span>
+                </a>
+                </li>
             </ul>
-        </nav>
+            <div class="indicator"></div>
+        </div>
+        </div >
+        <div id="toggle02" >
+            <img src="/css/menu-alt-svgrepo-com.svg" alt="Menu Icon" width="24" height="24">
+        </div>
     </header> 
     <!---------------------------------------------------------------->
-   <!--  <div id="toggle02" class="ball-text">
-        <img src="/css/menu-alt-svgrepo-com.svg" alt="Menu Icon" width="24" height="24">
-    </div> -->
+    
 
     <!---------------------------------------------------------------->
     <main class="haupt">
@@ -164,6 +194,8 @@
     </div>
 </div>
 <!---------------------------------------------------------------->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://unpkg.com/split-type"></script>
@@ -171,6 +203,7 @@
 <script src="/new_code/js/preloader02.js"></script>
 <s><script src="/new_code/js/menu02.js"> </script></s>
 <script src="/new_code/js/textAnimation01.js"> </script>
+<script src="/new_code/js/header.js"></script>
 <!---------------------------------------------------------------->
 </body>
 </html>
