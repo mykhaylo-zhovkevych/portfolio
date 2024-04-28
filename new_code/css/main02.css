@@ -14,6 +14,7 @@ body, html{
     flex-direction: column;
     width: 100vw;
     height: 100vh; 
+    background: linear-gradient(259deg, rgba(13,99,149,1) 0%, rgba(185,202,224,1) 100%); 
 }
 
 .header {
@@ -65,4 +66,10 @@ h1 {
 .char {
     transform: translateY(115px);
     transition: transform .5s;
+}
+
+.spacer{
+    aspect-ratio: 3440/100;
+    filter: blur(15px); /* Adjust the px value to control the amount of blur */
+    box-shadow: 0 0 10px -10px rgba(255, 255, 255, 0.25);
 }

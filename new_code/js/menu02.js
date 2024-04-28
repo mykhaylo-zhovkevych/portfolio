@@ -24,10 +24,52 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Function to handle the animation of squares and the showing/hiding of the menu
-    function animateSquares(showMenuAfter) {
-        squareContainer.style.display = 'flex';  // Make sure the container for squares is visible
+// Function to handle the animation of squares and the showing/hiding of the menu
+function animateSquares(showMenuAfter) {
+    squareContainer.style.display = 'flex';  // Make sure the container for squares is visible
 
+    // Animate squares appearing
+    gsap.fromTo(squares, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        duration: 0.4,
+        stagger: {
+            each: 0.004,
+            from: "random"
+        },
+        onComplete: () => {
+            squareContainer.style.display = 'none';  // Hide the container after animation
+            if (showMenuAfter) {
+                // Show the menu if the flag is true
+                gsap.fromTo(menu, {opacity: 0, visibility: "hidden"}, {opacity: 1, visibility: "visible", duration: 1});
+            } else {
+                // Hide the menu if the flag is false
+                gsap.to(menu, {opacity: 0, duration: 1.5, onComplete: () => {
+                    menu.style.visibility = 'hidden';
+                }});
+            }
+        }
+    });
+}
+
+document.getElementById("toggle02").addEventListener("click", () => {
+    const isVisible = window.getComputedStyle(menu).visibility === "visible";
+
+    if (isVisible) {
+        // If the menu is visible, animate to hide it
+        animateSquares(false);
+    } else {
+        // If the menu is not visible, animate to show it
+        animateSquares(true);
+    }
+});
+
+createSquares();  // Initialize squares when the DOM is fully loaded
+});
+
+
+/* 
         // Animate squares appearing
         gsap.fromTo(squares, {
             opacity: 0
@@ -60,19 +102,4 @@ window.addEventListener("DOMContentLoaded", () => {
                 });
             }
         });
-    }
-
-    document.getElementById("toggle02").addEventListener("click", () => {
-        const isVisible = window.getComputedStyle(menu).visibility === "visible";
-
-        if (isVisible) {
-            // If the menu is visible, animate to hide it
-            animateSquares(false);
-        } else {
-            // If the menu is not visible, animate to show it
-            animateSquares(true);
-        }
-    });
-
-    createSquares();  // Initialize squares when the DOM is fully loaded
-});
+    } */

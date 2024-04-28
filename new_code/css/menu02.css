@@ -63,8 +63,7 @@
     background: #2b275f;  
     color: white;
     visibility: hidden; 
-    opacity: 0;  
-    z-index: 100;  
+    opacity: 0;   
    /*  transition: opacity 0.5s, visibility 0.5s;   */
 }
 .content-overlay02 h1 {

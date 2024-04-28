@@ -1,5 +1,5 @@
 Promise.all([
-    new Promise(resolve => setTimeout(resolve, 12000)), // Ensures the preloader shows for at least 7.7 seconds
+    new Promise(resolve => setTimeout(resolve, 12000)),
     new Promise(resolve => window.onload = resolve) // Waits for all resources to load
 ]).then(() => {
     document.querySelector('.loading-screen02').style.display = 'none';
@@ -36,12 +36,12 @@ function preloadImages(callback) {
         img.onload = () => {
             loadedImages++;
             images[i] = img;
-            if (i === 0) { // Ensure the first image is displayed as soon as it's loaded
+            if (i === 0) { 
                 ball.frame = 0;
-                render(); // Display the first image
+                render(); 
             }
-            if (loadedImages === frameCount) { // Check if all images are loaded
-                callback(); // Call the callback function (e.g., to start animation)
+            if (loadedImages === frameCount) { 
+                callback(); 
             }
         };
     }
@@ -66,18 +66,16 @@ preloadImages(() => {
             ease: "none",
             snap: 'frame',
             onUpdate: render,
-            // repeat: -1, // Uncomment for looping animation
         });
-    }, 5000); // Delay animation start by 5 seconds
+    }, 5000); 
 });
 
-// Configure additional text animation as needed
+
 gsap.fromTo('.ball-text02', {
     opacity: 1,
 }, {
-   /*  opacity: 1, */
     duration: 5,
-    delay: 0, // Start after initial delay
+    delay: 0, 
     onComplete: () => {
         gsap.to(".ball-text02", {
             opacity: 0,
@@ -87,164 +85,209 @@ gsap.fromTo('.ball-text02', {
     }
 });
 
-// Entrance animation for '.ball-text02' after a delay
+
 gsap.fromTo('.ball-text02', {
-    x: '100%',  // Starts off the screen on the right
+    x: '100%', 
     opacity: 0
 }, {
-    x: '0%',  // Slides in to original position
+    x: '0%',  
     opacity: 1,
     duration: 2,
-    delay: 0,  // Delay before animation starts
+    delay: 0,  
     ease: "power2.out"
 });
 
 
-// the start and end work only with 
-
-// Configure additional text animation as needed
 gsap.fromTo('.ball-text', {
     opacity: 1,
 }, {
-    delay: 10, // Start after initial delay
-    
+    delay: 10, 
 });
 
-// Start the ball-text animation with a slide-in effect from the right
+
 gsap.fromTo('.ball-text', {
-    x: '-100%',  // Start off-screen to the right
+    x: '-100%', 
     opacity: 0
   }, {
-    x: '0%',    // End at its original position
+    x: '0%',   
     opacity: 1,
-    duration: 2,  // Duration of the slide-in effect
-    ease: "power2.out", // Ease out for a smooth ending
-    delay: 10,   // Start after initial delay
+    duration: 2,  
+    ease: "power2.out", 
+    delay: 10,   
   });
   
 
 
 /* ------------------ On scrollTrigger --------------------- */
+/* 
+const isMobile = window.innerWidth <= 1160; 
+
+gsap.fromTo('.ball-text', {
+  x: isMobile ? '-120%' : '-120%',
+  opacity: 0
+}, {
+  x: '0%',
+  opacity: 1,
+  duration: 2,
+  scrollTrigger: {
+    trigger: '.ball-text',
+    scrub: true,
+    start: isMobile ? "705%" : "605%", 
+    end: isMobile ? "1755%" : "1855%", 
+    markers: true,
+    toggleActions: 'play none none reverse',
+    onEnter: () => gsap.to(".ball-text", { opacity: 1 }),
+    onLeave: () => gsap.to(".ball-text", { opacity: 0 }),
+  }
+});
+ */
+// Function to determine device type based on window width and set GSAP animations
+function updateAnimations() {
+    const screenWidth = window.innerWidth;
+    let xStart, startPercent, endPercent;
+  
+    if (screenWidth <= 650) {  
+      xStart = '-0%';
+      startPercent = "605%";
+      endPercent = "4955%";
+    } else if (screenWidth <= 1100) {  
+      xStart = '-120%';
+      startPercent = "605%";
+      endPercent = "1755%";
+    } else {  // Larger screens
+      xStart = '-120%';
+      startPercent = "605%";
+      endPercent = "1855%";
+    } 
+    
+/* 
+    function updateAnimations() {
+        const screenWidth = window.innerWidth;
+        let xStart, startPercent, endPercent;
+      
+        if (screenWidth <= 550) {  // Phone
+          xStart = '-0%';
+          startPercent = "1905%";
+          endPercent = "7455%";
+        } else if (screenWidth <= 1160) {  // Middle devices
+          xStart = '-120%';
+          startPercent = "1005%";
+          endPercent = "2355%";
+        } else if (screenWidth <= 2680){  // Larger screens
+          xStart = '-120%';
+          startPercent = "605%";
+          endPercent = "1855%";
+        } else {
+          xStart = '-220%';
+          tartPercent = "705%";
+          endPercent = "1555%";
+        } */
+
+    gsap.fromTo('.ball-text', {
+      x: xStart,
+      opacity: 0
+    }, {
+      x: '0%',
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: '.ball-text',
+        scrub: true,
+        start: startPercent,
+        end: endPercent,
+        markers: true,
+        toggleActions: 'play none none reverse',
+        onEnter: () => gsap.to(".ball-text", { opacity: 1 }),
+        onLeave: () => gsap.to(".ball-text", { opacity: 0 }),
+      }
+    });
+  }
+  
+  // Initialize animations on load and update on window resize
+  updateAnimations();
+  window.addEventListener('resize', updateAnimations);
+
+gsap.fromTo('.ball-text02', {
+    x: '100%', }, { 
+    x: '0%',
+    opacity:1,  
+    duration: 2,
+   scrollTrigger: {
+    trigger: '.ball-text02',
+    scrub: true,
+    start: "top",
+    end: "top bottom%", 
+    onLeave: () => gsap.to(".ball-text02", { opacity: 0 }) 
+  },
+});
 
 gsap.to(ball, {
-frame: frameCount - 1,
-snap: 'frame',
-ease: "none",
-scrollTrigger: {
+  frame: frameCount - 1,
+  snap: 'frame',
+  ease: "none",
+  scrollTrigger: {
     scrub: true,
     pin: 'canvas',
     end: '800%',
-},
-onUpdate: render,
+  },
+  onUpdate: render,
 });
-/* 
-// GSAP Animation for '.ball-text' opacity based on scroll
-gsap.fromTo('.ball-text', {
-    opacity: 0
-  }, {
-    opacity: 1,
-    scrollTrigger: {
-      trigger: '.ball-text',  // Specify the trigger element for this animation
-        scrub: true,
-        start: "605%",
-        end: '1855%', markers: true,   // When bottom of '.ball-text' hits the top of viewport
-        onLeave: () => {
-        gsap.to(".ball-text", {
-            opacity: 0,
-            duration: 1,
-            
-        });
-    }
-    }
-  });
- */
-  // GSAP Animation for '.ball-text' opacity based on scroll
-gsap.fromTo('.ball-text', {
-    x: '-120%',
-    opacity: 0
-  }, {
-    x: '0%',
-    opacity: 1,
-    duration: 2,
-    scrollTrigger: {
-      trigger: '.ball-text',  // Specify the trigger element for this animation
-      scrub: true,
-      start: "605%",    // When the top of the trigger hits 80% of the viewport
-      end: "1855%",      // When the top of the trigger hits 30% of the viewport
-      markers: true,
-      toggleActions: 'play none none reverse', // Play the animation in and reverse out
-      onEnter: () => {
-        gsap.to(".ball-text", { opacity: 1 });
-      },
-      onLeave: () => {
-        gsap.to(".ball-text", { opacity: 0 });
-      }
-    }
-});
- 
-
-
-
-gsap.fromTo('.ball-text02', {
-    opacity: 1
-}, {
-    opacity: 0,
-    scrollTrigger: {
-        scrub: true,
-        start: "top",
-        end: "20%", // Ends 500px scroll after the start point
-        onLeave: () => gsap.to(".ball-text02", {opacity: 0}) // Adjusted to use onLeave for when the trigger leaves the end point
-    },
-});
-
-
-
-
 
 // Function to simulate a keypress event
 function simulateKeyPress(keyCode) {
-    // Create a new event
     let event = new KeyboardEvent('keypress', {
-        keyCode: keyCode, // ASCII code for key, e.g., 119 for 'w'
-        which: keyCode, // Set 'which' for compatibility with older browsers
-        bubbles: true, // Event should bubble up through the DOM
-        cancelable: true // Event can be canceled
+        keyCode: keyCode, 
+        which: keyCode, 
+        bubbles: true,
+        cancelable: true 
     });
 
-    // Dispatch the event on the window or any other element
+    
     window.dispatchEvent(event);
 }
 
 // Use setTimeout to delay the simulation
 setTimeout(() => {
-    simulateKeyPress(119); // ASCII code for 'w'
-}, 11000); // Delays the keypress event by 5000 milliseconds (5 seconds)
+    simulateKeyPress(119); 
+}, 11000); 
 
 window.addEventListener('keypress', (event) => {
     // Check if the pressed key is 'w' (ASCII code 119)
     if (event.keyCode === 119 || event.which === 119) {
-        // Delay any scrolling until everything is truly ready
+    
         setTimeout(() => {
-            // Use requestAnimationFrame to sync with the browser's repaint cycle
             requestAnimationFrame(() => {
                 performScrollAction();
             });
-        }); // Delay might need adjustment based on actual load performance
+        }); 
     }
 });
     
-    function performScrollAction() {
+function performScrollAction() {
     const canvasBottomPosition = canvas.offsetTop + canvas.offsetHeight;
     const maxScrollTop = document.body.scrollHeight - window.innerHeight;
     const currentScrollTop = window.pageYOffset;
+    const screenWidth = window.innerWidth;
+
+    // Definiere den Multiplikator abhängig von der Bildschirmbreite
+    let multiplier;
+    if (screenWidth < 550) {
+        multiplier = 7;  // Ein niedrigerer Multiplikator für sehr kleine Bildschirme
+    } else if (screenWidth < 1160) {
+        multiplier = 5;  // Mittlerer Multiplikator für mittlere Bildschirme
+    } else {
+        multiplier = 7;  // Standardmultiplikator für größere Bildschirme
+    }
+
     const distanceToCanvasBottom = canvasBottomPosition - currentScrollTop;
-    const scrollFraction = distanceToCanvasBottom * 7.5; // Adjust the fraction as needed
+    const scrollFraction = distanceToCanvasBottom * multiplier;
     
     let newScrollTop = currentScrollTop + scrollFraction;
-    newScrollTop = Math.min(newScrollTop, maxScrollTop); // Ensuring not to exceed the max scrollable area
+    newScrollTop = Math.min(newScrollTop, maxScrollTop);  // Verhindert, dass über das Dokumentende hinaus gescrollt wird
     
     window.scrollTo({ top: newScrollTop, behavior: 'instant' });
-    }
+}
+
 
 function render() {
 context.canvas.width = images[0].width;

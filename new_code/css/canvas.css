@@ -5,60 +5,402 @@ canvas {
     object-fit: cover;
 }
 
-div .ball-text {
-   position: fixed;
-   color: blue;
-   font-size: 2rem;
-   left: 10%;
-   bottom: 15%; 
-   min-height: 40%;
-   max-width: 50%;
-   padding-left: 25rem;
-   backdrop-filter: blur(20px);
-   box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-   white-space: normal; 
-   word-wrap: break-word;
-   align-items: end;
-   
-   
+
+:root {
+  --dynamic-padding-ultra: 15vw;
 }
 
 
-img {
+
+div .ball-text {
     position: fixed;
-    left: 10% !important;
-    bottom: 15% !important;
-    padding: 1rem !important;
-    min-height: 10% !important;
-    min-width: 20% !important;
+    color: blue;
+    font-size: 2rem;
+    left: 10%;
+    bottom: 15%; 
+    min-height: 40%;
+    max-width: 50%;
+    padding-left: calc(var(--dynamic-padding-ultra) + 5%);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    flex-wrap: wrap;
+    white-space: normal; 
+    word-wrap: break-word;
+    
     
  }
+ 
+ .ball-text02 {
+  position: fixed;
+  color: rgb(0, 255, 85);
+  font-size: 3rem;
+  top: 15rem;
+  left: 70%;  /* Start at 50% from the left */
+  transform: translateX(-50%);  /* Center the element */
+  width: 50%;  /* Set width relative to the viewport */
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+  text-align: justify;
+  white-space: normal;
+  overflow: auto;
+  word-wrap: break-word;
+  display: flex;  /* Use flexbox */
+  flex-direction: column;  /* Stack children vertically */
+  align-items: start;  /* Align items to the start of the flex container */
+  justify-content: center;  /* Center content vertically */
+  min-height: 20%;
+  border-radius: 0%;
+}
+
+ 
+ img {
+     position: fixed;
+     left: 10% ;
+     bottom: 15% ;
+     padding: 1rem ;
+     min-height: 10% ;
+     min-width: 20% ;
+     margin-left: -5rem ;
+     backdrop-filter: blur(20px);
+  box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+  }
+ 
+
+/*   img {
+    flex: 0 1 auto;  
+    max-width: 40%;  
+    height: auto;  
+    object-fit: cover;  
+    padding: 1rem;
+}
+
+.ball-text > div {
+    flex: 1;  
+    padding: 1rem;  
+    overflow: hidden;  
+    word-wrap: break-word; 
+} */
+
+/* ---------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 750px) {
+  :root {
+    --dynamic-padding-little: 0vw;
+  }
+
+    .ball-text {
+    font-size: 1rem !important; /* Smaller text on mobile */
+    padding-left: calc(var(--dynamic-padding-little) + 10%); /* Less padding to accommodate smaller screen size */
+    max-width: 80% !important; /* Use more of the screen for text */
+    bottom: 10% !important; /* Position it closer to the bottom */
+    left: 50% !important; /* Start from the middle of the screen */
+    transform: translateX(-50%) !important; /* Center it horizontally */
+    align-items: center !important; /* Center items since there is no image on the left */
+    min-height: initial !important; /* Reset min-height */
+    padding-right: 1rem !important; /* Add padding to the right to not touch the screen edge */
+}
+
+  .ball-text02 {
+    font-size: 1.5rem;
+    top: 10rem;  /* Adjust the position from the top */
+    width: 60% ;  /* Make the width suitable for mobile devices */
+    grid-template-columns: 1fr ; /* Stack items in one column for mobile */
+    left: 15rem;
+  }
+  
+}
 
 
+@media screen and (max-width: 750px) {
+  img {
+      position: fixed;
+      left: 5%; /* Closer to the left edge */
+      bottom: 10%; /* Align with the .ball-text bottom */
+      min-height: 20%; /* Increase size if needed */
+      min-width: 30%; /* Increase width if needed */
+      
+  }
+}
 
-.ball-text02 {
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 750px) and (max-width: 1160px) {
+  :root {
+    --dynamic-padding-middle: 30vw;
+  }
+
+
+  div .ball-text {
+    position: fixed;
+    color: blue;
+    font-size: 2rem;
+    left: 30%;
+    bottom: 15%;
+    min-height: 40%;
+    max-width: 70%;
+    padding-left: calc(var(--dynamic-padding-middle) + 15%);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    white-space: normal;
+    word-wrap: break-word;
+    align-items: center;
+    gap: 1rem;
+    
+    
+  }
+  
+  
+  .ball-text02 {
     position: fixed;
     color: rgb(0, 255, 85);
     font-size: 3rem;
     top: 15rem;
-    left: calc(70% );  /* Adjusted for better control */
-    transform: translateX(-50%);  /* Centering the text block horizontally relative to its position */
-    width: 50%;  /* Width set to 50% of the viewport or another value that suits your design */
+    left: 70%;  /* Start at 50% from the left */
+    transform: translateX(-50%);  /* Center the element */
+    width: 50%;  /* Set width relative to the viewport */
     padding: 1rem;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
-    text-align: justify;  /* Optional: justifies the text within the container */
-    white-space: normal;  /* Ensures text wraps naturally */
-    overflow: auto;  /* Ensures no overflow out of the element boundary */
-    word-wrap: break-word;  /* Ensures long words do not cause layout issues */
-    display: grid;
-    grid-template-columns: 0.5fr 1fr; /* Splits the container into two columns */
-    align-items: center; /* Vertically centers content in each cell */
-    justify-items: start;
+    text-align: justify;
+    white-space: normal;
+    overflow: auto;
+    word-wrap: break-word;
+    display: flex;  /* Use flexbox */
+    flex-direction: column;  /* Stack children vertically */
+    align-items: start;  /* Align items to the start of the flex container */
+    justify-content: center;  /* Center content vertically */
     min-height: 20%;
     border-radius: 0%;
+  }
+  }
+
+
+  @media screen and (min-width: 750px) and (max-width: 1160px) {
+    img {
+      position: fixed;
+      left: 15% ;
+      bottom: 15% ;
+      padding: 1rem ;
+      min-height: 10% ;
+      min-width: 10% ;
+      width: 20rem;
+      
+  }
+  }
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+@media screen and (min-width: 1161px) and (max-width: 1299px) {
+  :root {
+    --dynamic-padding01: 25vw;  /* Even larger padding for wider screens */
+  }
+
+div .ball-text {
+  position: fixed;
+  color: blue;
+  font-size: 2rem;
+  left: 10%;
+  bottom: 15%;
+  min-height: 40%;
+  max-width: 70%;
+  padding-left: calc(var(--dynamic-padding01) + 15%);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  white-space: normal;
+  word-wrap: break-word;
+  align-items: center;
+  gap: 1rem;
+  
+  
+}
+
+
+.ball-text02 {
+  position: fixed;
+  color: rgb(0, 255, 85);
+  font-size: 3rem;
+  top: 15rem;
+  left: 70%;  /* Start at 50% from the left */
+  transform: translateX(-50%);  /* Center the element */
+  width: 50%;  /* Set width relative to the viewport */
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+  text-align: justify;
+  white-space: normal;
+  overflow: auto;
+  word-wrap: break-word;
+  display: flex;  /* Use flexbox */
+  flex-direction: column;  /* Stack children vertically */
+  align-items: start;  /* Align items to the start of the flex container */
+  justify-content: center;  /* Center content vertically */
+  min-height: 20%;
+  border-radius: 0%;
+}
+}
+
+@media screen and (min-width: 1161px) and (max-width: 1299px) {
+    img {
+      position: fixed;
+      left: 15% ;
+      bottom: 15% ;
+      padding: 1rem ;
+      min-height: 10% ;
+      min-width: 20% ;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 1300px) and (max-width: 1800px) {
+  :root {
+    --dynamic-padding02: 20vw; /* Optimal padding for large screens */
+  }
+
+
+
+
+  
+  div .ball-text {
+    position: fixed;
+    color: blue;
+    font-size: 2rem;
+    left: 10%;
+    bottom: 15%; 
+    min-height: 40%;
+    max-width: 50%;
+    padding-left: calc(var(--dynamic-padding02) + 15%);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    flex-wrap: wrap;
+    white-space: normal; 
+    word-wrap: break-word;
+    
+    
+ }
+ 
+ .ball-text02 {
+  position: fixed;
+  color: rgb(0, 255, 85);
+  font-size: 3rem;
+  top: 15rem;
+  left: 70%;  /* Start at 50% from the left */
+  transform: translateX(-50%);  /* Center the element */
+  width: 50%;  /* Set width relative to the viewport */
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+  text-align: justify;
+  white-space: normal;
+  overflow: auto;
+  word-wrap: break-word;
+  display: flex;  /* Use flexbox */
+  flex-direction: column;  /* Stack children vertically */
+  align-items: start;  /* Align items to the start of the flex container */
+  justify-content: center;  /* Center content vertically */
+  min-height: 20%;
+  border-radius: 0%;
+}
+
 
 }
+
+@media screen and (min-width: 1300px) and (max-width: 1800px) {
+  img {
+    position: fixed;
+    left: 15% ;
+    bottom: 15% ;
+    padding: 1rem ;
+    min-height: 10% ;
+    min-width: 20% ;
+}
+
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 1801px) and (max-width: 2592px) {
+  :root {
+    --dynamic-padding03: 10vw; /* Very large padding for ultrawide screens */
+  }
+
+
+  div .ball-text {
+    position: fixed;
+    color: blue;
+    font-size: 2rem;
+    left: 10%;
+    bottom: 15%; 
+    min-height: 40%;
+    max-width: 50%;
+    padding-left: calc(var(--dynamic-padding03) + 15%);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    flex-wrap: wrap;
+    white-space: normal; 
+    word-wrap: break-word;
+    
+    
+ }
+ 
+ .ball-text02 {
+  position: fixed;
+  color: rgb(0, 255, 85);
+  font-size: 3rem;
+  top: 15rem;
+  left: 70%;  /* Start at 50% from the left */
+  transform: translateX(-50%);  /* Center the element */
+  width: 50%;  /* Set width relative to the viewport */
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+  text-align: justify;
+  white-space: normal;
+  overflow: auto;
+  word-wrap: break-word;
+  display: flex;  /* Use flexbox */
+  flex-direction: column;  /* Stack children vertically */
+  align-items: start;  /* Align items to the start of the flex container */
+  justify-content: center;  /* Center content vertically */
+  min-height: 20%;
+  border-radius: 0%;
+}
+
+
+
+
+}
+
+@media screen and (min-width: 1801px) and (max-width: 2592px) {
+  img {
+    position: fixed;
+    left: 10% ;
+    bottom: 15% ;
+    padding: 1rem ;
+    min-height: 10% ;
+    min-width: 20% ;
+}
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
