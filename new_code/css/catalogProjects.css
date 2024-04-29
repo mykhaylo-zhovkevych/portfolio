@@ -1,0 +1,191 @@
+:root {
+    --color-bg: #c0c0c0;
+    --color-section-1:#fff;
+    --color-section-2:#bd1f1f;
+    --color-section-3:#00a2ff;
+    --color-section-4:#d819b8;
+    --color-section-5:#1d00c4;
+    --color-section-6:#d0ff00;
+    --color-section-7:#1adbc1;
+    --color-section-8:#00ff0d;
+}
+
+@font-face {
+    font-family: 'PP Supply Sans';
+    src: url('/experement/page_about/PPSupplySans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Supply Mono';
+    src: url('/experement/page_about/PPSupplyMono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'header';
+    src: url('/experement/page_about/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    font-family: 'PP Supply Mono', 'header';
+    background: var(--color-bg);
+    display: flex;
+    width: 100%; 
+    min-height: 100vh; 
+   
+
+}
+
+.map {
+    position: relative;
+    width: 20%;
+    margin: 50px 0;
+    padding: 0 20px;
+    flex: 1; /* Gives the map a flexible space but equal to the sections, you can adjust this value to change width */
+    padding: 20px;
+    overflow-y: auto; /* Adds scroll if content overflows */
+    border-right: 2px solid #ccc; /* Optional: adds a visual separator between the map and the sections */
+
+}
+
+.section {
+    position: relative;
+    width: 80%;
+    max-height: 100vh;
+    margin: 50px 0;
+    padding: 30px 20px 0 0 ;
+    flex: 3; /* Gives the section more space compared to the map */
+    padding: 20px;
+    overflow-y: auto; /* Adds scroll if content overflows */
+}
+
+.map > div {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    border: 1.5px solid #000;
+    border-radius: 20px;
+    transition: height 0.5s;
+
+}
+
+.section > div {
+    width: 100%;
+    margin: 20px 0 80px 0;
+
+}
+
+.header01 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    border: 1.5px solid #000;
+    border-radius: 40px; /* ---------- */
+    font-size: 14px;
+
+}
+
+.map > div p:nth-child(1) {
+    font-size: 13px;
+
+}
+.map > div p:nth-child(2) {
+    font-size: 20px;
+    
+}
+.copy {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 1.5px solid #000;
+    border-radius: 20px;
+}
+
+.copy h1 {
+    font-weight: 300;
+    font-size: 50px;
+
+}
+
+.section-1 {
+    height: 500px;
+
+}
+
+.section-2 {
+    height: 300px;
+    
+}
+
+.section-3 {
+    height: 800px;
+    
+}
+
+.section-4 {
+    height: 400px;
+    
+}
+
+.section-5 {
+    height: 800px;
+    
+}
+
+.section-6 {
+    height: 500px;
+    
+}
+
+.section-7 {
+    height: 700px;
+    
+}
+
+.section-8 {
+    height: 300px;
+    
+}
+
+.whitespace {
+    width: 100%;
+    height: 150px;
+    border: none !important;
+}
+
+.s-1, .section-1 .header01, .section-1 .copy {
+  background: var(--color-section-1);
+}
+.s-2, .section-2 .header01, .section-2 .copy {
+    background: var(--color-section-2);
+  }
+  .s-3, .section-3 .header01, .section-3 .copy {
+    background: var(--color-section-3);
+  }
+  .s-4, .section-4 .header01, .section-4 .copy {
+    background: var(--color-section-4);
+  }
+  .s-5, .section-5 .header01, .section-5 .copy {
+    background: var(--color-section-5);
+  }
+  .s-6, .section-6 .header01, .section-6 .copy {
+    background: var(--color-section-6);
+  }
+  .s-7, .section-7 .header01, .section-7 .copy {
+    background: var(--color-section-7);
+  }
+  .s-8, .section-8 .header01, .section-8 .copy {
+    background: var(--color-section-8);
+  }
+
+
