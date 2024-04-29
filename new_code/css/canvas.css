@@ -31,6 +31,7 @@ div .ball-text {
     flex-wrap: wrap;
     white-space: normal; 
     word-wrap: break-word;
+    border-radius: 20px;
     
     
  }
@@ -55,7 +56,7 @@ div .ball-text {
   align-items: start;  /* Align items to the start of the flex container */
   justify-content: center;  /* Center content vertically */
   min-height: 20%;
-  border-radius: 0%;
+  border-radius: 20px;
 }
 
  
@@ -68,7 +69,8 @@ div .ball-text {
      min-width: 20% ;
      margin-left: -5rem ;
      backdrop-filter: blur(20px);
-  box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
   }
  
 
@@ -103,6 +105,7 @@ div .ball-text {
     align-items: center !important; /* Center items since there is no image on the left */
     min-height: initial !important; /* Reset min-height */
     padding-right: 1rem !important; /* Add padding to the right to not touch the screen edge */
+    border-radius: 20px;
 }
 
   .ball-text02 {
@@ -111,6 +114,7 @@ div .ball-text {
     width: 60% ;  /* Make the width suitable for mobile devices */
     grid-template-columns: 1fr ; /* Stack items in one column for mobile */
     left: 15rem;
+    border-radius: 20px;
   }
   
 }
@@ -123,7 +127,7 @@ div .ball-text {
       bottom: 10%; /* Align with the .ball-text bottom */
       min-height: 20%; /* Increase size if needed */
       min-width: 30%; /* Increase width if needed */
-      
+      border-radius: 20px;
   }
 }
 
@@ -153,7 +157,7 @@ div .ball-text {
     word-wrap: break-word;
     align-items: center;
     gap: 1rem;
-    
+    border-radius: 20px;
     
   }
   
@@ -178,7 +182,7 @@ div .ball-text {
     align-items: start;  /* Align items to the start of the flex container */
     justify-content: center;  /* Center content vertically */
     min-height: 20%;
-    border-radius: 0%;
+    border-radius: 20px;
   }
   }
 
@@ -192,7 +196,7 @@ div .ball-text {
       min-height: 10% ;
       min-width: 10% ;
       width: 20rem;
-      
+      border-radius: 20px;
   }
   }
 /* ---------------------------------------------------------------------------------------------------- */
@@ -221,7 +225,7 @@ div .ball-text {
   word-wrap: break-word;
   align-items: center;
   gap: 1rem;
-  
+  border-radius: 20px;
   
 }
 
@@ -246,7 +250,7 @@ div .ball-text {
   align-items: start;  /* Align items to the start of the flex container */
   justify-content: center;  /* Center content vertically */
   min-height: 20%;
-  border-radius: 0%;
+  border-radius: 20px;
 }
 }
 
@@ -258,6 +262,7 @@ div .ball-text {
       padding: 1rem ;
       min-height: 10% ;
       min-width: 20% ;
+      border-radius: 20px;
   }
 }
 
@@ -291,7 +296,7 @@ div .ball-text {
     flex-wrap: wrap;
     white-space: normal; 
     word-wrap: break-word;
-    
+    border-radius: 20px;
     
  }
  
@@ -315,7 +320,7 @@ div .ball-text {
   align-items: start;  /* Align items to the start of the flex container */
   justify-content: center;  /* Center content vertically */
   min-height: 20%;
-  border-radius: 0%;
+  border-radius: 20px;
 }
 
 
@@ -329,6 +334,7 @@ div .ball-text {
     padding: 1rem ;
     min-height: 10% ;
     min-width: 20% ;
+    border-radius: 20px;
 }
 
 }
@@ -360,7 +366,7 @@ div .ball-text {
     flex-wrap: wrap;
     white-space: normal; 
     word-wrap: break-word;
-    
+    border-radius: 20px;
     
  }
  
@@ -384,7 +390,7 @@ div .ball-text {
   align-items: start;  /* Align items to the start of the flex container */
   justify-content: center;  /* Center content vertically */
   min-height: 20%;
-  border-radius: 0%;
+  border-radius: 20px;
 }
 
 
@@ -400,6 +406,7 @@ div .ball-text {
     padding: 1rem ;
     min-height: 10% ;
     min-width: 20% ;
+    border-radius: 20px;
 }
 }
 

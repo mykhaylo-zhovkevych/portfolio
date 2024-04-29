@@ -14,7 +14,7 @@ body, html{
     flex-direction: column;
     width: 100vw;
     height: 100vh; 
-    background: linear-gradient(259deg, rgba(13,99,149,1) 0%, rgba(185,202,224,1) 100%); 
+    background-color: #bfc0c4;;
 }
 
 .haupt {
@@ -83,7 +83,7 @@ h1 {
 }
 
 :root {
-    --clr: rgb(0, 255, 85);
+    --clr: #00ff55;
     
     }
     
@@ -159,16 +159,16 @@ h1 {
 
 .indicator {
     position: absolute;
-    top: -37.5%;  /* Adjust this if the alignment is off, might need to adjust based on height */
-    transform: translateY(-50%); /* Center vertically */
+    top: 0;  
+    transform: translateY(-150%); 
     width: 70px;
     height: 70px;
-    background: #2289ff60;
-    border-radius: 50%;
-    /* border: 6px solid #1c0edb9f; */
+    background: #00ff551c;
+    border-radius: 20%;
+    
     transition: transform 0.5s ease;
-    /* Initialize left position based on active element or center if none */
-    left: 0; /* Adjust this based on actual item width and position */
+   
+    left: 0;
 }
 
 
