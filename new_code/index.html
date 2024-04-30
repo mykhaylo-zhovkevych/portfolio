@@ -82,9 +82,11 @@
                 </h1>
             </div>
         </div>
+        <!---------------------------------------------------------------->
         <div class="spacer">
             <svg id="visual" viewBox="0 0 3440 100" width="3440" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 49L3440 49" fill="none" stroke-linecap="square" stroke-linejoin="bevel" stroke="#3795BD" stroke-width="40"></path></svg>   
         </div>	
+        <!---------------------------------------------------------------->
         <section>
            <div> HALLO Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, voluptas nisi cum distinctio, mollitia perferendis minima, nesciunt officia voluptates aperiam natus blanditiis temporibus.</div>
             
@@ -92,7 +94,9 @@
         <div class="spacer">
             <svg id="visual" viewBox="0 0 3440 100" width="3440" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 49L3440 49" fill="none" stroke-linecap="square" stroke-linejoin="bevel" stroke="#3795BD" stroke-width="40"></path></svg>   
         </div>	
+        <!---------------------------------------------------------------->
         <section>
+            
             <div class="container">
                 <div class="map">
                     <div class="s-1">
@@ -244,7 +248,7 @@
                 </div>
             </div>
         </section>
-
+    <!---------------------------------------------------------------->
     <div class="spacer">
         <svg id="visual" viewBox="0 0 3440 100" width="3440" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 49L3440 49" fill="none" stroke-linecap="square" stroke-linejoin="bevel" stroke="#3795BD" stroke-width="40"></path></svg>   
     </div>	
@@ -257,7 +261,35 @@
     </div>	
     <!---------------------------------------------------------------->
     <footer class="footer">
-    <p>© 2024 by Your Name. Proudly created with Your Portfolio Name</p>
+    
+    <div class="footer-wrapper">
+        <p>© 2024 by Your Name. Proudly created with Your Portfolio Name</p>
+    </div>
+    <div class="container-effect">
+          <div class="loader-effect"></div>
+          <div class="overlay-effect">
+          <div class="block block-1"></div>
+          <div class="block block-2"></div>
+          <div class="block block-3"></div>
+          <div class="block block-4"></div>
+          <div class="block block-5"></div>
+          <div class="block block-6"></div>
+          <div class="block block-7"></div>
+          <div class="block block-8"></div>
+          <div class="block block-9"></div>
+          <div class="block block-10"></div>
+          <div class="block block-11"></div>
+          <div class="block block-12"></div>
+          <div class="block block-13"></div>
+          <div class="block block-14"></div>
+          <div class="block block-15"></div>
+          <div class="block block-16"></div>
+          <div class="block block-17"></div>
+          <div class="block block-18"></div>
+          <div class="block block-19"></div>
+          <div class="block block-20"></div>
+          </div>
+    </div>
     </footer>
     </main>
     <!---------------------------------------------------------------->
@@ -344,6 +376,47 @@
 <script src="/new_code/js/textAnimation01.js"> </script>
 <script src="/new_code/js/header.js"></script>
 <script src="/new_code/js/catalogProjects.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+// Ensure GSAP and ScrollTrigger are loaded
+gsap.registerPlugin(ScrollTrigger);
+
+// Function to animate blocks
+function animateBlocks() {
+    gsap.from(".block", {
+    scrollTrigger: {
+        trigger: ".footer",
+        start: "9500px",
+        end: "10300px",
+        toggleActions: "restart pause resume pause",
+        markers: true
+    },
+    width: "0%",
+    duration: 0.8,
+    ease: "power1.inOut",
+    stagger: {
+        amount: 1.5,
+        from: "start",
+    }
+});
+}
+
+/* // Function to fade out the loader
+function fadeOutLoader() {
+    gsap.to(".loader-effect", {
+        opacity: 0,
+        duration: 1,
+        ease: "expo.out",
+        delay: 1.5
+    });
+} */
+
+// Call the animation functions
+animateBlocks();
+fadeOutLoader();
+
+</script> 
+    
 <!---------------------------------------------------------------->
 </body>
 </html>

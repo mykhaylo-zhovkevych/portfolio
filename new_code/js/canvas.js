@@ -195,7 +195,7 @@ function updateAnimations() {
         scrub: true,
         start: startPercent,
         end: endPercent,
-        markers: true,
+        /* markers: true, */
         toggleActions: 'play none none reverse',
         onEnter: () => gsap.to(".ball-text", { opacity: 1 }),
         onLeave: () => gsap.to(".ball-text", { opacity: 0 }),
@@ -212,7 +212,7 @@ gsap.fromTo('.ball-text02', {
     x: '0%',
     opacity:1,  
     duration: 2,
-   scrollTrigger: {
+    scrollTrigger: {
     trigger: '.ball-text02',
     scrub: true,
     start: "top",
