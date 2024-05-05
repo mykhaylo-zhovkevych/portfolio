@@ -7,6 +7,7 @@
 body, html{
     overflow-y: auto;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .website-content02 {
@@ -68,7 +69,7 @@ h1 {
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
     display: flex;
-    width: 30%;
+    width: auto;
     height: 6rem;
     border-radius: 20px;
 
@@ -220,6 +221,7 @@ h1 {
     flex-direction: column;
     min-height: 50vh;
     width: 100vw;
+    background-color: #3795bd;
     
 }
 
@@ -232,21 +234,30 @@ h1 {
     color: white;
 }
 
-/* .loader-effect {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    font-size: 2vw;
-} */
 
-
-.overlay-effect {
+.overlay-effect-footer {
     width: 100%;
     max-height: 50vh;
     /* opacity: 0; 
     visibility: hidden;  */
+    
+}
+
+.overlay-effect-catalog {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3795BD; /* Blue color */
+    z-index: 10; /* Ensure it's above the content */
+    opacity: 1; /* Start fully visible */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.block-catalog {
+    position: absolute;
+    width: 5%;
+    min-height: 100vh;
+    background: #c0c0c0 !important;
     
 }
 
@@ -255,87 +266,87 @@ h1 {
     position: absolute;
     width: 5%;
     min-height: 50vh;
-    background: #579ec7 !important;
+    background: #c0c0c0 !important;
 }
 
 .block-1 {
-    left: 0;
+    right: 0;
 }
 
 .block-2 {
-    left: 5%;
+    right: 5%;
 }
 
 .block-3 {
-    left: 10%;
+    right: 10%;
 }
 
 .block-4 {
-    left: 15%;
+    right: 15%;
 }
 
 .block-5 {
-    left: 20%;
+    right: 20%;
 }
 
 .block-6 {
-    left: 25%;
+    right: 25%;
 }
 
 .block-7 {
-    left: 30%;
+    right: 30%;
 }
 
 .block-8 {
-    left: 35%;
+    right: 35%;
 }
 
 .block-9 {
-    left: 40%;
+    right: 40%;
 }
 
 .block-10 {
-    left: 45%;
+    right: 45%;
 }
 
 .block-11 {
-    left: 50%;
+    right: 50%;
 }
 
 .block-12 {
-    left: 55%;
+    right: 55%;
 }
 
 .block-13 {
-    left: 60%;
+    right: 60%;
 }
 
 .block-14 {
-    left: 65%;
+    right: 65%;
 }
 
 .block-15 {
-    left: 70%;
+    right: 70%;
 }
 
 .block-16 {
-    left: 75%;
+    right: 75%;
 }
 
 .block-17 {
-    left: 80%;
+    right: 80%;
 }
 
 .block-18 {
-    left: 85%;
+    right: 85%;
 }
 
 .block-19 {
-    left: 90%;
+    right: 90%;
 }
 
 .block-20 {
-    left: 95%;
+    right: 95%;
 }
 
 @media(max-width: 900px) {

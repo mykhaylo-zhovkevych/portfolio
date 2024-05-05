@@ -31,14 +31,13 @@
     font-style: normal;
 }
 
-.container {
+.container{
     font-family: 'PP Supply Mono', 'header';
     background: var(--color-bg);
     display: flex;
     width: 100%; 
-    min-height: 100vh; 
+    max-height: 100vh;
    
-
 }
 
 .map {

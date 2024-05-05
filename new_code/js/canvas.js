@@ -160,28 +160,6 @@ function updateAnimations() {
       endPercent = "1855%";
     } 
     
-/* 
-    function updateAnimations() {
-        const screenWidth = window.innerWidth;
-        let xStart, startPercent, endPercent;
-      
-        if (screenWidth <= 550) {  // Phone
-          xStart = '-0%';
-          startPercent = "1905%";
-          endPercent = "7455%";
-        } else if (screenWidth <= 1160) {  // Middle devices
-          xStart = '-120%';
-          startPercent = "1005%";
-          endPercent = "2355%";
-        } else if (screenWidth <= 2680){  // Larger screens
-          xStart = '-120%';
-          startPercent = "605%";
-          endPercent = "1855%";
-        } else {
-          xStart = '-220%';
-          tartPercent = "705%";
-          endPercent = "1555%";
-        } */
 
     gsap.fromTo('.ball-text', {
       x: xStart,
@@ -195,7 +173,7 @@ function updateAnimations() {
         scrub: true,
         start: startPercent,
         end: endPercent,
-        /* markers: true, */
+       /*  markers: true, */
         toggleActions: 'play none none reverse',
         onEnter: () => gsap.to(".ball-text", { opacity: 1 }),
         onLeave: () => gsap.to(".ball-text", { opacity: 0 }),
