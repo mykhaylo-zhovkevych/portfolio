@@ -151,7 +151,7 @@ function updateAnimations() {
       startPercent = "605%";
       endPercent = "4955%";
     } else if (screenWidth <= 1100) {  
-      xStart = '-120%';
+      xStart = '-0%';
       startPercent = "605%";
       endPercent = "1755%";
     } else {  // Larger screens

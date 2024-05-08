@@ -57,6 +57,8 @@ div .ball-text {
   justify-content: center;  /* Center content vertically */
   min-height: 20%;
   border-radius: 20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
  
@@ -115,6 +117,8 @@ div .ball-text {
     grid-template-columns: 1fr ; /* Stack items in one column for mobile */
     left: 15rem;
     border-radius: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
   
 }
@@ -143,10 +147,10 @@ div .ball-text {
     position: fixed;
     color: blue;
     font-size: 2rem;
-    left: 30%;
+   /*  left: 30%; */
     bottom: 15%;
     min-height: 40%;
-    max-width: 70%;
+    max-width: 80%;
     padding-left: calc(var(--dynamic-padding-middle) + 15%);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
@@ -183,6 +187,8 @@ div .ball-text {
     justify-content: center;  /* Center content vertically */
     min-height: 20%;
     border-radius: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
   }
 
@@ -251,6 +257,8 @@ div .ball-text {
   justify-content: center;  /* Center content vertically */
   min-height: 20%;
   border-radius: 20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 }
 
@@ -284,7 +292,7 @@ div .ball-text {
     left: 10%;
     bottom: 15%; 
     min-height: 40%;
-    max-width: 50%;
+    max-width: 70%;
     padding-left: calc(var(--dynamic-padding02) + 15%);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
@@ -321,6 +329,8 @@ div .ball-text {
   justify-content: center;  /* Center content vertically */
   min-height: 20%;
   border-radius: 20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 
@@ -391,11 +401,9 @@ div .ball-text {
   justify-content: center;  /* Center content vertically */
   min-height: 20%;
   border-radius: 20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-
-
-
-
 }
 
 @media screen and (min-width: 1801px) and (max-width: 2592px) {

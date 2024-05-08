@@ -4,7 +4,33 @@
     box-sizing: border-box;
     
 }
-body, html{
+:root {
+    --clr: #00ff55;
+    
+}
+
+@font-face {
+    font-family: 'PP Supply Sans';
+    src: url('/experement/page_about/PPSupplySans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Supply Mono';
+    src: url('/experement/page_about/PPSupplyMono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'header';
+    src: url('/experement/page_about/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -13,35 +39,28 @@ body, html{
 .website-content02 {
     display: none;
     flex-direction: column;
-  /*   width: 100vw;
-    height: 100vh;  */
     background-color: #bfc0c4;;
 }
 
 .haupt {
     display: flex;
     flex-direction: column;
-    /* height: 100vh;
-    width: 100vw; */
 }
 
-
-
-
-h1 {
+#grid-item01 {
     font-size: 3rem;
     text-transform: uppercase;
-    font-family: 'Bebas Neue';
+    font-family: 'PP Supply Mono', Arial;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    line-height: 2rem;
-}
+    line-height: 3rem;
+} 
 /* <!---------------------------------------------------------------->  */
 .char {
     transform: translateY(115px);
     transition: transform .5s;
 }
 
-.spacer{
+.spacer {
     aspect-ratio: 3440/100;
     /* filter: blur(15px);  */
     box-shadow: 0 0 10px -10px rgba(255, 255, 255, 0.25);
@@ -65,6 +84,19 @@ h1 {
     z-index: 1;
 }
 
+#nameOfPortfolio {
+    position: inherit;
+    left: 0em;
+    font-family: 'header', Arial;
+    transition: transform 0.3s ease;
+    padding: 1em;
+}
+#nameOfPortfolio:hover {
+    transform: scale(1.1);
+    color: #00ff55;
+    
+}
+
 .header-cover {
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
@@ -75,23 +107,18 @@ h1 {
 
 }
 
-:root {
-    --clr: #00ff55;
-    
-    }
-    
-    .navigation {
-        width: 350px;
-        height: 70px;
-        background: #ffffff00;
-        position: relative;  /* This is critical for absolute positioning of children */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        margin: auto; 
+.navigation {
+    width: 350px;
+    height: 70px;
+    background: #ffffff00;
+    position: relative;  /* This is critical for absolute positioning of children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto; 
         
-    }
+}
 
 .navigation ul {
     display: flex;
@@ -158,9 +185,7 @@ h1 {
     height: 70px;
     background: #00ff551c;
     border-radius: 20%;
-    
     transition: transform 0.5s ease;
-   
     left: 0;
 }
 
@@ -215,7 +240,98 @@ h1 {
     transform: translateX(calc(70px * 4));
 }
 
+/* <!---------------------------------------------------------------->  */
 
+/* .wrapper-section01 {
+    min-height: 100vh;
+}
+ */
+
+.scroll-wrapper {
+    overflow-x: hidden;
+    position: relative;
+    min-height: 150vh;
+    height: 0px !important;
+}
+
+.svg-section01 {
+    position: absolute;
+    top: 12em;
+    left: 10vw;
+    width: 50vw;
+
+    .mask {
+        width: 0;
+    }
+}
+
+.kontainer {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    height: 150vh;
+
+    .col {
+        display: flex;
+        gap: 3em;
+        
+        p {
+            font-size: .8rem;
+        }
+    }
+
+    section {
+        width: 100vw;
+        padding: 20vw 10vw;
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            width: 50vw;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 3em;
+            width: 100%;
+            height: 300px;
+            padding: 0;
+
+            li {
+                background: white;
+                border-radius: .3em;
+                flex-grow: 1;
+            }
+        }
+
+    }
+}
+
+.sec1 {
+background-color: #eeff00;
+}
+
+.sec2 {
+    background-color: #ff0000;
+
+}
+
+.sec3 {
+    background-color: #00ff55;
+}
+
+/* section {
+    height: 100vh;
+
+} */
+
+
+/* .........................................................................  */
 .footer {
     display: flex;
     flex-direction: column;
@@ -251,6 +367,7 @@ h1 {
     z-index: 10; /* Ensure it's above the content */
     opacity: 1; /* Start fully visible */
     transition: opacity 0.5s ease-in-out;
+    
 }
 
 .block-catalog {

@@ -7,6 +7,7 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 100%);
     color: #2F58CD;
     pointer-events: none;
+    
 
 }
 
@@ -21,7 +22,7 @@
     line-height: 102px;
     clip-path: polygon(0 0, 100%  0, 100% 100px, 0 100px);
     font-weight: 400;
-
+    
 }
 
 
@@ -61,7 +62,7 @@
     transform: translate(-50%, -50%);
     display: flex;
     background: rgb(80, 80, 80);
-
+    
 }
 
 .loader-1 {
