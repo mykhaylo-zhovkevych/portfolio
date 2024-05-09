@@ -57,5 +57,41 @@ function animateSection() {
 });
 }
 
-animateFooter();
+function animateSection01() {
+    gsap.from(".block-section01", {
+        scrollTrigger: {
+            trigger: ".section01",
+            scroller: window, 
+            start: () => { // 9500px
+                    // Errechnet den Startpunkt basierend auf der Höhe des Canvas
+                    const canvasHeight = document.querySelector('.canvas').offsetHeight;
+                    return "top+=" + (canvasHeight + window.innerHeight * 7 -500);
+                },
+            end: () => { // 10300px
+                    // Berechnet das Ende basierend auf der Höhe des Canvas minus einem festen Wert
+                    const canvasHeight = document.querySelector('.canvas').offsetHeight;
+                    const sectionHeight = document.querySelector('.section01').offsetHeight;
+                    return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); // Endet, wenn das untere Ende von 'section02' minus 6200px die Oberkante erreicht. 11020
+                },
+            toggleActions: "play play play play",
+            markers: true
+        },
+        width: "0%",
+        duration: 1.3,
+        ease: "power2.inOut",
+        stagger: {
+            amount: 1.5,
+            from: "start",
+        },
+        onComplete: function() {
+                // Hide the overlay completely after animation
+                document.querySelector(".overlay-effect-section01").style.opacity = '0';
+                document.querySelector(".overlay-effect-section01").style.display = 'none';
+            }
+    });
+}
+
+animateSection01();
 animateSection();
+animateFooter();
+
