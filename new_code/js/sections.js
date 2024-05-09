@@ -1,7 +1,33 @@
+const container = document.querySelector(".kontainer");
+const sections = gsap.utils.toArray(".kontainer section");
+const canvasHeight = document.querySelector('.canvas').offsetHeight;
+const texts = gsap.utils.toArray(".anim");
+const mask = document.querySelector(".mask");
+
+// Create a larger scrolling context by adjusting the height of a wrapper or similar
+document.querySelector('.scroll-wrapper').style.height = `${canvasHeight + window.innerHeight * 7}px`;
+
+// Iterate over sections and apply animation
+sections.forEach((section, index) => {
+  // Adjust `xPercent` or any other transform property as needed
+  gsap.to(section, {
+    xPercent: -100, 
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".kontainer",
+      scroller: window,
+      start: () => `top+=${canvasHeight + window.innerHeight * 8 + 250}`, // Starts when the specified position is met
+      end: "+=600", // Continues for an additional amount based on design needs
+      scrub: 1,
+      markers: true,
+    }
+  });
+});
+
+
 // Ensure GSAP and ScrollTrigger are loaded
 gsap.registerPlugin(ScrollTrigger);
 
-// Function to animate blocks
 function animateFooter() {
     gsap.from(".block", {
     scrollTrigger: {
@@ -22,22 +48,22 @@ function animateFooter() {
 });
 }
 
-// Function to animate blocks
+
 function animateSection() {
     gsap.from(".block-catalog", {
     scrollTrigger: {
         trigger: ".section02",
         scroller: window, 
-        start: () => { // 9500px
+        start: () => { 
                 // Errechnet den Startpunkt basierend auf der Höhe des Canvas
                 const canvasHeight = document.querySelector('.canvas').offsetHeight;
-                return "top+=" + (canvasHeight + window.innerHeight * 7);
+                return "top+=" + (canvasHeight + window.innerHeight * 7 -100);
             },
-        end: () => { // 10300px
+        end: () => { 
                 // Berechnet das Ende basierend auf der Höhe des Canvas minus einem festen Wert
                 const canvasHeight = document.querySelector('.canvas').offsetHeight;
                 const sectionHeight = document.querySelector('.section02').offsetHeight;
-                return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); // Endet, wenn das untere Ende von 'section02' minus 6200px die Oberkante erreicht. 11020
+                return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); 
             },
         toggleActions: "restart restart restart restart",
         markers: true
@@ -65,7 +91,7 @@ function animateSection01() {
             start: () => { // 9500px
                     // Errechnet den Startpunkt basierend auf der Höhe des Canvas
                     const canvasHeight = document.querySelector('.canvas').offsetHeight;
-                    return "top+=" + (canvasHeight + window.innerHeight * 7 -500);
+                    return "top+=" + (canvasHeight + window.innerHeight * 7 - 500);
                 },
             end: () => { // 10300px
                     // Berechnet das Ende basierend auf der Höhe des Canvas minus einem festen Wert
@@ -74,7 +100,7 @@ function animateSection01() {
                     return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); // Endet, wenn das untere Ende von 'section02' minus 6200px die Oberkante erreicht. 11020
                 },
             toggleActions: "play play play play",
-            markers: true
+            /* markers: true */
         },
         width: "0%",
         duration: 1.3,

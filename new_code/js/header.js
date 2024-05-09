@@ -19,3 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+let lastWindowWidth = window.innerWidth;
+function hasSignificantResize(newWidth) {
+  // Definieren Sie einen Schwellenwert für eine "signifikante" Änderung
+  const threshold = 100; // Beispiel: 100 Pixel Unterschied
+  return Math.abs(newWidth - lastWindowWidth) > threshold;
+}
+
+
+window.addEventListener('resize', () => {
+  const currentWidth = window.innerWidth;
+ 
+  if (hasSignificantResize(currentWidth)) {
+    window.scrollTo(0, 0);
+    lastWindowWidth = currentWidth;
+    window.location.reload();
+  }
+});
