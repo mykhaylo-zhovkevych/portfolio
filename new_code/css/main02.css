@@ -5,7 +5,7 @@
     
 }
 :root {
-    --clr: #00ff55;
+    --clr: #3795bd;
     
 }
 
@@ -50,7 +50,7 @@ body, html {
 #grid-item01 {
     font-size: 3rem;
     text-transform: uppercase;
-    font-family: 'PP Supply Mono', Arial;
+    font-family: 'PP Supply Sans', Arial;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     line-height: 3rem;
 } 
@@ -64,6 +64,7 @@ body, html {
     aspect-ratio: 3440/100;
     /* filter: blur(15px);  */
     box-shadow: 0 0 10px -10px rgba(255, 255, 255, 0.25);
+    z-index: 1
 }
 
 /* <!---------------------------------------------------------------->  */
@@ -81,7 +82,7 @@ body, html {
     width: 100%;
     padding: 1em 1em;
     cursor:auto;
-    z-index: 1;
+    z-index: 2;
 }
 
 #nameOfPortfolio {
@@ -90,10 +91,11 @@ body, html {
     font-family: 'header', Arial;
     transition: transform 0.3s ease;
     padding: 1em;
+    color: #bfc0c4;
 }
 #nameOfPortfolio:hover {
     transform: scale(1.1);
-    color: #00ff55;
+    color: #3795bd;
     
 }
 
@@ -183,7 +185,7 @@ body, html {
     transform: translateY(-150%); 
     width: 70px;
     height: 70px;
-    background: #00ff551c;
+    background: #bfc0c45b;
     border-radius: 20%;
     transition: transform 0.5s ease;
     left: 0;
@@ -254,6 +256,7 @@ body, html {
     width: 100vw;
     min-height: 100vh;
     height: 150vh;
+    color: #ffffff;
 
     .col {
         display: flex;
@@ -275,15 +278,17 @@ body, html {
 }
 
 .sec1 {
-/* background-color: #3c4053; */
 margin: 10vw 0vw;
 background-color: #bfc0c4;
 
 }
 
-.sec2 {
-    background-color: #bfc0c4;
-    margin: 40vw 0vw;
+
+#h1Section01 {
+    padding: 2em;
+    font-family: "PP Supply Sans";
+    font-size: 2em;
+    font-style: normal;
 }
 
 
@@ -302,7 +307,35 @@ background-color: #bfc0c4;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.486);
     border-radius: 20px;
+    height: 65vh;
 }
+
+/* <!---------------------------------------------------------------->  */
+
+.sec2 {
+    background-color: #bfc0c4;
+    margin: 40vw 0vw;
+}
+
+
+#h1Section02 {
+    padding: 2em;
+    font-family: "PP Supply Sans";
+    font-size: 2em;
+    font-style: normal;
+}
+
+
+.sec2-wrapper {
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: calc(15vh + 200px);
+    background-color: #3795bd;
+}
+
 .col02-section01 {
     padding-top: 5em;
     padding-bottom: 5em;
@@ -311,15 +344,50 @@ background-color: #bfc0c4;
     border-radius: 20px;
 }
 
-.sec2-wrapper {
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
-    height: 120vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem;
-    background-color: #3795bd;
+
+@media (min-width: 3440px) {
+    .sec2-wrapper {
+        padding-top: calc(5vh + 100px);
+    }
 }
+
+@media (min-width: 2560px) and (max-width: 3439px) {
+    .sec2-wrapper {
+        padding-top: calc(5vh + 100px);
+    }
+}
+
+@media (min-width: 1800px) and (max-width: 2559px) {
+    .sec2-wrapper {
+        padding-top: calc(15vh + 220px);
+    }
+}
+
+@media (min-width: 1450px) and (max-width: 1799px) {
+    .sec2-wrapper {
+        padding-top: calc(25vh + 200px);
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1449px) {
+    .sec2-wrapper {
+        padding-top: calc(38vh + 200px);
+    }
+}
+
+@media (min-width: 701px) and (max-width: 999px) {
+    .sec2-wrapper {
+        padding-top: calc(50vh + 180px);
+    }
+}
+
+@media (max-width: 700px) {
+    .sec2-wrapper {
+        padding-top: calc(65vh + 120px);
+    }
+}
+
+
 /* .........................................................................  */
 
 .section03 {
@@ -349,6 +417,7 @@ background-color: #bfc0c4;
 .overlay-effect-footer {
     width: 100%;
     max-height: 50vh;
+    z-index: 1;
     /* opacity: 0; 
     visibility: hidden;  */
     
@@ -359,7 +428,7 @@ background-color: #bfc0c4;
     width: 100%;
     height: 100%;
     background-color: #3795BD; /* Blue color */
-    z-index: 10; /* Ensure it's above the content */
+    z-index: 1; /* Ensure it's above the content */
     opacity: 1; /* Start fully visible */
     transition: opacity 0.5s ease-in-out;
     
@@ -370,7 +439,7 @@ background-color: #bfc0c4;
     width: 100%;
     height: 150vh;
     background-color: #3795BD; /* Blue color */
-    z-index: 10; 
+    z-index: 1; 
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }

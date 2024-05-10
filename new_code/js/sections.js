@@ -48,7 +48,6 @@ function animateFooter() {
 });
 }
 
-
 function animateSection() {
     gsap.from(".block-catalog", {
     scrollTrigger: {
@@ -57,7 +56,7 @@ function animateSection() {
         start: () => { 
                 // Errechnet den Startpunkt basierend auf der Höhe des Canvas
                 const canvasHeight = document.querySelector('.canvas').offsetHeight;
-                return "top+=" + (canvasHeight + window.innerHeight * 7 -100);
+                return "top+=" + (canvasHeight + window.innerHeight * 7 -500);
             },
         end: () => { 
                 // Berechnet das Ende basierend auf der Höhe des Canvas minus einem festen Wert
@@ -81,7 +80,7 @@ function animateSection() {
             document.querySelector(".overlay-effect-catalog").style.display = 'none';
         }
 });
-}
+} 
 
 function animateSection01() {
     gsap.from(".block-section01", {
