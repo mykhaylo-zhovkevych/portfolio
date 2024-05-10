@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/new_code/css/menu02.css">
     <link rel="stylesheet" href="/new_code/css/preloader02.css">
     <link rel="stylesheet" href="/new_code/css/catalogProjects.css">
+    <link rel="stylesheet" href="/new_code/css/contact.css">
     <!---------------------------------------------------------------->
 
 </head>
@@ -65,7 +66,7 @@
     </header> 
     <!---------------------------------------------------------------->
 
-    
+
     <!---------------------------------------------------------------->
     <main class="haupt">
         <div class="ball-text">
@@ -308,23 +309,39 @@
     </div>	
     <!---------------------------------------------------------------->
     <aside class="section03">
-        <div class="section03-wrapper"> <p> Kontakt hier </p>
-            <div>
-                <section class="kontakt" id="kontakt">
-                    <h2 class="heading">Kontakt<span>Hier</span></h2>
-                  <form action="#"> <div class="inpit-box">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Name">
-                  </div>
-                  <div class="inpit-box">
-                    <input type="text" placeholder="Phone">
-                    <input type="text" placeholder="text hier">
-                  </div>
-                  <textarea name="" id="" cols="30" rows="10" placeholder="Your massage"></textarea>
-                  <input type="submit" value="send your massage" class="bth">
-                  </form>
-                  </section>
-            </div>
+        <div class="section03-wrapper">
+            <section class="contact">
+                    <h2 class="heading">Kontakt <span>Hier</span></h2>
+                        <form action="#"> 
+                            <div class="input-box">
+                                <div class="input-field field">
+                                    <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                                    <div class="error-txt">Full Name can't be blank</div>
+                                </div>
+                                <div class="input-field field">
+                                    <input type="text" placeholder="Email Adress" id="email" class="item" autocomplete="off">
+                                    <div class="error-txt email">Email can't be blank</div>
+                                </div>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="input-field field">
+                                    <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+                                    <div class="error-txt">Phone can't be blank</div>
+                                </div>
+                                <div class="input-field field">
+                                    <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                                    <div class="error-txt">Subject can't be blank</div>
+                                </div>
+                            </div>
+
+                            <div class="textarea-field field">
+                                <textarea name="" id="message" cols="30" rows="10" placeholder=">Your Message" class="item" autocomplete="off"></textarea>
+                                    <div class="error-txt">Message can't be blank</div>
+                            </div>
+                            <button type="submit">Send Message</button>
+                       </form>
+            </section>
         </div>
     </aside>
     <div class="spacer">
@@ -449,6 +466,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script src="/new_code/js/sections.js"></script> 
 <script src="/new_code/js/pageStopper.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="/new_code/js/contact.js"></script>
 <!---------------------------------------------------------------->
 </body>
 </html>
