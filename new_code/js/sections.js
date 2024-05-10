@@ -56,7 +56,7 @@ function animateSection() {
         start: () => { 
                 // Errechnet den Startpunkt basierend auf der Höhe des Canvas
                 const canvasHeight = document.querySelector('.canvas').offsetHeight;
-                return "top+=" + (canvasHeight + window.innerHeight * 7 -500);
+                return "top+=" + (canvasHeight + window.innerHeight * 7 - 100);
             },
         end: () => { 
                 // Berechnet das Ende basierend auf der Höhe des Canvas minus einem festen Wert
@@ -90,7 +90,7 @@ function animateSection01() {
             start: () => { // 9500px
                     // Errechnet den Startpunkt basierend auf der Höhe des Canvas
                     const canvasHeight = document.querySelector('.canvas').offsetHeight;
-                    return "top+=" + (canvasHeight + window.innerHeight * 7 - 500);
+                    return "top+=" + (canvasHeight + window.innerHeight * 7 ); // - 500 um das zu weiter bringen
                 },
             end: () => { // 10300px
                     // Berechnet das Ende basierend auf der Höhe des Canvas minus einem festen Wert

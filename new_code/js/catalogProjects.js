@@ -77,5 +77,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Verzögerte Initialisierung, um sicherzustellen, dass alle Inhalte geladen sind
-    setTimeout(initializeMapHeights, 50000);  // Anpassen basierend auf der benötigten Zeit für das Laden Ihrer Inhalte
+    setTimeout(initializeMapHeights, 30000);  // Anpassen basierend auf der benötigten Zeit für das Laden Ihrer Inhalte
 });

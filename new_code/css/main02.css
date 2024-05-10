@@ -5,7 +5,7 @@
     
 }
 :root {
-    --clr: #3795bd;
+    --clr: #ffffff9c;
     
 }
 
@@ -82,7 +82,7 @@ body, html {
     width: 100%;
     padding: 1em 1em;
     cursor:auto;
-    z-index: 2;
+    z-index: 3;
 }
 
 #nameOfPortfolio {
@@ -91,7 +91,7 @@ body, html {
     font-family: 'header', Arial;
     transition: transform 0.3s ease;
     padding: 1em;
-    color: #bfc0c4;
+    color: #ffffff9c;
 }
 #nameOfPortfolio:hover {
     transform: scale(1.1);
@@ -426,9 +426,9 @@ background-color: #bfc0c4;
 .overlay-effect-catalog {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 115vh;
     background-color: #3795BD; /* Blue color */
-    z-index: 1; /* Ensure it's above the content */
+    z-index: 2; /* Ensure it's above the content */
     opacity: 1; /* Start fully visible */
     transition: opacity 0.5s ease-in-out;
     
@@ -437,7 +437,7 @@ background-color: #bfc0c4;
 .overlay-effect-section01 {
     position: absolute;
     width: 100%;
-    height: 150vh;
+    height: 200vh;
     background-color: #3795BD; /* Blue color */
     z-index: 1; 
     opacity: 1;
@@ -447,7 +447,7 @@ background-color: #bfc0c4;
 .block-catalog {
     position: absolute;
     width: 5%;
-    min-height: 100vh;
+    min-height: 115vh;
     background-color: #c0c0c0 !important;
     
 }
@@ -463,7 +463,7 @@ background-color: #bfc0c4;
 .block-section01 {
     position: absolute;
     width: 5%;
-    min-height: 150vh;
+    min-height: 200vh;
     background-color: #c0c0c0 !important;
 
 }
