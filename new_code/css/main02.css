@@ -304,19 +304,162 @@ background-color: #bfc0c4;
 .col01-section01 {
     padding-top: 5em;
     padding-bottom: 5em;
-    backdrop-filter: blur(20px);
+   
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.486);
     border-radius: 20px;
     height: 65vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .col02-section01 {
     padding-top: 5em;
-    padding-bottom: 5em;
-    backdrop-filter: blur(20px);
+    /* padding-bottom: 5em; */
+   
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
+/* <!---------------------------------------------------------------->  */
+
+col01-section01::before {
+    content: '';
+    background: rgba(0, 0,0, 0.7 );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+}
+
+#TimelineH1 {
+    margin: 0.3rem;
+    font-size: 2.5rem;
+}
+
+#TimelineH2 {
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    text-align: center;
+}
+.title p {
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    margin: 5rem auto;
+    max-width: 34.15rem;
+}
+
+.checkpoint {
+    max-width: 34rem;
+    padding-top: 2rem;
+    position: relative;
+}
+
+.checkpoint div {
+    border: 2px solid #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.checkpoint:nth-child(even) {
+    border-left: 2px solid #ffffff;
+    padding-left: 5rem;
+    transform: translateX(18.87rem);
+}
+
+.checkpoint:nth-child(odd) {
+    border-right: 2px solid #ffffff;
+    padding-right: 5rem;
+    transform: translateX(-15rem);
+}
+
+.checkpoint:nth-child(even)::before, 
+.checkpoint:nth-child(odd)::before {
+    content: '';
+    background: #ffffff;
+    width: 5rem;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(even)::before {
+    left: 0;
+}
+
+.checkpoint:nth-child(odd)::before {
+    right: 0;
+}
+
+.checkpoint:nth-child(even) div::before,
+.checkpoint:nth-child(odd) div::before {
+    content: '';
+    background: #ffffff;
+    box-shadow: 0 0 0 0.5rem #007cc95d;
+    border-radius: 20px;
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute;
+    top: 46%;
+    transform: rotateY(-50%);
+}
+.checkpoint:nth-child(even) div::before {
+    left: -0.5rem;
+}
+.checkpoint:nth-child(odd) div::before {
+    right: -0.5rem;
+}
+/* <!---------------------------------------------------------------->  */
+
+.hobby-list {
+    height: 50vh;  
+    padding: 10rem 0 0 10rem;  
+    list-style: none;  
+    display: flex;  
+    flex-direction: column;  
+    gap: 2rem; 
+}
+
+.hobby-item {
+    display: flex;  
+    align-items: center;  
+    padding: 1rem;  
+    transition: transform 0.3s ease;  
+}
+
+.hobby-item:hover {
+    transform: scale(1.05);  
+    background-color: #f0f0f059; 
+}
+
+.hobby-description {
+    margin-left: 20px;  
+    color: #333;  
+    font-size: 1rem;  
+    width: 70%; 
+}
+
+.title-hobbys {
+    padding: 0 0 0 10rem;
+    margin: 0 -10rem 0 0;
+}
+
+#HobbysH1 {
+    font-size: 2.5rem;  
+    margin: 0.3rem 0.3rem 0.3rem 0rem; 
+    
+}
+.st0 {
+    fill: #fdfdfd !important;
+  }
 
 /* <!---------------------------------------------------------------->  */
 
@@ -511,6 +654,8 @@ i {
         padding-top: calc(65vh + 120px);
     }
 }
+
+
 
 
 /* .........................................................................  */
