@@ -4,20 +4,19 @@ const canvasHeight = document.querySelector('.canvas').offsetHeight;
 const texts = gsap.utils.toArray(".anim");
 const mask = document.querySelector(".mask");
 
-// Create a larger scrolling context by adjusting the height of a wrapper or similar
+
 document.querySelector('.scroll-wrapper').style.height = `${canvasHeight + window.innerHeight * 7}px`;
 
 // Iterate over sections and apply animation
 sections.forEach((section, index) => {
-  // Adjust `xPercent` or any other transform property as needed
   gsap.to(section, {
     xPercent: -100, 
     ease: "none",
     scrollTrigger: {
       trigger: ".kontainer",
       scroller: window,
-      start: () => `top+=${canvasHeight + window.innerHeight * 8 + 250}`, // Starts when the specified position is met
-      end: "+=600", // Continues for an additional amount based on design needs
+      start: () => `top+=${canvasHeight + window.innerHeight * 8 + 250}`, 
+      end: "+=600", 
       scrub: 1,
       markers: true,
     }
@@ -33,9 +32,9 @@ function animateFooter() {
     scrollTrigger: {
         trigger: ".footer-wrapper",
         scroller: window,
-        start: "9500px", // 9500px
-        end: "10300px", // 10300px
-        toggleActions: "restart pause resume pause",
+        start: "9500px",
+        end: "10300px", 
+        toggleActions: "play none none none",
         /* markers: true, */
     },
     width: "0%",
@@ -54,17 +53,15 @@ function animateSection() {
         trigger: ".section02",
         scroller: window, 
         start: () => { 
-                // Errechnet den Startpunkt basierend auf der Höhe des Canvas
                 const canvasHeight = document.querySelector('.canvas').offsetHeight;
                 return "top+=" + (canvasHeight + window.innerHeight * 7 - 100);
             },
         end: () => { 
-                // Berechnet das Ende basierend auf der Höhe des Canvas minus einem festen Wert
                 const canvasHeight = document.querySelector('.canvas').offsetHeight;
                 const sectionHeight = document.querySelector('.section02').offsetHeight;
                 return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); 
             },
-        toggleActions: "restart restart restart restart",
+        toggleActions: "play none none none",
         markers: true
     },
     width: "0%",
@@ -75,7 +72,6 @@ function animateSection() {
         from: "start",
     },
     onComplete: function() {
-            // Hide the overlay completely after animation
             document.querySelector(".overlay-effect-catalog").style.opacity = '0';
             document.querySelector(".overlay-effect-catalog").style.display = 'none';
         }
@@ -87,19 +83,17 @@ function animateSection01() {
         scrollTrigger: {
             trigger: ".section01",
             scroller: window, 
-            start: () => { // 9500px
-                    // Errechnet den Startpunkt basierend auf der Höhe des Canvas
+            start: () => { 
                     const canvasHeight = document.querySelector('.canvas').offsetHeight;
-                    return "top+=" + (canvasHeight + window.innerHeight * 7 ); // - 500 um das zu weiter bringen
+                    return "top+=" + (canvasHeight + window.innerHeight * 7 - 200); 
                 },
-            end: () => { // 10300px
-                    // Berechnet das Ende basierend auf der Höhe des Canvas minus einem festen Wert
+            end: () => { 
                     const canvasHeight = document.querySelector('.canvas').offsetHeight;
                     const sectionHeight = document.querySelector('.section01').offsetHeight;
-                    return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); // Endet, wenn das untere Ende von 'section02' minus 6200px die Oberkante erreicht. 11020
+                    return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); 
                 },
-            toggleActions: "play play play play",
-            /* markers: true */
+            toggleActions: "play none none none",
+            markers: true
         },
         width: "0%",
         duration: 1.3,
@@ -109,14 +103,45 @@ function animateSection01() {
             from: "start",
         },
         onComplete: function() {
-                // Hide the overlay completely after animation
                 document.querySelector(".overlay-effect-section01").style.opacity = '0';
                 document.querySelector(".overlay-effect-section01").style.display = 'none';
             }
     });
 }
 
+function animateSection03() {
+        gsap.from(".block-contact", {
+            scrollTrigger: {
+                trigger: ".section03",
+                scroller: window, 
+                start: () => { 
+                        const canvasHeight = document.querySelector('.canvas').offsetHeight;
+                        return "top+=" + (canvasHeight + window.innerHeight * 7 - 200); 
+                    },
+                end: () => { 
+                        const canvasHeight = document.querySelector('.canvas').offsetHeight;
+                        const sectionHeight = document.querySelector('.section03').offsetHeight;
+                        return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); 
+                    },
+                toggleActions: "play none none none",
+                markers: true
+            },
+            width: "0%",
+            duration: 1.3,
+            ease: "power2.inOut",
+            stagger: {
+                amount: 1.5,
+                from: "start",
+            },
+            onComplete: function() {
+                    document.querySelector(".overlay-effect-contact").style.opacity = '0';
+                    document.querySelector(".overlay-effect-contact").style.display = 'none';
+                }
+        });
+    }
+
 animateSection01();
 animateSection();
+animateSection03();
 animateFooter();
 

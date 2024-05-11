@@ -149,10 +149,6 @@
     
 }
 
-.section-8 {
-    height: 300px;
-    
-}
 
 .whitespace {
     width: 100%;
@@ -181,8 +177,5 @@
   .s-7, .section-7 .header01, .section-7 .copy {
     background: var(--color-section-7);
   }
-  .s-8, .section-8 .header01, .section-8 .copy {
-    background: var(--color-section-8);
-  }
-
+ 
 

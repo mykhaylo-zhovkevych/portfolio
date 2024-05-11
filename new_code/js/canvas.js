@@ -226,12 +226,12 @@ function simulateKeyPress(keyCode) {
 
 // Use setTimeout to delay the simulation
 setTimeout(() => {
-    simulateKeyPress(119); 
+    simulateKeyPress(135); 
 }, 11000); 
 
 window.addEventListener('keypress', (event) => {
-    // Check if the pressed key is 'w' (ASCII code 119)
-    if (event.keyCode === 119 || event.which === 119) {
+    // Check if the pressed key is '‡' (ASCII code 135)
+    if (event.keyCode === 135 || event.which === 135) {
     
         setTimeout(() => {
             requestAnimationFrame(() => {

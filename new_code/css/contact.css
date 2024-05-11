@@ -3,20 +3,19 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    z-index: 2;
 
 }
 .contact {
     background-color: #bfc0c4;
     border-radius: 20px;
-    z-index: 2;
-    backdrop-filter: blur(20px);
+    z-index: 1;
+    
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.733);
 }
 
 .contact h2 {
     font-size: 40px;
-    color: azure;
+    color: #3795bd;
     text-align: center;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -26,7 +25,8 @@
 .contact form {
     width: 900px;
     text-align: center;
-    height: 800px;
+    height: 700px;
+    
 }
 
 form .input-box {
@@ -44,17 +44,17 @@ form .input-box {
     width: 100%;
     padding: 18px;
     background-color: transparent;
-    border: 2px solid rebeccapurple;
+    border: 1.5px solid #000000;
     outline: none;
     border-radius: 6px;
     font-size: 16px;
-    color: aliceblue;
+    color: #3795bd;
     margin: 12px 0;
    
 }
 
 .field.error .item {
-    border-color: red;
+    border-color: #ff0000;
 }
 
 .field.error .error-txt {
@@ -62,7 +62,7 @@ form .input-box {
 }
 
 .field .item::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
    
 }
 
@@ -74,19 +74,19 @@ form .textarea-field .item {
 
 form button {
     padding: 12px 32px;
-    background: #fff;
+    background: #bfc0c4;
     border: none;
     outline: none;
     border-radius: 6px;
-    box-shadow: 0 0 10px #0ef;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.555);
     font-size: 16px;
-    color: #333;
+    color: #3795bd;
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
     margin-top: 20px;
     transition: 0.5s;
-
+backdrop-filter: blur(20px);
 }
 
 form button:hover {
