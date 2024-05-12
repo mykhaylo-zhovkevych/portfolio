@@ -50,7 +50,7 @@ form .input-box {
     font-size: 16px;
     color: #3795bd;
     margin: 12px 0;
-   
+    font-family: "PP Supply Sans", Arial;
 }
 
 .field.error .item {
@@ -86,7 +86,7 @@ form button {
     cursor: pointer;
     margin-top: 20px;
     transition: 0.5s;
-backdrop-filter: blur(20px);
+    font-family: "PP Supply Sans", Arial;
 }
 
 form button:hover {

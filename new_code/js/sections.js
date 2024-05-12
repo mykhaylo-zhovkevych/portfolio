@@ -1,4 +1,4 @@
-const container = document.querySelector(".kontainer");
+/* const container = document.querySelector(".kontainer");
 const sections = gsap.utils.toArray(".kontainer section");
 const canvasHeight = document.querySelector('.canvas').offsetHeight;
 const texts = gsap.utils.toArray(".anim");
@@ -22,8 +22,33 @@ sections.forEach((section, index) => {
     }
   });
 });
+ */
+const container = document.querySelector(".kontainer");
+const sections = gsap.utils.toArray(".kontainer section");
+const canvasHeight = document.querySelector('.canvas').offsetHeight;
+const texts = gsap.utils.toArray(".anim");
+const mask = document.querySelector(".mask");
 
+document.querySelector('.scroll-wrapper').style.height = `${canvasHeight + window.innerHeight * 7}px`;
 
+// Check if the viewport width is less than 1100 pixels
+if (window.innerWidth >= 1100) {
+  
+  sections.forEach((section, index) => {
+    gsap.to(section, {
+      xPercent: -100,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".kontainer",
+        scroller: window,
+        start: () => `top+=${canvasHeight + window.innerHeight * 8 + 250}`,
+        end: "+=600",
+        scrub: 1,
+        markers: true,
+      }
+    });
+  });
+}
 // Ensure GSAP and ScrollTrigger are loaded
 gsap.registerPlugin(ScrollTrigger);
 

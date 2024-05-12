@@ -47,6 +47,7 @@ canvas {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    font-family: "PP Supply Sans", Arial;
 }
 
 
@@ -74,7 +75,7 @@ div .ball-text {
     font-family: "PP Supply Sans", Arial;
     flex-wrap: wrap;
     white-space: normal; 
-    word-wrap: break-word;
+    word-wrap: anywhere;
     border-radius: 20px;
     animation: shadowPulse01 1s infinite alternate ease-in-out;
     
@@ -85,20 +86,20 @@ div .ball-text {
   color: #bfc0c4;
   font-size: 3rem;
   top: 15rem;
-  left: 70%;  /* Start at 50% from the left */
-  transform: translateX(-50%);  /* Center the element */
-  width: 50%;  /* Set width relative to the viewport */
+  left: 70%;  
+  transform: translateX(-50%) !important; 
+  width: 50%; 
   padding: 1rem;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
   text-align: justify;
   white-space: normal;
   overflow: auto;
-  word-wrap: break-word;
-  display: flex;  /* Use flexbox */
-  flex-direction: column;  /* Stack children vertically */
-  align-items: start;  /* Align items to the start of the flex container */
-  justify-content: center;  /* Center content vertically */
+  word-wrap: anywhere;
+  display: flex; 
+  flex-direction: column;  
+  align-items: start;  
+  justify-content: center;  
   min-height: 20%;
   border-radius: 20px;
   overflow-x: hidden;
@@ -144,15 +145,15 @@ div .ball-text {
   }
 
     .ball-text {
-    font-size: 1rem !important; /* Smaller text on mobile */
-    padding-left: calc(var(--dynamic-padding-little) + 10%); /* Less padding to accommodate smaller screen size */
-    max-width: 80% !important; /* Use more of the screen for text */
-    bottom: 10% !important; /* Position it closer to the bottom */
-    left: 50% !important; /* Start from the middle of the screen */
-    transform: translateX(-50%) !important; /* Center it horizontally */
-    align-items: center !important; /* Center items since there is no image on the left */
-    min-height: initial !important; /* Reset min-height */
-    padding-right: 1rem !important; /* Add padding to the right to not touch the screen edge */
+    font-size: 1rem !important;
+    padding-left: calc(var(--dynamic-padding-little) + 10%); 
+    max-width: 80% !important; 
+    bottom: 10% !important;
+    left: 50% !important; 
+    transform: translateX(-50%) !important; 
+    align-items: center !important;
+    min-height: initial !important; 
+    padding-right: 1rem !important; 
     border-radius: 20px;
     font-family: "PP Supply Sans", Arial;
     animation: shadowPulse01 1s infinite alternate ease-in-out;
@@ -160,9 +161,9 @@ div .ball-text {
 
   .ball-text02 {
     font-size: 1.5rem;
-    top: 10rem;  /* Adjust the position from the top */
-    width: 60% ;  /* Make the width suitable for mobile devices */
-    grid-template-columns: 1fr ; /* Stack items in one column for mobile */
+    top: 10rem;  
+    width: 60% ; 
+    grid-template-columns: 1fr ; 
     left: 15rem;
     border-radius: 20px;
     overflow-x: hidden;
@@ -176,10 +177,10 @@ div .ball-text {
 @media screen and (max-width: 750px) {
   img {
       position: fixed;
-      left: 5%; /* Closer to the left edge */
-      bottom: 10%; /* Align with the .ball-text bottom */
-      min-height: 20%; /* Increase size if needed */
-      min-width: 30%; /* Increase width if needed */
+      left: 5%; 
+      bottom: 10%; 
+      min-height: 20%;
+      min-width: 30%; 
       border-radius: 20px;
       animation: shadowPulse01 1s infinite alternate ease-in-out;
   }
@@ -208,7 +209,7 @@ div .ball-text {
     flex-direction: row;
     flex-wrap: wrap;
     white-space: normal;
-    word-wrap: break-word;
+    word-wrap: anywhere;
     align-items: center;
     gap: 1rem;
     border-radius: 20px;
@@ -222,20 +223,20 @@ div .ball-text {
     color: #bfc0c4;
     font-size: 3rem;
     top: 15rem;
-    left: 70%;  /* Start at 50% from the left */
-    transform: translateX(-50%);  /* Center the element */
-    width: 50%;  /* Set width relative to the viewport */
+    left: 70%;  
+    transform: translateX(-50%) !important;  
+    width: 50%;  
     padding: 1rem;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
     text-align: justify;
     white-space: normal;
     overflow: auto;
-    word-wrap: break-word;
-    display: flex;  /* Use flexbox */
-    flex-direction: column;  /* Stack children vertically */
-    align-items: start;  /* Align items to the start of the flex container */
-    justify-content: center;  /* Center content vertically */
+    word-wrap: anywhere;
+    display: flex;  
+    flex-direction: column;  
+    align-items: start; 
+    justify-content: center;  
     min-height: 20%;
     border-radius: 20px;
     overflow-x: hidden;
@@ -263,7 +264,7 @@ div .ball-text {
 
 @media screen and (min-width: 1161px) and (max-width: 1299px) {
   :root {
-    --dynamic-padding01: 25vw;  /* Even larger padding for wider screens */
+    --dynamic-padding01: 25vw;  
   }
 
 div .ball-text {
@@ -281,7 +282,7 @@ div .ball-text {
   flex-direction: row;
   flex-wrap: wrap;
   white-space: normal;
-  word-wrap: break-word;
+  word-wrap: anywhere;
   align-items: center;
   gap: 1rem;
   border-radius: 20px;
@@ -295,20 +296,20 @@ div .ball-text {
   color: #bfc0c4;
   font-size: 3rem;
   top: 15rem;
-  left: 70%;  /* Start at 50% from the left */
-  transform: translateX(-50%);  /* Center the element */
-  width: 50%;  /* Set width relative to the viewport */
+  left: 70%; 
+  transform: translateX(-50%) !important;  
+  width: 50%; 
   padding: 1rem;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
   text-align: justify;
   white-space: normal;
   overflow: auto;
-  word-wrap: break-word;
-  display: flex;  /* Use flexbox */
-  flex-direction: column;  /* Stack children vertically */
-  align-items: start;  /* Align items to the start of the flex container */
-  justify-content: center;  /* Center content vertically */
+  word-wrap: anywhere;
+  display: flex;  
+  flex-direction: column;  
+  align-items: start;  
+  justify-content: center;  
   min-height: 20%;
   border-radius: 20px;
   overflow-x: hidden;
@@ -334,7 +335,7 @@ div .ball-text {
 
 @media (min-width: 1300px) and (max-width: 1800px) {
   :root {
-    --dynamic-padding02: 20vw; /* Optimal padding for large screens */
+    --dynamic-padding02: 20vw; 
   }
 
 
@@ -359,7 +360,7 @@ div .ball-text {
     font-family: "PP Supply Sans", Arial;
     flex-wrap: wrap;
     white-space: normal; 
-    word-wrap: break-word;
+    word-wrap: anywhere;
     border-radius: 20px;
     animation: shadowPulse01 1s infinite alternate ease-in-out;
  }
@@ -369,20 +370,20 @@ div .ball-text {
   color: #bfc0c4;
   font-size: 3rem;
   top: 15rem;
-  left: 70%;  /* Start at 50% from the left */
-  transform: translateX(-50%);  /* Center the element */
-  width: 50%;  /* Set width relative to the viewport */
+  left: 70%;  
+  transform: translateX(-50%) !important;  
+  width: 50%;  
   padding: 1rem;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
   text-align: justify;
   white-space: normal;
   overflow: auto;
-  word-wrap: break-word;
-  display: flex;  /* Use flexbox */
-  flex-direction: column;  /* Stack children vertically */
-  align-items: start;  /* Align items to the start of the flex container */
-  justify-content: center;  /* Center content vertically */
+  word-wrap: anywhere;
+  display: flex;  
+  flex-direction: column;  
+  align-items: start;  
+  justify-content: center;  
   min-height: 20%;
   border-radius: 20px;
   overflow-x: hidden;
@@ -408,7 +409,7 @@ div .ball-text {
 
 @media (min-width: 1801px) and (max-width: 2592px) {
   :root {
-    --dynamic-padding03: 10vw; /* Very large padding for ultrawide screens */
+    --dynamic-padding03: 10vw; 
   }
 
 
@@ -430,7 +431,7 @@ div .ball-text {
     font-family: "PP Supply Sans", Arial;
     flex-wrap: wrap;
     white-space: normal; 
-    word-wrap: break-word;
+    word-wrap: anywhere;
     border-radius: 20px;
     animation: shadowPulse01 1s infinite alternate ease-in-out;
     
@@ -441,20 +442,20 @@ div .ball-text {
   color: #bfc0c4;
   font-size: 3rem;
   top: 15rem;
-  left: 70%;  /* Start at 50% from the left */
-  transform: translateX(-50%);  /* Center the element */
-  width: 50%;  /* Set width relative to the viewport */
+  left: 70%;  
+  transform: translateX(-50%) !important;
+  width: 50%;  
   padding: 1rem;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
   text-align: justify;
   white-space: normal;
   overflow: auto;
-  word-wrap: break-word;
-  display: flex;  /* Use flexbox */
-  flex-direction: column;  /* Stack children vertically */
-  align-items: start;  /* Align items to the start of the flex container */
-  justify-content: center;  /* Center content vertically */
+  word-wrap: anywhere;
+  display: flex;  
+  flex-direction: column;  
+  align-items: start;  
+  justify-content: center; 
   min-height: 20%;
   border-radius: 20px;
   overflow-x: hidden;
