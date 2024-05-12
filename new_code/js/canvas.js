@@ -149,11 +149,11 @@ function updateAnimations() {
     if (screenWidth <= 650) {  
       xStart = '-0%';
       startPercent = "605%";
-      endPercent = "4955%";
+      endPercent = "1255%";
     } else if (screenWidth <= 1100) {  
       xStart = '-0%';
       startPercent = "605%";
-      endPercent = "1755%";
+      endPercent = "1055%";
     } else {  // Larger screens
       xStart = '-120%';
       startPercent = "605%";
@@ -173,7 +173,7 @@ function updateAnimations() {
         scrub: true,
         start: startPercent,
         end: endPercent,
-       /*  markers: true, */
+        markers: true,
         toggleActions: 'play none none reverse',
         onEnter: () => gsap.to(".ball-text", { opacity: 1 }),
         onLeave: () => gsap.to(".ball-text", { opacity: 0 }),

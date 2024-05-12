@@ -1,13 +1,13 @@
 :root {
     --color-bg: #c0c0c0;
-    --color-section-1:#fff;
-    --color-section-2:#bd1f1f;
-    --color-section-3:#00a2ff;
-    --color-section-4:#d819b8;
-    --color-section-5:#1d00c4;
-    --color-section-6:#d0ff00;
-    --color-section-7:#1adbc1;
-    --color-section-8:#00ff0d;
+    --color-section-1:#F4F9F9;
+    --color-section-2:#CCF2F4;
+    --color-section-3:#A4EBF3;
+    --color-section-4:#AAAAAA;
+    --color-section-5:#EEF5FF;
+    --color-section-6:#B4D4FF;
+    --color-section-7:#86B6F6;
+    --color-section-8:#176B87;
 }
 
 @font-face {
@@ -101,6 +101,37 @@
     font-size: 20px;
     
 }
+
+.copy-container {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-start; 
+    height: 100%;
+}
+
+.copy-text {
+    width: 50%; 
+    padding-right: 20px;
+    height: 85%;
+}
+
+.copy-picture {
+    margin: 2rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 20px;
+    background-color: transparent;
+    width: 50%;
+    height: 85%;
+    box-shadow: 10px 10px 30px -10px rgb(0, 0, 0);
+}
+
+#h2-title-copy {
+    padding-bottom: 2rem;
+    
+
+}
+
 .copy {
     height: 100%;
     padding: 20px;
@@ -115,7 +146,7 @@
 }
 
 .section-1 {
-    height: 500px;
+    height: 700px;
 
 }
 
