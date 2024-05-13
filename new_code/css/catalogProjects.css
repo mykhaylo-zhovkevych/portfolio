@@ -95,8 +95,8 @@
 
 .map > div p:nth-child(1) {
     font-size: 13px;
-
 }
+
 .map > div p:nth-child(2) {
     font-size: 20px;
     
@@ -108,25 +108,27 @@
     align-items: center; 
     justify-content: flex-start; 
     height: 100%;
+    width: 100%;
 }
 
 .copy-text {
     width: 50%; 
-    padding-right: 20px;
+    padding-left: 50px;
     height: 85%;
 }
 
 .copy-picture {
-    margin: 2rem 2rem 2rem 2rem;
-    padding: 2rem 2rem 2rem 2rem;
+    margin: 2rem;
     border-radius: 20px;
-    background-color: transparent;
-    width: 50%;
-    height: 85%;
+    background-color: #f0f0f0;  /* Example background color */
+   /*  width: 100%; */
+    height: auto;
     box-shadow: 10px 10px 30px -10px rgb(0, 0, 0);
+    overflow: hidden;  /* Prevents image from overflowing its container */
 }
 
 #h2-title-copy {
+    padding-top: 1rem;
     padding-bottom: 2rem;
     
 
@@ -146,12 +148,12 @@
 }
 
 .section-1 {
-    height: 700px;
+    height: 800px;
 
 }
 
 .section-2 {
-    height: 300px;
+    height: 1100px;
     
 }
 

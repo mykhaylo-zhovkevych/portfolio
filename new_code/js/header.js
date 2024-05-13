@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-let lastWindowWidth = window.innerWidth;
+/* let lastWindowWidth = window.innerWidth;
 function hasSignificantResize(newWidth) {
   // Definieren Sie einen Schwellenwert für eine "signifikante" Änderung
   const threshold = 100; // Beispiel: 100 Pixel Unterschied
@@ -36,5 +36,5 @@ window.addEventListener('resize', () => {
     lastWindowWidth = currentWidth;
     window.location.reload();
   }
-});
+}); */
 

@@ -1107,7 +1107,7 @@ background-color: #bfc0c4;
 /* Größere Bildschirme von 1800px bis 2559px */
 @media (min-width: 1800px) and (max-width: 2559px) {
     .sec2-wrapper {
-        padding-top: calc(10vh + 220px);
+        padding-top: calc(15vh + 220px);
     }
 }
 

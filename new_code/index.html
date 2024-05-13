@@ -15,6 +15,7 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="/new_code/css/section01.css">
     <link rel="stylesheet" href="/new_code/css/footer.css">
+    <link rel="stylesheet" href="/new_code/css/imgs.css">
     <!---------------------------------------------------------------->
 
 </head>
@@ -38,25 +39,25 @@
                 </a>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="#profil">
                     <span class="icon"> <ion-icon name="person-outline"></ion-icon> </span>
                     <span class="text">Profil</span>
                 </a>
                 </li>
                 <li class="list ">
-                    <a href="#">
+                    <a href="#wissen">
                     <span class="icon" ><ion-icon name="briefcase-outline"></ion-icon> </span>
                     <span class="text">Wissen</span>
                 </a>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="#projekte">
                     <span class="icon"> <ion-icon name="shield-checkmark-outline"></ion-icon> </span>
                     <span class="text">Projekte</span>
                 </a>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="#kontakt">
                     <span class="icon"> <ion-icon name="call-outline"></ion-icon> </span>
                     <span class="text">Kontakt</span>
                 </a>
@@ -75,7 +76,7 @@
     <!---------------------------------------------------------------->
     <main class="haupt">
         <div class="ball-text">
-            <img src="Screenshot1.png" alt="404"> 
+            <img src="/new_code/Screenshot1.png" alt="404"> 
             <div>
               <h2>Über mich:</h2>
               <h3>Mein Name ist Mykhaylo und zurzeit mache ich eine Berufsinformatikausbildung bei WISS. In diesem Portfolio erfahren Sie mehr über mich und meine Leidenschaft.</h3>
@@ -92,7 +93,7 @@
             <svg id="visual" viewBox="0 0 3440 100" width="3440" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 49L3440 49" fill="none" stroke-linecap="square" stroke-linejoin="bevel" stroke="#3795BD" stroke-width="40"></path></svg>   
         </div>	
         <!---------------------------------------------------------------->
-        <section class="section01">
+        <section class="section01" id="profil">
             <div class="container-effect-section01">
                 <div class="loader-effect"></div>
                 <div class="overlay-effect-section01">
@@ -197,13 +198,13 @@
                                                 Lesen - .
                                             </div>
                                         </li>
-                                        <li class="hobby-item">
+                                        <li class="hobby-item" id="wissen">
                                             <lord-icon
                                             src="https://cdn.lordicon.com/vlycxjwx.json"
                                             trigger="hover"
                                             colors="primary:#ffffff,secondary:#e4e4e4"
                                             style="width:120px;height:120px">
-                                        </lord-icon>
+                                        </lord-icon >
                                             <div class="hobby-description">
                                                 Programmierung - .
                                             </div>
@@ -212,7 +213,7 @@
                                 </div>
                             </div>
                          </div>
-                    </section>
+                    </section >
         <!---------------------------------------------------------------->
                     <section class="sec2 pin">
                         <div class="sec2-wrapper">
@@ -318,7 +319,7 @@
             <svg id="visual" viewBox="0 0 3440 100" width="3440" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 49L3440 49" fill="none" stroke-linecap="square" stroke-linejoin="bevel" stroke="#3795BD" stroke-width="40"></path></svg>   
         </div>	
         <!---------------------------------------------------------------->
-        <section class="section02">
+        <section class="section02" id="projekte">
                 <div class="container-effect-catalog">
                     <div class="loader-effect"></div>
                     <div class="overlay-effect-catalog">
@@ -386,13 +387,26 @@
                         </div>
                         <div class="copy">
                             
-                            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa?</h3>
+                            <h3>Portfolio mit gsap, js und css </h3>
                             <div class="copy-container">
                             <div class="copy-picture">
-                                <p>Lorem, ipsum.</p>
+                                <div class="slider">
+                                    <div class="slides">
+                                        <img class="img-copy" src="/experement/scrollImg/copy01/Screenshot 2024-05-13 110518.png" alt="404">
+                                        <img class="img-copy" src="/experement/scrollImg/copy01/Screenshot 2024-05-13 110843.png" alt="404">
+                                        <img class="img-copy" src="/experement/scrollImg/copy01/Screenshot 2024-05-13 110857.png" alt="404">
+                                        <img class="img-copy" src="/experement/scrollImg/copy01/Screenshot 2024-05-13 110935.png" alt="404">
+                                        <img class="img-copy" src="/experement/scrollImg/copy01/Screenshot 2024-05-13 111031.png" alt="404">
+                                        <img class="img-copy" src="/experement/scrollImg/copy01/Screenshot 2024-05-13 111051.png" alt="404">
+                                        <img class="img-copy" src="/experement/scrollImg/copy01/Screenshot 2024-05-13 111104.png" alt="404">
+                                        <button class="prev" onclick="prevSlide()">&#10094;</button>
+                                        <button class="next" onclick="nextSlide()">&#10095;</button>
+                                    </div>
+                                   
+                                </div>
                             </div>
                             <div class="copy-text">
-                                <h2 id="h2-title-copy">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, consequatur.</h2>
+                                <h2 id="h2-title-copy">Die Idee war, eine scrollende 3d-Interaktion mit einem horizontalen und vertikalen Seitenlauf zu schaffen.</h2>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur corrupti sed, eos laudantium possimus quia distinctio numquam nobis quaerat, consectetur fugiat consequatur officiis?</p>
                                 </div>
                             </div>
@@ -405,12 +419,27 @@
                         </div>
                         <div class="copy">
                             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa?</h3>
-                            <div class="copy-picture">
-
-                            </div>
-                            <div class="copy-text">
-
-                            </div>
+                            <div class="copy-container">
+                                <div class="copy-picture">
+                                    <div class="slider">
+                                        <div class="slides">
+                                            <img class="img-copy" src="" alt="404">
+                                            <img class="img-copy" src="" alt="404">
+                                            <img class="img-copy" src="" alt="404">
+                                            <img class="img-copy" src="" alt="404">
+                                            <img class="img-copy" src="" alt="404">
+                                            
+                                            <button class="prev" onclick="prevSlide()">&#10094;</button>
+                                            <button class="next" onclick="nextSlide()">&#10095;</button>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="copy-text">
+                                    <h2 id="h2-title-copy">Die Idee war, eine scrollende 3d-Interaktion mit einem horizontalen und vertikalen Seitenlauf zu schaffen.</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur corrupti sed, eos laudantium possimus quia distinctio numquam nobis quaerat, consectetur fugiat consequatur officiis?</p>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                     <div class="section-3 sec">
@@ -509,7 +538,7 @@
         <svg id="visual" viewBox="0 0 3440 100" width="3440" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 49L3440 49" fill="none" stroke-linecap="square" stroke-linejoin="bevel" stroke="#3795BD" stroke-width="40"></path></svg>   
     </div>	
     <!---------------------------------------------------------------->
-    <aside class="section03">
+    <aside class="section03" id="kontakt">
         <div class="container-effect-contact">
             <div class="loader-effect"></div>
             <div class="overlay-effect-contact">
@@ -824,6 +853,41 @@
         }
         
         requestAnimationFrame(render);
+    </script>
+    <script>
+        const slides = document.querySelectorAll(".slides img");
+let slideIndex = 0;
+/* let intercalID = null; */
+
+InitializeSlider();
+function InitializeSlider() {
+    slides[slideIndex].classList.add("displaySlide");
+}
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        slideIndex = 0;
+    }
+    else if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    slides.forEach(slide => {
+        slide.classList.remove("displaySlide");
+    });
+    slides[slideIndex].classList.add("displaySlide");
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlide(slideIndex);
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+}
+
     </script>
 <!---------------------------------------------------------------->
 </body>

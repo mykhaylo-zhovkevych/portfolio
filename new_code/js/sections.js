@@ -44,7 +44,7 @@ if (window.innerWidth >= 1100) {
         start: () => `top+=${canvasHeight + window.innerHeight * 8 + 250}`,
         end: "+=600",
         scrub: 1,
-        markers: true,
+        /* markers: true, */
       }
     });
   });
@@ -67,7 +67,7 @@ function animateFooter() {
             return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 7); 
         }, 
         toggleActions: "play none none none",
-        markers: true,
+       /*  markers: true, */
     },
     width: "0%",
     duration: 1.3,
@@ -99,7 +99,7 @@ function animateSection() {
                 return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); 
             },
         toggleActions: "play none none none",
-        markers: true
+      /*   markers: true */
     },
     width: "0%",
     duration: 1.3,
@@ -130,7 +130,7 @@ function animateSection01() {
                     return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); 
                 },
             toggleActions: "play none none none",
-            markers: true
+            /* markers: true */
         },
         width: "0%",
         duration: 1.3,
@@ -161,7 +161,7 @@ function animateSection03() {
                         return "top+=" + (canvasHeight - sectionHeight + window.innerHeight * 9); 
                     },
                 toggleActions: "play none none none",
-                markers: true
+                /* markers: true */
             },
             width: "0%",
             duration: 1.3,

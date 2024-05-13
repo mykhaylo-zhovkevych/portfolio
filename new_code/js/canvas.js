@@ -173,7 +173,7 @@ function updateAnimations() {
         scrub: true,
         start: startPercent,
         end: endPercent,
-        markers: true,
+       /*  markers: true, */
         toggleActions: 'play none none reverse',
         onEnter: () => gsap.to(".ball-text", { opacity: 1 }),
         onLeave: () => gsap.to(".ball-text", { opacity: 0 }),
