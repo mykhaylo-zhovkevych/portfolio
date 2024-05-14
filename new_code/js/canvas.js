@@ -144,9 +144,15 @@ gsap.fromTo('.ball-text', {
 // Function to determine device type based on window width and set GSAP animations
 function updateAnimations() {
     const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
     let xStart, startPercent, endPercent;
   
-    if (screenWidth <= 650) {  
+    if (screenWidth <= 1400 && screenHeight <= 1000) {
+        xStart = '-120%';  
+        startPercent = "605%";
+        endPercent = "1255%"; 
+    }
+    else if (screenWidth <= 650) {  
       xStart = '-0%';
       startPercent = "605%";
       endPercent = "1255%";
@@ -173,8 +179,8 @@ function updateAnimations() {
         scrub: true,
         start: startPercent,
         end: endPercent,
-       /*  markers: true, */
-        toggleActions: 'play none none reverse',
+        markers: true, 
+        toggleActions: 'play none none none',
         onEnter: () => gsap.to(".ball-text", { opacity: 1 }),
         onLeave: () => gsap.to(".ball-text", { opacity: 0 }),
       }

@@ -51,6 +51,16 @@ img.displaySlide {
     margin: 0 0 0 0;
 }
 
+#h2-title-copy01 {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    letter-spacing: 0rem;
+}
+
+.github-icon-copy-text {
+
+}
+
 @media (min-width: 400px) and (max-width: 1499px) {
 
 
@@ -115,9 +125,14 @@ img.displaySlide {
     #h2-title-copy {
         padding-top: 5rem;
         padding-bottom: 2rem;
+        letter-spacing: 0rem;
       }
 
-
+      #h2-title-copy01 {
+        padding-top: 8rem;
+        padding-bottom: 2rem;
+        letter-spacing: 0rem;
+      }
 
 }
 
@@ -184,8 +199,14 @@ img.displaySlide {
     #h2-title-copy {
         padding-top: 4rem;
         padding-bottom: 2rem;
+        letter-spacing: 0rem;
       }
 
+    #h2-title-copy01 {
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+        letter-spacing: 0rem;
+    }
 }
 
 
@@ -251,8 +272,12 @@ img.displaySlide {
 #h2-title-copy {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    
-
+    letter-spacing: 0rem;
 }
 
+#h2-title-copy01 {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    letter-spacing: 0rem;
+}
 }
