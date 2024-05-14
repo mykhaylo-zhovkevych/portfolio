@@ -146,17 +146,23 @@ function updateAnimations() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
     let xStart, startPercent, endPercent;
-  
-    if (screenWidth <= 1400 && screenHeight <= 1000) {
+    // phone
+    if (screenWidth <= 1400 && screenHeight <= 800) {
+        xStart = '-120%';  
+        startPercent = "605%";
+        endPercent = "1455%"; 
+    }
+    // laptopp
+    else if (screenWidth <= 1400 && screenHeight <= 1000) {
         xStart = '-120%';  
         startPercent = "605%";
         endPercent = "1255%"; 
     }
-    else if (screenWidth <= 650) {  
+    else if (screenWidth <= 650 && screenHeight >= 1000) {  
       xStart = '-0%';
       startPercent = "605%";
       endPercent = "1255%";
-    } else if (screenWidth <= 1100) {  
+    } else if (screenWidth <= 1100 && screenHeight >= 1000) {  
       xStart = '-0%';
       startPercent = "605%";
       endPercent = "1055%";
