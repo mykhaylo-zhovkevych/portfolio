@@ -33,7 +33,7 @@
 body, html {
     overflow-y: auto;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 .website-content02 {
@@ -65,181 +65,6 @@ body, html {
     /* filter: blur(15px);  */
     box-shadow: 0 0 10px -10px rgba(255, 255, 255, 0.25);
     z-index: 1
-}
-
-/* <!---------------------------------------------------------------->  */
-.header {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    /* padding: 0.5em 0em; */
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    width: 100%;
-    padding: 1em 1em;
-    cursor:auto;
-    z-index: 3;
-}
-
-#nameOfPortfolio {
-    position: inherit;
-    left: 0em;
-    font-family: 'header', Arial;
-    transition: transform 0.3s ease;
-    padding: 1em;
-    color: #ffffff9c;
-}
-#nameOfPortfolio:hover {
-    transform: scale(1.1);
-    color: #3795bd;
-    
-}
-
-.header-cover {
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
-    display: flex;
-    width: auto;
-    height: 6rem;
-    border-radius: 20px;
-
-}
-
-.navigation {
-    width: 350px;
-    height: 70px;
-    background: #ffffff00;
-    position: relative;  /* This is critical for absolute positioning of children */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin: auto; 
-        
-}
-
-.navigation ul {
-    display: flex;
-    justify-content: space-between; /* This will ensure spacing is distributed evenly */
-    width: 100%;
-    padding: 0; /* Ensure no default padding is causing issues */
-}
-.navigation ul li {
-
-    position: relative;
-    list-style: none;
-    width: 70px;
-    height: 70px;
-    z-index: 1;
-}
-.navigation ul li  a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-
-}
-
-.navigation ul li  a .icon {
-    position: relative;
-    display: block;
-    line-height: 80px;
-    font-size: 1.8em;
-    text-align: center;
-    transition: 0.5s;
-    color: var(--clr);
-
-}
-
-/* .navigation ul li.active  a .icon {
-   
-
-} */
-
-.navigation ul li a .text {
-    position: fixed;
-    color:var(--clr);
-    font-weight: 500;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.navigation ul li.active a .text {
-    opacity: 1;
-}
-
-.indicator {
-    position: absolute;
-    top: 0;  
-    transform: translateY(-150%); 
-    width: 70px;
-    height: 70px;
-    background: #bfc0c45b;
-    border-radius: 20%;
-    transition: transform 0.5s ease;
-    left: 0;
-}
-
-
-.indicator::before {
-    content: '';
-    position: absolute;
-    top: 35%;
-    left: -30px;
-    width: 25px;
-    height: 20px;
-    background: transparent;
-   /*  border-top-right-radius: 40px; */
-    border: 5px solid transparent;
-   /*  border-top-color: #1100ffd2; 
-    border-right-color: #1100ff9f;  */
-
-}
-
-.indicator::after {
-    content: '';
-    position: absolute;
-    top: 35%;
-    right: 30px;
-    width: 25px;
-    height: 20px;
-    background: transparent;
-   /*  border-top-left-radius: 40px; */
-    border: 5px solid transparent;
-   /*  border-top-color: #1100ffd2; 
-    border-left-color: #1100ff9f;  */
-
-}
-
-.navigation ul li:nth-child(1).active ~ .indicator {
-    transform: translateX(calc(70px * 0));
-}
-
-.navigation ul li:nth-child(2).active ~ .indicator {
-    transform: translateX(calc(70px * 1));
-}
-
-.navigation ul li:nth-child(3).active ~ .indicator {
-    transform: translateX(calc(70px * 2));
-}
-
-.navigation ul li:nth-child(4).active ~ .indicator {
-    transform: translateX(calc(70px * 3));
-}
-
-.navigation ul li:nth-child(5).active ~ .indicator {
-    transform: translateX(calc(70px * 4));
 }
 
 /* <!---------------------------------------------------------------->  */
@@ -560,8 +385,6 @@ i {
     text-align: start;
     opacity: 0.5;
     line-height: 50px;
-
-    /* font-size: 10px; will not work there above is allready defined  */
  }
 
 .skill-level {
@@ -1167,7 +990,7 @@ background-color: #bfc0c4;
 .overlay-effect-catalog {
     position: absolute;
     width: 100%;
-    height: 120vh;
+    height: 130vh;
     background-color: #3795BD; /* Blue color */
     z-index: 2; /* Ensure it's above the content */
     opacity: 1; /* Start fully visible */
@@ -1199,7 +1022,7 @@ background-color: #bfc0c4;
 .block-catalog {
     position: absolute;
     width: 5%;
-    min-height: 120vh;
+    min-height: 130vh;
     background-color: #c0c0c0 !important;
     
 }
