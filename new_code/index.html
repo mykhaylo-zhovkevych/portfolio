@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Mykhaylo, Zhovkevych, mykhaylo-zhovkevych, Mykhaylo Zhovkevych">
+    <meta name="keywords" content="Mykhaylo, Zhovkevych, mykhaylo-zhovkevych, Mykhaylo Zhovkevych, mykhaylo, zhovkevych, михайло, жовкевич, Михайло, Жовкевич, Михайло Жовкевич">
     <meta name="description" content="Portfolio Zhovkevych">
     <link rel="icon" type="image/png" href="logo.png">
     <title>Portfolio Zhovkevych</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/new_code/css/canvas.css">
-    <link rel="stylesheet" href="/new_code/css/main02.css">
+    <link rel="stylesheet" href="/new_code/css/main.css">
     <link rel="stylesheet" href="/new_code/css/menu02.css">
     <link rel="stylesheet" href="/new_code/css/preloader02.css">
     <link rel="stylesheet" href="/new_code/css/catalogProjects.css">
@@ -19,9 +19,8 @@
     <link rel="stylesheet" href="/new_code/css/header.css">
     <link rel="stylesheet" href="/new_code/css/footer.css">
     <link rel="stylesheet" href="/new_code/css/imgs.css">
-    <!---------------------------------------------------------------->
-
 </head>
+    <!---------------------------------------------------------------->
 <body>
     <canvas id="canvas-main" class="canvas"></canvas>
     <!---------------------------------------------------------------->
@@ -37,31 +36,58 @@
             <ul>
                 <li class="list">
                     <a href="#">
-                    <span class="icon"> <ion-icon name="home-outline"></ion-icon> </span>
+                    <span class="icon"> <lord-icon
+                        src="https://cdn.lordicon.com/laqlvddb.json"
+                        trigger="hover"
+                        stroke="bold"
+                        colors="primary:#ffffff,secondary:#ffffff">
+                    </lord-icon></span>
                     <span class="text">Home</span>
                 </a>
                 </li>
                 <li class="list">
                     <a href="#profil">
-                    <span class="icon"> <ion-icon name="person-outline"></ion-icon> </span>
+                    <span class="icon"> <lord-icon
+                        src="https://cdn.lordicon.com/bgebyztw.json"
+                        trigger="hover"
+                        stroke="bold"
+                        state="hover-looking-around"
+                        colors="primary:#ffffff,secondary:#ffffff">
+                    </lord-icon> </span>
                     <span class="text">Profil</span>
                 </a>
                 </li>
                 <li class="list ">
                     <a href="#wissen">
-                    <span class="icon" ><ion-icon name="shield-checkmark-outline"></ion-icon> </span>
+                    <span class="icon" ><lord-icon
+                        src="https://cdn.lordicon.com/wwmtsdzm.json"
+                        trigger="hover"
+                        stroke="bold"
+                        colors="primary:#ffffff,secondary:#ffffff">
+                    </lord-icon> </span>
                     <span class="text">Wissen</span>
                 </a>
                 </li>
                 <li class="list">
                     <a href="#projekte">
-                    <span class="icon"> <ion-icon name="briefcase-outline"></ion-icon> </span>
+                    <span class="icon"> <lord-icon
+                        src="https://cdn.lordicon.com/qmsejndz.json"
+                        trigger="hover"
+                        stroke="bold"
+                        colors="primary:#ffffff,secondary:#ffffff">
+                    </lord-icon> </span>
                     <span class="text">Projekte</span>
                 </a>
                 </li>
                 <li class="list">
                     <a href="#kontakt">
-                    <span class="icon"> <ion-icon name="call-outline"></ion-icon> </span>
+                    <span class="icon"> <lord-icon
+                        src="https://cdn.lordicon.com/ebjjjrhp.json"
+                        trigger="hover"
+                        stroke="bold"
+                        state="hover-spin"
+                        colors="primary:#ffffff,secondary:#ffffff">
+                    </lord-icon> </span>
                     <span class="text">Kontakt</span>
                 </a>
                 </li>
@@ -73,8 +99,8 @@
             <lord-icon
                 src="https://cdn.lordicon.com/jnzhohhs.json"
                 trigger="hover"
-                colors="primary:#86a7c1"
-                style="width:60px;height:60px;z-index: 10;">
+                colors="primary:#ffffff"
+                style="width:55px;height:55px;z-index: 10;">
             </lord-icon>
         </div>
         <div class="header-info-text">
@@ -120,12 +146,9 @@
         </div> -->
     </header> 
     <!---------------------------------------------------------------->
-
-
-    <!---------------------------------------------------------------->
     <main class="haupt">
         <div class="ball-text">
-            <img src="/new_code/Screenshot1.png" alt="404"> 
+            <img src="/new_code/7M1A8792.jpg" alt="404"> 
             <div>
               <h2>Über mich:</h2>
               <h3>Mein Name ist Mykhaylo und zurzeit mache ich eine Berufsinformatikausbildung bei WISS. In diesem Portfolio erfahren Sie mehr über mich und meine Leidenschaft.</h3>
@@ -435,8 +458,7 @@
                             <p>lorem 23</p>
                         </div>
                         <div class="copy">
-                            
-                            <h3>Portfolio mit gsap, js und css </h3>
+                            <h3 class="h3-status-done">Portfolio mit gsap, js und css<div class="copy-status-done">the status here</div></h3>
                             <div class="copy-container">
                             <div class="copy-picture">
                                 <div class="slider">
@@ -837,6 +859,7 @@
     <!--------------------------------ENDE-------------------------------->
     </div>
     <!--------------------------------ENDE-------------------------------->
+    <audio id="background-audio" src="/new_code/preloader.wav" preload="auto"></audio>
     <div class="loading-screen02">
         <div class="loader">
             <div class="loader-1 bar"></div>

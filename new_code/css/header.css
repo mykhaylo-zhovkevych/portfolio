@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'PP Supply Sans';
+    src: url('/new_code/PPSupplySans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Supply Mono';
+    src: url('/new_code/PPSupplyMono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'header';
+    src: url('/new_code/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .header {
     position: fixed;
     display: flex;
@@ -21,7 +42,7 @@
     font-family: 'header', Arial;
     transition: transform 0.3s ease;
     padding: 1em;
-    color: #ffffff9c;
+    color: #ffffff;
 }
 #nameOfPortfolio:hover {
     transform: scale(1.1);
@@ -43,8 +64,8 @@
     position: relative;
     border:1px solid #bfc0c45b;
     border-radius: 50%;
-    width: 62px;
-    height: 62px;
+    width: 56.5px;
+    height: 56.5px;
     cursor: pointer;
 }
 .header-info-text {
@@ -55,8 +76,8 @@
     height: 200vh;
     width: 100%;
     flex-direction: column;
-    clip-path: circle(100px at 90% -10%);
-    -webkit-clip-path: circle(100px at 90% -10%);
+    clip-path: circle(0% at 100% -5%);
+    -webkit-clip-path: circle(0% at 100% -5%);
     transition: all 2s ease-out;
     pointer-events: none;
     z-index: 5;
@@ -77,6 +98,7 @@
     width: auto;
     height: 6rem;
     border-radius: 20px;
+    font-family: 'PP Supply Sans';
 
 }
 
@@ -163,7 +185,7 @@
 
 }
 
-.navigation ul li  a .icon {
+.navigation ul li  a .icon  {
     position: relative;
     display: block;
     line-height: 80px;

@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
     animate(document.querySelector(".counter-1"), 2, 4);
 
 });
-
+const audio = document.getElementById("background-audio");
+audio.play();
 // responsibel for taking the number away wehn i reaches 100
 gsap.to(".digit", {
     top: "-150px",
@@ -114,5 +115,9 @@ gsap.fromTo(".loader", {
             duration: 1.5,
             ease: "power2.inOut"
         });
+        setTimeout(function() {
+            audio.pause();
+            audio.currentTime = 0;
+        }, 2000); // 2 seconds delay
     }
 });

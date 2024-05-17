@@ -75,10 +75,9 @@ form .textarea-field .item {
 form button {
     padding: 12px 32px;
     background: #bfc0c4;
-    border: none;
+    border: 1px solid #000000;
     outline: none;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.555);
     font-size: 16px;
     color: #3795bd;
     letter-spacing: 1px;
@@ -90,7 +89,7 @@ form button {
 }
 
 form button:hover {
-    box-shadow: none;
+    box-shadow:0.3rem 0.3rem 0rem #000;
 
 }
 

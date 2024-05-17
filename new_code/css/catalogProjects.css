@@ -112,11 +112,31 @@
 }
 
 .copy-text {
-    width: 50%; 
+    width: 60%; 
     padding-left: 50px;
+    padding-right: 50px;
     height: 85%;
     letter-spacing: 0.1rem;
+    word-wrap: break-word;
+    word-break: break-all;
+
 }
+
+.copy-status-done {
+    margin-left: auto;
+
+
+}
+
+.h3-status-done {
+    display: flex;
+
+}
+
+.copy-status-inprogress {
+
+}
+
 
 .copy-picture {
     margin: 2rem;
