@@ -145,25 +145,26 @@ div .ball-text {
   }
 
     .ball-text {
-    font-size: 1rem !important;
-    padding-left: calc(var(--dynamic-padding-little) + 10%); 
-    max-width: 80% !important; 
+    padding-left: calc(var(--dynamic-padding-little) + 5%)  !important; 
+    max-width: 130% !important; 
     bottom: 10% !important;
     left: 50% !important; 
+    top: 40rem;
     transform: translateX(-50%) !important; 
     align-items: center !important;
     min-height: initial !important; 
     padding-right: 1rem !important; 
-    border-radius: 20px;
+    border-radius: 20px !important;
+    font-size: 1.2rem !important;
     font-family: "PP Supply Sans", Arial;
-    animation: shadowPulse01 1s infinite alternate ease-in-out;
+    animation: shadowPulse01 1s infinite alternate ease-in-out !important;
+    width: 25rem;
 }
 
   .ball-text02 {
     font-size: 1.5rem;
-    top: 10rem;  
-    width: 60% ; 
-    grid-template-columns: 1fr ; 
+    top: 15rem;
+    width: 55%;
     left: 15rem;
     border-radius: 20px;
     overflow-x: hidden;
@@ -177,12 +178,13 @@ div .ball-text {
 @media screen and (max-width: 750px) {
   img {
       position: fixed;
-      left: 5%; 
+      left: 60%; 
       bottom: 10%; 
-      min-height: 20%;
-      min-width: 30%; 
+      max-height: 105% !important;
+      max-width: 70%;
       border-radius: 20px;
       animation: shadowPulse01 1s infinite alternate ease-in-out;
+      top: -20rem;
   }
 }
 
@@ -197,12 +199,12 @@ div .ball-text {
   div .ball-text {
     position: fixed;
     color: #bfc0c4;
-    font-size: 2rem;
-   /*  left: 30%; */
+    font-size: 1.5rem;
+    left: 20%;
     bottom: 15%;
     min-height: 40%;
     max-width: 80%;
-    padding-left: calc(var(--dynamic-padding-middle) + 15%);
+    padding-left: calc(var(--dynamic-padding-middle) + 5%);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -252,17 +254,22 @@ div .ball-text {
       left: 15% ;
       bottom: 15% ;
       padding: 1rem ;
-      min-height: 10% ;
-      min-width: 10% ;
-      width: 20rem;
+      max-height: 105%;
+      max-width: 60%;
       border-radius: 20px;
       animation: shadowPulse01 1s infinite alternate ease-in-out;
     }
   }
+  
+@media (max-height: 1000px) and (min-width: 750px) and (max-width: 1160px) {
+  div .ball-text {
+  padding-left: calc(var(--dynamic-padding-middle) + -5%);
+}
+} 
 /* ---------------------------------------------------------------------------------------------------- */
 
 
-@media screen and (min-width: 1161px) and (max-width: 1299px) {
+@media screen and (min-width: 1161px) and (max-width: 1349px) {
   :root {
     --dynamic-padding01: 25vw;  
   }
@@ -271,7 +278,7 @@ div .ball-text {
   position: fixed;
   color: #bfc0c4;
   font-size: 2rem;
-  left: 10%;
+  left: 25%;
   bottom: 15%;
   min-height: 40%;
   max-width: 70%;
@@ -318,35 +325,37 @@ div .ball-text {
 }
 }
 
-@media screen and (min-width: 1161px) and (max-width: 1299px) {
+@media screen and (min-width: 1161px) and (max-width: 1349px) {
     img {
       position: fixed;
       left: 15% ;
       bottom: 15% ;
       padding: 1rem ;
-      min-height: 10% ;
-      min-width: 20% ;
+      max-height: 125%;
+      max-width: 80%;
       border-radius: 20px;
       animation: shadowPulse01 1s infinite alternate ease-in-out;
   }
 }
 
+/* @media (max-height: 1000px) and (min-width: 1161px) and (max-width: 1349px) {
+  div .ball-text {
+  padding-left: calc(var(--padding01) + 5%);
+}
+} */
+
 /* ---------------------------------------------------------------------------------------------------- */
 
-@media (min-width: 1300px) and (max-width: 1800px) {
+@media (min-width: 1350px) and (max-width: 1800px) {
   :root {
     --dynamic-padding02: 20vw; 
   }
 
-
-
-
-  
   div .ball-text {
     position: fixed;
     color: #bfc0c4;
     font-size: 2rem;
-    left: 10%;
+    left: 20%;
     bottom: 15%; 
     min-height: 40%;
     max-width: 70%;
@@ -390,20 +399,27 @@ div .ball-text {
   overflow-y: hidden;
   animation: shadowPulse 10s infinite alternate ease-in-out;
 }
-}
 
-@media screen and (min-width: 1300px) and (max-width: 1800px) {
+
+@media screen and (min-width: 1350px) and (max-width: 1800px) {
   img {
     position: fixed;
     left: 15% ;
     bottom: 15% ;
     padding: 1rem ;
-    min-height: 10% ;
-    min-width: 20% ;
+    max-height: 135%;
+    max-width: 90%;
     border-radius: 20px;
     animation: shadowPulse01 1s infinite alternate ease-in-out;
 }
 }
+@media (max-height: 1000px) and (min-width: 1350px) and (max-width: 1800px) {
+  div .ball-text {
+  padding-left: calc(var(--dynamic-padding02) + 5%);
+}
+}
+}
+
 
 /* ---------------------------------------------------------------------------------------------------- */
 
@@ -417,7 +433,7 @@ div .ball-text {
     position: fixed;
     color: #bfc0c4;
     font-size: 2rem;
-    left: 10%;
+    left: 16%;
     bottom: 15%; 
     min-height: 40%;
     max-width: 50%;
@@ -462,7 +478,7 @@ div .ball-text {
   overflow-y: hidden;
   animation: shadowPulse 10s infinite alternate ease-in-out;
 }
-}
+
 
 
 
@@ -472,11 +488,15 @@ div .ball-text {
     left: 10% ;
     bottom: 15% ;
     padding: 1rem ;
-    min-height: 10% ;
-    min-width: 20% ;
+    max-height: 145%;
+    max-width: 100%;
     border-radius: 20px;
     animation: shadowPulse01 1s infinite alternate ease-in-out;
 }
 }
-
-/* ---------------------------------------------------------------------------------------------------- */
+@media (max-height: 1000px) and (min-width: 1801px) and (max-width: 2592px) {
+  div .ball-text {
+  padding-left: calc(var(--dynamic-padding03) + 6%);
+}
+}
+}

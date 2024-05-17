@@ -124,8 +124,13 @@
 
 .copy-status-done {
     margin-left: auto;
-
-
+    background: linear-gradient(135deg, #bfc0c4, #ffffff00);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 0.5px solid #000000;
+    padding: 0rem 1rem 0rem 1rem;
+    
 }
 
 .h3-status-done {
@@ -144,7 +149,7 @@
     background-color: #f0f0f0;  /* Example background color */
    /*  width: 100%; */
     height: auto;
-    box-shadow: 10px 10px 30px -10px rgb(0, 0, 0);
+    box-shadow: 10px 10px 30px -10px #000000;
     overflow: hidden;  /* Prevents image from overflowing its container */
 }
 
@@ -194,7 +199,7 @@
 }
 
 .section-6 {
-    height: 600px;
+    height: 750px;
     
 }
 
