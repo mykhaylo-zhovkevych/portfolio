@@ -29,16 +29,22 @@
     <!---------------------------------------------------------------->
     <div id="square-container02"></div>
     <!---------------------------------------------------------------->
-<!--     <audio id="background-audio-main" src="/new_code/deep-lofi-vibes-205062.mp3" preload="auto"></audio> -->
+    <!--<audio id="background-audio-main" src="/new_code/deep-lofi-vibes-205062.mp3" preload="auto"></audio>-->
     <!---------------------------------------------------------------->
     <header class="header" >
         <div id="nameOfPortfolio"> Portfolio Zhovkevych</div>
         <div class="header-cover"> 
-        <div class="navigation">
+          <div class="navigation">
             <ul>
-                <li class="list">
-                    <a href="#">
-                    <span class="icon"> <lord-icon
+               <audio id="navbar" src="/new_code/sounds/button_sound02.mp3" preload="auto"></audio>
+               <audio id="info-extra" src="/new_code/sounds/button-sound01.mp3" preload="auto"></audio>
+               <audio id="info" src="/new_code/sounds/button_sound03.mp3" preload="auto"></audio>
+               <audio id="github-sound" src="/new_code/sounds/button_sound04_github.mp3" preload="auto"></audio>
+               <audio id="github-link" src="/new_code/sounds/button_sound05.mp3" preload="auto"></audio>
+
+            <li class="list">
+                <a href="#" class="button-with-sound" data-sound="navbar">
+                   <span class="icon"> <lord-icon
                         src="https://cdn.lordicon.com/laqlvddb.json"
                         trigger="hover"
                         stroke="bold"
@@ -48,7 +54,7 @@
                 </a>
                 </li>
                 <li class="list">
-                    <a href="#profil">
+                    <a href="#profil" class="button-with-sound" data-sound="navbar">
                     <span class="icon"> <lord-icon
                         src="https://cdn.lordicon.com/bgebyztw.json"
                         trigger="hover"
@@ -60,7 +66,7 @@
                 </a>
                 </li>
                 <li class="list ">
-                    <a href="#wissen">
+                    <a href="#wissen" class="button-with-sound" data-sound="navbar">
                     <span class="icon" ><lord-icon
                         src="https://cdn.lordicon.com/wwmtsdzm.json"
                         trigger="hover"
@@ -71,7 +77,7 @@
                 </a>
                 </li>
                 <li class="list">
-                    <a href="#projekte">
+                    <a href="#projekte" class="button-with-sound" data-sound="navbar">
                     <span class="icon"> <lord-icon
                         src="https://cdn.lordicon.com/qmsejndz.json"
                         trigger="hover"
@@ -82,7 +88,7 @@
                 </a>
                 </li>
                 <li class="list">
-                    <a href="#kontakt">
+                    <a href="#kontakt" class="button-with-sound" data-sound="navbar">
                     <span class="icon"> <lord-icon
                         src="https://cdn.lordicon.com/ebjjjrhp.json"
                         trigger="hover"
@@ -92,18 +98,20 @@
                     </lord-icon> </span>
                     <span class="text">Kontakt</span>
                 </a>
-                </li>
+              </li>
             </ul>
-            <div class="indicator"></div>
+          <div class="indicator"></div>
         </div>
         </div>
         <div class="header-info">
+            <a class="button-with-sound" data-sound="info">
             <lord-icon
                 src="https://cdn.lordicon.com/jnzhohhs.json"
                 trigger="hover"
                 colors="primary:#ffffff"
                 style="width:55px;height:55px;z-index: 10;">
             </lord-icon>
+            </a>
         </div>
         <div class="header-info-text">
             <div class="header-overflow-text">
@@ -133,11 +141,11 @@
                                 <td>The code was restructured for better understanding</td>
                                 <td>2024-05-17</td>
                             </tr>
-                            <!-- <tr>
+                            <tr>
                                 <td>04</td>
-                                <td>Improved mobile responsiveness</td>
-                                <td>2024-05-15</td>
-                            </tr> -->
+                                <td>Added new picture, added text and sounds, changed preloader animation, now portfolkio-website can be used, but in the last update I will make compatibility with Phones etc.</td>
+                                <td>2024-05-18</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -479,15 +487,15 @@
                                         <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 111031.png" alt=">>>IMAGE 404">
                                         <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 111051.png" alt=">>>IMAGE 404">
                                         <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 111104.png" alt=">>>IMAGE 404">
-                                        <button class="prev" >&#10094;</button>
-                                        <button class="next" >&#10095;</button>
+                                        <button class="prev button-with-sound" data-sound="github-sound">&#10094;</button>
+                                        <button class="next button-with-sound" data-sound="github-sound">&#10095;</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="copy-text">
                                 <h2 id="h2-title-copy">"Die Idee war, eine scrollende 3d-Interaktion mit einem horizontalen und vertikalen Seitenlauf zu schaffen."</h2>
                                     <p>Dieses Projekt habe ich nicht ganz so geplant durchgeführt, weil ich ursprünglich dachte, dass ich eine Website für alle Plattformen, wie PCs, Laptops und Handys, erstellen würde. Nach der Implementierungsphase wurde mir jedoch klar, dass dies zeitaufwändiger sein und mehr Zeit in Anspruch nehmen würde als geplant. Ich wollte dieses Projekt innerhalb von 2 Wochen abschliessen, wobei eine Woche für die Grundlagen von GSAP und die Vertiefung in JavaScript und die zweite Woche für die Fertigstellung vorgesehen war. Meiner Meinung nach hat das Ganze gut geklappt, nur die @media-Anpassungen für Handys und Laptops müssen noch gemacht werden. Ansonsten habe ich alles andere fast ideal umgesetzt.</p>
-                                <a href="https://github.com/mykhaylo-zhovkevych/portfolio" class="github-icon-copy-text"  target="_blank"><i class="devicon-github-original"><span>code</span></i></a>
+                                <a href="https://github.com/mykhaylo-zhovkevych/portfolio" class="github-icon-copy-text button-with-sound" data-sound="github-link" target="_blank" ><i class="devicon-github-original"><span>code</span></i></a>
                             </div>
                             </div>
                         </div>
@@ -509,8 +517,8 @@
                                             <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204514.png" alt=">>>IMAGE 404">
                                             <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204546.png" alt=">>>IMAGE 404">
                                             <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204604.png" alt=">>>IMAGE 404">
-                                            <button class="prev" >&#10094;</button>
-                                            <button class="next" >&#10095;</button>
+                                            <button class="prev button-with-sound" data-sound="github-sound">&#10094;</button>
+                                            <button class="next button-with-sound" data-sound="github-sound" >&#10095;</button>
                                         </div>
                                        
                                     </div>
@@ -518,9 +526,9 @@
                                 <div class="copy-text">
                                     <h2 id="h2-title-copy01">"Dieses Projekt war für mich ein Training für das Java-Jakarta."</h2>
                                     <p>Die Idee war, die allgemeinen Arbeitsweisen von Backends zu lernen, und zwar mit Java ohne Framework, um zu sehen, wie dies in Java implementiert ist und wie man dann in der Realität ein Backend aufbauen kann.</p>
-                                    <a href="https://github.com/mykhaylo-zhovkevych/JavaWebApp" class="github-icon-copy-text"  target="_blank"><i class="devicon-github-original"><span>code</span></i></a>    
+                                    <a href="https://github.com/mykhaylo-zhovkevych/JavaWebApp" class="github-icon-copy-text button-with-sound" data-sound="github-link" target="_blank" ><i class="devicon-github-original"><span>code</span></i></a>    
                                     <br><br>
-                                    <a href="http://18.195.252.63/JavaWebProject/" class="links-copy-text" target="_blank">
+                                    <a href="http://18.195.252.63/JavaWebProject/" class="links-copy-text button-with-sound" data-sound="github-link" target="_blank">
                                         <span>Website Link</span>
                                     </a>
                                       
@@ -549,7 +557,7 @@
                                 <div class="copy-text">
                                     <h2 id="h2-title-copy01">"Mit diesem Projekt habe ich verschiedene Konzepte in Java und OOP geübt"</h2>
                                     <p>Die Idee war, ein bisschen über Game Development zu lernen und ein 2D Spiel zu erstellen, ohne eine Game Engine wie Unity zu verwenden, da diese für Anfänger ziemlich viel Zeit in Anspruch nehmen, aber dann exponentiell produktiver sind, als alles selbst zu schreiben.</p>
-                                    <a href="https://github.com/mykhaylo-zhovkevych/2dGame" class="github-icon-copy-text"  target="_blank"><i class="devicon-github-original"><span>code</span></i></a>    
+                                    <a href="https://github.com/mykhaylo-zhovkevych/2dGame" class="github-icon-copy-text button-with-sound" data-sound="github-link" target="_blank" ><i class="devicon-github-original"><span>code</span></i></a>    
                                 
                                 </div>
 
@@ -583,7 +591,7 @@
                                 <div class="copy-text">
                                     <h2 id="h2-title-copy04">Ein einfaches Programm, das nach dem Caesar-Verschlüsselungsprinzip arbeitet</h2>
                                     <p>Der Benutzer kann über eine Konsolenoberfläche zwischen Verschlüsselung, Entschlüsselung und Programmende wählen. Die Implementierung umfasst Methoden zur Verschiebung von Buchstaben und behandelt sowohl Gross- als auch Kleinbuchstaben. Nicht-Buchstaben bleiben unverändert, und die Benutzerinteraktion erfolgt über Eingabeaufforderungen. </p>
-                                    <a href="https://github.com/mykhaylo-zhovkevych/Caesar-Encrypt-Decrypt-" class="github-icon-copy-text "  target="_blank"><i class="devicon-github-original"><span>code</span></i></a>    
+                                    <a href="https://github.com/mykhaylo-zhovkevych/Caesar-Encrypt-Decrypt-" class="github-icon-copy-text button-with-sound" data-sound="github-link" target="_blank" ><i class="devicon-github-original"><span>code</span></i></a>    
                                 </div>
                                 </div>
                             </div> 
@@ -606,7 +614,7 @@
                                 <div class="copy-text">
                                     <h2 id="h2-title-copy01">"Ich wollte einen Musiksynthesizer bauen, um zu lernen, wie die Musikausgabe in java funktioniert."</h2>
                                     <p>Diese Musiksynthesizer hatte ich mithilfe von einem tutorial gebaut und da hatte ich gelern, wie man mit Java digitales Audio in Echtzeit synthetisiert und streamt. Und wie einen Audio-Streaming-Mechanismus, um eine synthetisierte Sinuswelle auf Tastendruck an die Lautsprecher zu übertragen</p>
-                                    <a href="" class="github-icon-copy-text" target="_blank"><i class="devicon-github-original"><span>code</span></i></a>
+                                    <a href="" class="github-icon-copy-text button-with-sound" data-sound="github-link" target="_blank" ><i class="devicon-github-original"><span>code</span></i></a>
                                 </div>
                                 </div>
                             </div>
@@ -625,7 +633,7 @@
                                 <div class="copy-text">
                                     <h2 id="h2-title-copy04">"Einfacher oberflächlicher Taschenrechner mit einfachen Operationen"</h2>
                                     <p>War mein erstes Java Swing Programm für eine detaillierte Beschreibung bitte auf Github gehen.</p>
-                                    <a href="https://github.com/mykhaylo-zhovkevych/Calculator" class="github-icon-copy-text" target="_blank"><i class="devicon-github-original"><span>code</span></i></a>    
+                                    <a href="https://github.com/mykhaylo-zhovkevych/Calculator" class="github-icon-copy-text button-with-sound" data-sound="github-link" target="_blank" ><i class="devicon-github-original"><span>code</span></i></a>    
                                 </div>
                                 </div>
                             </div>
@@ -644,9 +652,9 @@
                                 <div class="copy-text">
                                     <h2 id="h2-title-copy01">"Dieses Projekt war meine erste HTML Website"</h2>
                                     <p>Eine einfache, aber dennoch schöne Website mit Kompatibilität für Handys, Tablets und PCs sowie einer simplen JS-Reload-Animation.</p>
-                                    <a href="https://github.com/mykhaylo-zhovkevych/demo_portfolio" class="github-icon-copy-text" target="_blank"><i class="devicon-github-original"><span>code</span></i></a>
+                                    <a href="https://github.com/mykhaylo-zhovkevych/demo_portfolio" class="github-icon-copy-text button-with-sound" data-sound="github-link" target="_blank" ><i class="devicon-github-original"><span>code</span></i></a>
                                     <br><br>
-                                    <a href="http://18.195.252.63/demoPortfolio/" class="links-copy-text" target="_blank">
+                                    <a href="http://18.195.252.63/demoPortfolio/" class="links-copy-text button-with-sound" data-sound="github-link" target="_blank">
                                         <span>Website Link</span>
                                     </a>
                                 </div>
@@ -730,7 +738,7 @@
                                 <textarea name="" id="message" cols="30" rows="10" placeholder=">Ihre Nachricht" class="item" autocomplete="off"></textarea>
                                     <div class="error-txt">Nachricht kann nicht leer sein</div>
                             </div>
-                            <button type="submit">Send Message</button>
+                            <button type="submit" class=" button-with-sound" data-sound="info">Send Message</button>
                        </form>
             </section>
         </div>
@@ -770,9 +778,9 @@
         <div class="content">
             <div class="footer-div">
                 <div class="row">
-                <a href="https://github.com/mykhaylo-zhovkevych"><i class="devicon-github-original-wordmark"></i></a>
-                <a href=""><i class="bi bi-discord"></i></a>
-                <a href="#kontakt"><i class="bi bi-envelope-at"></i></a>
+                <a href="https://github.com/mykhaylo-zhovkevych" class=" button-with-sound" data-sound="github-sound"><i class="devicon-github-original-wordmark"></i></a>
+                <a href=""><i class="bi bi-discord button-with-sound" data-sound="github-sound"></i></a>
+                <a href="#kontakt"><i class="bi bi-envelope-at button-with-sound" data-sound="github-sound"></i></a>
                 </div>
                 
                 <div class="row">
@@ -1005,7 +1013,6 @@ info.addEventListener("click", () => {
 });
 </script>
 <!-- <script>
-
     const audioMain = document.getElementById("background-audio-main");
     const audioNext = document.getElementById("background-audio");
 
@@ -1033,6 +1040,18 @@ info.addEventListener("click", () => {
         setTimeout(playAudio); 
     });
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var buttons = document.querySelectorAll('.button-with-sound');
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var soundId = button.getAttribute('data-sound');
+                var audio = document.getElementById(soundId);
+                audio.play();
+            });
+        });
+    });
+  </script>
 <!---------------------------------------------------------------->
 </body>
 </html>
