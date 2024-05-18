@@ -20,6 +20,7 @@
     margin: 1rem 0 0 0;
     transition: 0.3s ease-in-out;
     border: 1px solid #000;
+    letter-spacing: 0;
   }
 
 .slides {

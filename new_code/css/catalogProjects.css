@@ -12,21 +12,21 @@
 
 @font-face {
     font-family: 'PP Supply Sans';
-    src: url('/new_code/PPSupplySans-Regular.otf') format('opentype');
+    src: url('/new_code/fonts/PPSupplySans-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PP Supply Mono';
-    src: url('/new_code/PPSupplyMono-Regular.otf') format('opentype');
+    src: url('/new_code/fonts/PPSupplyMono-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'header';
-    src: url('/new_code/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
+    src: url('/new_code/fonts/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -122,6 +122,7 @@
 
 }
 
+/* has nothing to do with done just so named */
 .copy-status-done {
     margin-left: auto;
     background: linear-gradient(135deg, #bfc0c4, #ffffff00);
@@ -138,20 +139,39 @@
 
 }
 
-.copy-status-inprogress {
-
+.links-copy-text {
+    display: block;
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+    background: linear-gradient(135deg, #bfc0c4, #ffffff00);
+    border-radius: 20px;
+    border: 1px solid #000000;
+    padding: 0rem 1rem 0rem 1rem;
+    text-decoration: none; 
+    transition: 0.5s ease-in-out;
+    color: #bfc0c4;
 }
 
+
+  
+.links-copy-text:hover {
+    color: #000000; 
+}
 
 .copy-picture {
     margin: 2rem;
-    border-radius: 20px;
-    background-color: #f0f0f0;  /* Example background color */
-   /*  width: 100%; */
+    border-radius: 10px;
+    background-color: #bfc0c4; 
     height: auto;
-    box-shadow: 10px 10px 30px -10px #000000;
-    overflow: hidden;  /* Prevents image from overflowing its container */
+    overflow: hidden;  
+    transition: box-shadow 0.5s ease-in-out;
+    
 }
+
+.copy-picture:hover {
+    box-shadow: 20px 20px 0px 5px #1b1b1b;
+}
+
 
 #h2-title-copy {
     padding-top: 1rem;
@@ -174,12 +194,12 @@
 }
 
 .section-1 {
-    height: 800px;
+    height: 900px;
 
 }
 
 .section-2 {
-    height: 900px;
+    height: 800px;
     
 }
 
@@ -199,12 +219,12 @@
 }
 
 .section-6 {
-    height: 750px;
+    height: 350px;
     
 }
 
 .section-7 {
-    height: 700px;
+    height: 600px;
     
 }
 

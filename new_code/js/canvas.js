@@ -1,6 +1,6 @@
 Promise.all([
-    new Promise(resolve => setTimeout(resolve, 12000)),
-    new Promise(resolve => window.onload = resolve) // Waits for all resources to load
+    new Promise(resolve => setTimeout(resolve, 6500)),
+    new Promise(resolve => window.onload = resolve) // Waits for all resources to load 
 ]).then(() => {
     document.querySelector('.loading-screen02').style.display = 'none';
     document.querySelector('.website-content02').style.display = 'flex';
@@ -67,19 +67,19 @@ preloadImages(() => {
             snap: 'frame',
             onUpdate: render,
         });
-    }, 5000); 
+    }, 3500); 
 });
 
 
 gsap.fromTo('.ball-text02', {
     opacity: 1,
 }, {
-    duration: 5,
+    duration: 4,
     delay: 0, 
     onComplete: () => {
         gsap.to(".ball-text02", {
             opacity: 0,
-            duration: 1,
+            duration: 0.5,
             
         });
     }
@@ -92,7 +92,7 @@ gsap.fromTo('.ball-text02', {
 }, {
     x: '0%',  
     opacity: 1,
-    duration: 2,
+    duration: 1,
     delay: 0,  
     ease: "power2.out"
 });
@@ -101,7 +101,7 @@ gsap.fromTo('.ball-text02', {
 gsap.fromTo('.ball-text', {
     opacity: 1,
 }, {
-    delay: 10, 
+    delay: 7.5, 
 });
 
 
@@ -111,9 +111,9 @@ gsap.fromTo('.ball-text', {
   }, {
     x: '0%',   
     opacity: 1,
-    duration: 2,  
+    duration: 4,  
     ease: "power2.out", 
-    delay: 10,   
+    delay: 7.5,   
   });
   
 

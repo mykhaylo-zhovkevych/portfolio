@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'PP Supply Sans';
-    src: url('/new_code/PPSupplySans-Regular.otf') format('opentype');
+    src: url('/new_code/fonts/PPSupplySans-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PP Supply Mono';
-    src: url('/new_code/PPSupplyMono-Regular.otf') format('opentype');
+    src: url('/new_code/fonts/PPSupplyMono-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'header';
-    src: url('/new_code/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
+    src: url('/new_code/fonts/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

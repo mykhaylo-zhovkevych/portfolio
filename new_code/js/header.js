@@ -20,14 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* let lastWindowWidth = window.innerWidth;
+// auto-resizable
+let lastWindowWidth = window.innerWidth;
 function hasSignificantResize(newWidth) {
   // Definieren Sie einen Schwellenwert für eine "signifikante" Änderung
   const threshold = 100; // Beispiel: 100 Pixel Unterschied
   return Math.abs(newWidth - lastWindowWidth) > threshold;
 }
-
-
 window.addEventListener('resize', () => {
   const currentWidth = window.innerWidth;
  
@@ -36,5 +35,34 @@ window.addEventListener('resize', () => {
     lastWindowWidth = currentWidth;
     window.location.reload();
   }
-}); */
+});
 
+
+// span for section01
+document.addEventListener('DOMContentLoaded', (event) => {
+  const iconSpan = document.getElementById('icon-cycle');
+  const icons = [
+    '<i class="devicon-java-plain"></i>',
+    '<i class="devicon-javascript-plain"></i>',
+    '<i class="devicon-c-plain"></i>',
+    '<i class="devicon-html5-plain"></i>',
+    '<i class="devicon-css3-plain"></i>',
+    '<i class="devicon-bash-plain"></i>',
+    '<i class="devicon-spring-plain"></i>',
+    '<i class="devicon-linux-plain"></i>',
+    '<i class="devicon-mysql-plain"></i>'
+  ];
+  let currentIndex = 0;
+
+  function cycleIcons() {
+    iconSpan.style.opacity = 0; 
+
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % icons.length;
+      iconSpan.innerHTML = icons[currentIndex];
+      iconSpan.style.opacity = 1; 
+    }, 500); 
+  }
+
+  setInterval(cycleIcons, 2000);
+});

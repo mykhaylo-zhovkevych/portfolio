@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'PP Supply Sans';
-  src: url('/new_code/PPSupplySans-Regular.otf') format('opentype');
+  src: url('/new_code/fonts/PPSupplySans-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PP Supply Mono';
-  src: url('/new_code/PPSupplyMono-Regular.otf') format('opentype');
+  src: url('/new_code/fonts/PPSupplyMono-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'header';
-  src: url('/new_code/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
+  src: url('/new_code/fonts/AbyssalHorrorsItalic-L37l4.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -436,7 +436,7 @@ div .ball-text {
     left: 16%;
     bottom: 15%; 
     min-height: 40%;
-    max-width: 50%;
+    max-width: 60%; /* 50% might be better*/
     padding-left: calc(var(--dynamic-padding03) + 15%);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/new_code/css/header.css">
     <link rel="stylesheet" href="/new_code/css/footer.css">
     <link rel="stylesheet" href="/new_code/css/imgs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 </head>
     <!---------------------------------------------------------------->
 <body>
@@ -28,6 +29,7 @@
     <!---------------------------------------------------------------->
     <div id="square-container02"></div>
     <!---------------------------------------------------------------->
+<!--     <audio id="background-audio-main" src="/new_code/deep-lofi-vibes-205062.mp3" preload="auto"></audio> -->
     <!---------------------------------------------------------------->
     <header class="header" >
         <div id="nameOfPortfolio"> Portfolio Zhovkevych</div>
@@ -148,9 +150,9 @@
     <!---------------------------------------------------------------->
     <main class="haupt">
         <div class="ball-text">
-            <img src="/new_code/7M1A8792.jpg" alt="404"> 
+            <img src="/new_code/pictures/7M1A8792.jpg" alt="404"> 
             <div>
-              <h2>Über mich:</h2>
+              <h2>Hello, World!</h2>
               <h3>Mein Name ist Mykhaylo und zurzeit mache ich eine Berufsinformatikausbildung bei WISS. In diesem Portfolio erfahren Sie mehr über mich und meine Leidenschaft.</h3>
             </div>
         </div>
@@ -289,13 +291,20 @@
         <!---------------------------------------------------------------->
                     <section class="sec2 pin">
                         <div class="sec2-wrapper">
-                            <h1 id="h1Section02">Meine Kenntnisse <span> ... </span></h1>
+                            <style>
+                                .icon-cycle {
+                                  display: inline-block;
+                                  transition: opacity 0.5s;
+                                  padding-left: 5rem;
+                                }
+                              </style>
+                            <h1 id="h1Section02">Meine IT-Kenntnisse: <span id="icon-cycle" class="icon-cycle"><i class="devicon-java-plain"></i></span></h1>
                             <div class="col anim">
                                 <div class="skill-section">
                                     <div class="skills-container">
                                         <div class="skills-card">
                                             <i class="devicon-java-plain"></i>
-                                            <div class="skill-level">70%</div>
+                                            <div class="skill-level" >70%</div>
                                             <h1 class="skill-name-h1">JAVA</h1>
                                             <p class="skill-info-p">Ich habe Java als erste Programmiersprache kennen gelernt.
                                             </p>
@@ -418,7 +427,7 @@
                     </div>
                  </div>
                  <div class="header-container">
-                     <h1> Mein Projekte <span> ...</span></h1>
+                     <h1> Meine Programmierprojekte <span> ... </span></h1>
                 </div>
                 <div class="container">
                 <div class="map">
@@ -448,13 +457,13 @@
                     </div>
                     <div class="s-7">
                         <p>~07</p>
-                        <p>Zukunftige Projekt mit SPRING</p>
+                        <p>Mein Projekt mit HTML</p>
                     </div>
                 </div>
                 <div class="section">
                     <div class="section-1 sec">
                         <div class="header01">
-                            <p>01</p>
+                            <p>~01</p>
                             <p>lorem 23</p>
                         </div>
                         <div class="copy">
@@ -463,13 +472,13 @@
                             <div class="copy-picture">
                                 <div class="slider">
                                     <div class="slides">
-                                        <img class="img-copy" src="/new_code/scrollImg/copy01/Screenshot 2024-05-13 110518.png" alt=">>>IMAGE 404">
-                                        <img class="img-copy" src="/new_code/scrollImg/copy01/Screenshot 2024-05-13 110843.png" alt=">>>IMAGE 404">
-                                        <img class="img-copy" src="/new_code/scrollImg/copy01/Screenshot 2024-05-13 110857.png" alt=">>>IMAGE 404">
-                                        <img class="img-copy" src="/new_code/scrollImg/copy01/Screenshot 2024-05-13 110935.png" alt=">>>IMAGE 404">
-                                        <img class="img-copy" src="/new_code/scrollImg/copy01/Screenshot 2024-05-13 111031.png" alt=">>>IMAGE 404">
-                                        <img class="img-copy" src="/new_code/scrollImg/copy01/Screenshot 2024-05-13 111051.png" alt=">>>IMAGE 404">
-                                        <img class="img-copy" src="/new_code/scrollImg/copy01/Screenshot 2024-05-13 111104.png" alt=">>>IMAGE 404">
+                                        <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 110518.png" alt=">>>IMAGE 404">
+                                        <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 110843.png" alt=">>>IMAGE 404">
+                                        <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 110857.png" alt=">>>IMAGE 404">
+                                        <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 110935.png" alt=">>>IMAGE 404">
+                                        <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 111031.png" alt=">>>IMAGE 404">
+                                        <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 111051.png" alt=">>>IMAGE 404">
+                                        <img class="img-copy" src="/new_code/copy01/Screenshot 2024-05-13 111104.png" alt=">>>IMAGE 404">
                                         <button class="prev" >&#10094;</button>
                                         <button class="next" >&#10095;</button>
                                     </div>
@@ -477,19 +486,15 @@
                             </div>
                             <div class="copy-text">
                                 <h2 id="h2-title-copy">"Die Idee war, eine scrollende 3d-Interaktion mit einem horizontalen und vertikalen Seitenlauf zu schaffen."</h2>
-                                <p>Dieses Projekt habe ich nicht ganz so geplant durchgeführt, weil ich ursprünglich dachte, dass ich eine Website für alle Plattformen, wie PCs, Laptops und Handys, erstellen würde. Nach der Implementierungsphase wurde mir jedoch klar, dass dies zeitaufwändiger sein und mehr Zeit in Anspruch nehmen würde als geplant. Ich wollte dieses Projekt innerhalb von 2 Wochen abschliessen, wobei eine Woche für die Grundlagen von GSAP und die Vertiefung in JavaScript und die zweite Woche für die Fertigstellung vorgesehen war. Meiner Meinung nach hat das Ganze gut geklappt, nur die @media-Anpassungen für Handys und Laptops müssen noch gemacht werden. Ansonsten habe ich alles andere fast ideal umgesetzt.</p>
-                                
-                                
-                                    <a href="https://github.com/mykhaylo-zhovkevych/portfolio" class="github-icon-copy-text"><i class="devicon-github-original"><span>code</span></i></a>
-                              
-                                
+                                    <p>Dieses Projekt habe ich nicht ganz so geplant durchgeführt, weil ich ursprünglich dachte, dass ich eine Website für alle Plattformen, wie PCs, Laptops und Handys, erstellen würde. Nach der Implementierungsphase wurde mir jedoch klar, dass dies zeitaufwändiger sein und mehr Zeit in Anspruch nehmen würde als geplant. Ich wollte dieses Projekt innerhalb von 2 Wochen abschliessen, wobei eine Woche für die Grundlagen von GSAP und die Vertiefung in JavaScript und die zweite Woche für die Fertigstellung vorgesehen war. Meiner Meinung nach hat das Ganze gut geklappt, nur die @media-Anpassungen für Handys und Laptops müssen noch gemacht werden. Ansonsten habe ich alles andere fast ideal umgesetzt.</p>
+                                <a href="https://github.com/mykhaylo-zhovkevych/portfolio" class="github-icon-copy-text"  target="_blank"><i class="devicon-github-original"><span>code</span></i></a>
                             </div>
                             </div>
                         </div>
                     </div>
                     <div class="section-2 sec">
                         <div class="header01">
-                            <p>01</p>
+                            <p>~02</p>
                             <p>lorem 23</p>
                         </div>
                         <div class="copy">
@@ -498,12 +503,12 @@
                                 <div class="copy-picture">
                                     <div class="slider">
                                         <div class="slides">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204133.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204456.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204505.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204514.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204546.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204604.png" alt="404">
+                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204133.png" alt=">>>IMAGE 404">
+                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204456.png" alt=">>>IMAGE 404">
+                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204505.png" alt=">>>IMAGE 404">
+                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204514.png" alt=">>>IMAGE 404">
+                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204546.png" alt=">>>IMAGE 404">
+                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204604.png" alt=">>>IMAGE 404">
                                             <button class="prev" >&#10094;</button>
                                             <button class="next" >&#10095;</button>
                                         </div>
@@ -513,39 +518,38 @@
                                 <div class="copy-text">
                                     <h2 id="h2-title-copy01">"Dieses Projekt war für mich ein Training für das Java-Jakarta."</h2>
                                     <p>Die Idee war, die allgemeinen Arbeitsweisen von Backends zu lernen, und zwar mit Java ohne Framework, um zu sehen, wie dies in Java implementiert ist und wie man dann in der Realität ein Backend aufbauen kann.</p>
-                                    <a href="" class="github-icon-copy-text"><i class="devicon-github-original"><span>code</span></i></a>    
-                                
+                                    <a href="https://github.com/mykhaylo-zhovkevych/JavaWebApp" class="github-icon-copy-text"  target="_blank"><i class="devicon-github-original"><span>code</span></i></a>    
+                                    <br><br>
+                                    <a href="http://18.195.252.63/JavaWebProject/" class="links-copy-text" target="_blank">
+                                        <span>Website Link</span>
+                                    </a>
+                                      
                                 </div>
                                 </div>
                         </div>
                     </div>
                     <div class="section-3 sec">
                         <div class="header01">
-                            <p>01</p>
+                            <p>~03</p>
                             <p>lorem 23</p>
                         </div>
                         <div class="copy">
-                            <h3 class="h3-status-done">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa?<div class="copy-status-done">Projektstatus :<span>Läuft</span></div></h3>
+                            <h3 class="h3-status-done">2D Platformer Game<div class="copy-status-done">Projektstatus :<span>Läuft</span></div></h3>
                             <div class="copy-container">
                                 <div class="copy-picture">
                                     <div class="slider">
                                         <div class="slides">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204133.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204456.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204505.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204514.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204546.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204604.png" alt="404">
-                                            <button class="prev" >&#10094;</button>
-                                            <button class="next" >&#10095;</button>
+                                            <img class="img-copy" src="/new_code/pictures/image.png" alt=">>>IMAGE 404">
+                                            
+                                           
                                         </div>
                                        
                                     </div>
                                 </div>
                                 <div class="copy-text">
-                                    <h2 id="h2-title-copy01">"Dieses Projekt war für mich ein Training für das Java-Jakarta."</h2>
-                                    <p>Die Idee war, die allgemeinen Arbeitsweisen von Backends zu lernen, und zwar mit Java ohne Framework, um zu sehen, wie dies in Java implementiert ist und wie man dann in der Realität ein Backend aufbauen kann.</p>
-                                    <a href="" class="github-icon-copy-text"><i class="devicon-github-original"><span>code</span></i></a>    
+                                    <h2 id="h2-title-copy01">"Mit diesem Projekt habe ich verschiedene Konzepte in Java und OOP geübt"</h2>
+                                    <p>Die Idee war, ein bisschen über Game Development zu lernen und ein 2D Spiel zu erstellen, ohne eine Game Engine wie Unity zu verwenden, da diese für Anfänger ziemlich viel Zeit in Anspruch nehmen, aber dann exponentiell produktiver sind, als alles selbst zu schreiben.</p>
+                                    <a href="https://github.com/mykhaylo-zhovkevych/2dGame" class="github-icon-copy-text"  target="_blank"><i class="devicon-github-original"><span>code</span></i></a>    
                                 
                                 </div>
 
@@ -554,11 +558,11 @@
                         </div>
                         <div class="section-4 sec">
                             <div class="header01">
-                                <p>01</p>
+                                <p>~04</p>
                                 <p>lorem 23</p>
                             </div>
                             <div class="copy">
-                                <h3 class="h3-status-done">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa?<div class="copy-status-done">Projektstatus :<span>Läuft</span></div></h3>
+                                <h3 class="h3-status-done">Ver/Entschlüsselungsprogramm Terminal bassiert<div class="copy-status-done">Projektstatus :<span>Fertig</span></div></h3>
                                 <div class="copy-container">
                                 <div class="copy-picture">
                                     <div class="slider">
@@ -577,111 +581,76 @@
                                     </div>
                                 </div>
                                 <div class="copy-text">
-                                    <h2 id="h2-title-copy04">"Dieses Projekt war für mich ein Training für das Java-Jakarta."</h2>
-                                    <p>Die Idee war, die allgemeinen Arbeitsweisen von Backends zu lernen, und zwar mit Java ohne Framework, um zu sehen, wie dies in Java implementiert ist und wie man dann in der Realität ein Backend aufbauen kann.</p>
-                                    <a href="" class="github-icon-copy-text"><i class="devicon-github-original"><span>code</span></i></a>    
-                                
+                                    <h2 id="h2-title-copy04">Ein einfaches Programm, das nach dem Caesar-Verschlüsselungsprinzip arbeitet</h2>
+                                    <p>Der Benutzer kann über eine Konsolenoberfläche zwischen Verschlüsselung, Entschlüsselung und Programmende wählen. Die Implementierung umfasst Methoden zur Verschiebung von Buchstaben und behandelt sowohl Gross- als auch Kleinbuchstaben. Nicht-Buchstaben bleiben unverändert, und die Benutzerinteraktion erfolgt über Eingabeaufforderungen. </p>
+                                    <a href="https://github.com/mykhaylo-zhovkevych/Caesar-Encrypt-Decrypt-" class="github-icon-copy-text "  target="_blank"><i class="devicon-github-original"><span>code</span></i></a>    
                                 </div>
                                 </div>
-
-                            </div>
+                            </div> 
                         </div>
                         <div class="section-5 sec">
                             <div class="header01">
-                                <p>01</p>
+                                <p>~05</p>
                                 <p>lorem 23</p>
                             </div>
                             <div class="copy">
-                                <h3 class="h3-status-done">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa?<div class="copy-status-done">Projektstatus :<span>Läuft</span></div></h3>
+                                <h3 class="h3-status-done">Java-Musiksynthesizer<div class="copy-status-done">Projektstatus :<span>Läuft</span></div></h3>
                                 <div class="copy-container">
                                 <div class="copy-picture">
                                     <div class="slider">
                                         <div class="slides">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204133.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204456.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204505.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204514.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204546.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204604.png" alt="404">
-                                            <button class="prev" >&#10094;</button>
-                                            <button class="next" >&#10095;</button>
+                                            <img class="img-copy" src="/new_code/pictures/DALL·E.webp" height="700px" width="700px" alt=">>>IMAGE 404">     
                                         </div>
-                                       
                                     </div>
                                 </div>
                                 <div class="copy-text">
-                                    <h2 id="h2-title-copy01">"Dieses Projekt war für mich ein Training für das Java-Jakarta."</h2>
-                                    <p>Die Idee war, die allgemeinen Arbeitsweisen von Backends zu lernen, und zwar mit Java ohne Framework, um zu sehen, wie dies in Java implementiert ist und wie man dann in der Realität ein Backend aufbauen kann.</p>
-                                    <a href="" class="github-icon-copy-text"><i class="devicon-github-original"><span>code</span></i></a>
-
+                                    <h2 id="h2-title-copy01">"Ich wollte einen Musiksynthesizer bauen, um zu lernen, wie die Musikausgabe in java funktioniert."</h2>
+                                    <p>Diese Musiksynthesizer hatte ich mithilfe von einem tutorial gebaut und da hatte ich gelern, wie man mit Java digitales Audio in Echtzeit synthetisiert und streamt. Und wie einen Audio-Streaming-Mechanismus, um eine synthetisierte Sinuswelle auf Tastendruck an die Lautsprecher zu übertragen</p>
+                                    <a href="" class="github-icon-copy-text" target="_blank"><i class="devicon-github-original"><span>code</span></i></a>
                                 </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="section-6 sec">
                             <div class="header01">
-                                <p>01</p>
+                                <p>~06</p>
                                 <p>lorem 23</p>
                             </div>
                             <div class="copy">
-                                <h3 class="h3-status-done">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa?<div class="copy-status-done">Projektstatus :<span>Läuft</span></div></h3>
+                                <h3 class="h3-status-done">Java Swing Taschenrechner<div class="copy-status-done">Projektstatus :<span>Fertig</span></div></h3>
                                 <div class="copy-container">
+
                                 <div class="copy-picture">
-                                    <div class="slider">
-                                        <div class="slides">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204133.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204456.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204505.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204514.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204546.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204604.png" alt="404">
-                                            <button class="prev" >&#10094;</button>
-                                            <button class="next" >&#10095;</button>
-                                        </div>
-                                       
-                                    </div>
                                 </div>
                                 <div class="copy-text">
-                                    <h2 id="h2-title-copy01">"Dieses Projekt war für mich ein Training für das Java-Jakarta."</h2>
-                                    <p>Die Idee war, die allgemeinen Arbeitsweisen von Backends zu lernen, und zwar mit Java ohne Framework, um zu sehen, wie dies in Java implementiert ist und wie man dann in der Realität ein Backend aufbauen kann.</p>
-                                    <a href="" class="github-icon-copy-text"><i class="devicon-github-original"><span>code</span></i></a>    
+                                    <h2 id="h2-title-copy04">"Einfacher oberflächlicher Taschenrechner mit einfachen Operationen"</h2>
+                                    <p>War mein erstes Java Swing Programm für eine detaillierte Beschreibung bitte auf Github gehen.</p>
+                                    <a href="https://github.com/mykhaylo-zhovkevych/Calculator" class="github-icon-copy-text" target="_blank"><i class="devicon-github-original"><span>code</span></i></a>    
                                 </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="section-7 sec">
                             <div class="header01">
-                                <p>01</p>
+                                <p>~07</p>
                                 <p>lorem 23</p>
                             </div>
                             <div class="copy">
-                                <h3  class="h3-status-done">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa?<div class="copy-status-done">Projektstatus :<span>Läuft</span></div></h3>
+                                <h3  class="h3-status-done">Demo portfolio Website<div class="copy-status-done">Projektstatus :<span>Fertig</span></div></h3>
                                 <div class="copy-container">
                                 <div class="copy-picture">
-                                    <div class="slider">
-                                        <div class="slides">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204133.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204456.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204505.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204514.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204546.png" alt="404">
-                                            <img class="img-copy" src="/new_code/copy02/Screenshot 2024-05-13 204604.png" alt="404">
-                                            <button class="prev" >&#10094;</button>
-                                            <button class="next" >&#10095;</button>
-                                        </div>
-                                       
-                                    </div>
+                                    
                                 </div>
                                 <div class="copy-text">
-                                    <h2 id="h2-title-copy01">"Dieses Projekt war für mich ein Training für das Java-Jakarta."</h2>
-                                    <p>Die Idee war, die allgemeinen Arbeitsweisen von Backends zu lernen, und zwar mit Java ohne Framework, um zu sehen, wie dies in Java implementiert ist und wie man dann in der Realität ein Backend aufbauen kann.</p>
-                                    <a href="" class="github-icon-copy-text"><i class="devicon-github-original"><span>code</span></i></a>
-
+                                    <h2 id="h2-title-copy01">"Dieses Projekt war meine erste HTML Website"</h2>
+                                    <p>Eine einfache, aber dennoch schöne Website mit Kompatibilität für Handys, Tablets und PCs sowie einer simplen JS-Reload-Animation.</p>
+                                    <a href="https://github.com/mykhaylo-zhovkevych/demo_portfolio" class="github-icon-copy-text" target="_blank"><i class="devicon-github-original"><span>code</span></i></a>
+                                    <br><br>
+                                    <a href="http://18.195.252.63/demoPortfolio/" class="links-copy-text" target="_blank">
+                                        <span>Website Link</span>
+                                    </a>
                                 </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- <div class="section-8 sec">
@@ -742,7 +711,7 @@
                                 </div>
                                 <div class="input-field field">
                                     <input type="text" placeholder="E-Mail Adresse" id="email" class="item" autocomplete="off">
-                                    <div class="error-txt email">E-Mail Adresse ckann nicht leer sein</div>
+                                    <div class="error-txt email">E-Mail Adresse kann nicht leer sein</div>
                                 </div>
                             </div>
 
@@ -859,7 +828,7 @@
     <!--------------------------------ENDE-------------------------------->
     </div>
     <!--------------------------------ENDE-------------------------------->
-    <audio id="background-audio" src="/new_code/preloader.wav" preload="auto"></audio>
+    <audio id="background-audio" src="/new_code/sounds/epic start01.mp3"  muted preload="auto"></audio>
     <div class="loading-screen02">
         <div class="loader">
             <div class="loader-1 bar"></div>
@@ -1024,7 +993,7 @@
         requestAnimationFrame(render);
 </script>
 <script>
-    const info = document.querySelector(".header-info");
+const info = document.querySelector(".header-info");
 const navLinks = document.querySelector(".header-info-text");
 const links = document.querySelectorAll(".header-info-text");
 
@@ -1034,6 +1003,35 @@ info.addEventListener("click", () => {
     link.classList.toggle("fade");
   });
 });
+</script>
+<!-- <script>
+
+    const audioMain = document.getElementById("background-audio-main");
+    const audioNext = document.getElementById("background-audio");
+
+    // Play the main audio 2 seconds after the page loads
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            audioMain.play();
+        }, 12000); // 2000 milliseconds = 2 seconds
+    });
+
+    // When the main audio ends, play the next audio
+    audioMain.addEventListener("ended", () => {
+        audioNext.play();
+    });
+</script> -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById("background-audio");
+    
+        function playAudio() {
+            audio.muted = false;
+            audio.play();
+        }
+    
+        setTimeout(playAudio); 
+    });
 </script>
 <!---------------------------------------------------------------->
 </body>
