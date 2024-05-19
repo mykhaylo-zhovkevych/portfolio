@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/new_code/css/main.css">
     <link rel="stylesheet" href="/new_code/css/menu02.css">
     <link rel="stylesheet" href="/new_code/css/preloader02.css">
+    <link rel="stylesheet" href="/new_code/css/counterInternet.css">
     <link rel="stylesheet" href="/new_code/css/catalogProjects.css">
     <link rel="stylesheet" href="/new_code/css/contact.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
@@ -874,10 +875,27 @@
         </div>
     </div>
 </div>
+    <div class="main-INT" style="display: none;">
+        <div class="slow-connection-message">
+            <p>Ihre Verbindung ist langsam. <bold>Bitte warten Sie</bold>, bis das Laden des Inhalts abgeschlossen ist. Für eine bessere Erfahrung verwenden Sie schnelleres Internet oder laden Sie die Seite erneut, um den Festplatten-Cache zu nutzen.</p>
+        </div>
+        <div class="container-INT">
+            <div class="loader-widget-INT">
+                <h1>CHECK YOUR INTERNET SPEED</h1>
+                <span class="loader-INT hide-INT"></span>
+                <div class="loader-content-INT">
+                    <div class="content-INT hide-INT">0<small>Mbps</small></div>
+                    <button id="check-speed-button">CHECK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <!---------------------------------------------------------------->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.1.0.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="/new_code/js/counterInternet.js"></script>
 <script src="https://cdn.lordicon.com/lordicon.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -896,6 +914,8 @@
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="/new_code/js/contact.js"></script>
 <script src="https://twgljs.org/dist/4.x/twgl-full.min.js"></script>
+
+
 
 <script id="vertexShader" type="x-shader/x-vertex">
     attribute vec4 position;
