@@ -47,7 +47,7 @@ function preloadImages(callback) {
     }
 }
 // request
-// console.log(images); 
+console.log(images); 
 //output
 /* Array(140) [ img, img, img, img, img, img, img, img, img, img, … ]
 [0…99]
@@ -119,29 +119,7 @@ gsap.fromTo('.ball-text', {
 
 
 /* ------------------ On scrollTrigger --------------------- */
-/* 
-const isMobile = window.innerWidth <= 1160; 
 
-gsap.fromTo('.ball-text', {
-  x: isMobile ? '-120%' : '-120%',
-  opacity: 0
-}, {
-  x: '0%',
-  opacity: 1,
-  duration: 2,
-  scrollTrigger: {
-    trigger: '.ball-text',
-    scrub: true,
-    start: isMobile ? "705%" : "605%", 
-    end: isMobile ? "1755%" : "1855%", 
-    markers: true,
-    toggleActions: 'play none none reverse',
-    onEnter: () => gsap.to(".ball-text", { opacity: 1 }),
-    onLeave: () => gsap.to(".ball-text", { opacity: 0 }),
-  }
-});
- */
-// Function to determine device type based on window width and set GSAP animations
 function updateAnimations() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -259,14 +237,13 @@ function performScrollAction() {
     const currentScrollTop = window.pageYOffset;
     const screenWidth = window.innerWidth;
 
-    // Definiere den Multiplikator abhängig von der Bildschirmbreite
     let multiplier;
     if (screenWidth < 550) {
-        multiplier = 7;  // Ein niedrigerer Multiplikator für sehr kleine Bildschirme
+        multiplier = 7;  
     } else if (screenWidth < 1160) {
-        multiplier = 5;  // Mittlerer Multiplikator für mittlere Bildschirme
+        multiplier = 5;  
     } else {
-        multiplier = 7;  // Standardmultiplikator für größere Bildschirme
+        multiplier = 7; 
     }
 
     const distanceToCanvasBottom = canvasBottomPosition - currentScrollTop;
@@ -277,8 +254,7 @@ function performScrollAction() {
     
     window.scrollTo({ top: newScrollTop, behavior: 'instant' });
 }
-
-
+ 
 function render() {
 context.canvas.width = images[0].width;
 context.canvas.height = images[0].height;

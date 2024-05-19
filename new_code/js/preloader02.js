@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+ 
     const counter3 = document.querySelector(".counter-3");
 
     for(let i = 0; i < 2; i++) {
@@ -111,3 +112,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
