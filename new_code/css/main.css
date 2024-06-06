@@ -522,9 +522,12 @@ i {
     .checkpoint:nth-child(2n+1) {
         border-right: 2px solid #ffffff;
         padding-right: 5rem;
-        transform: translateX(-10rem);
+        transform: translateX(0rem);
       }
-
+    .checkpoint:nth-child(even) { 
+        border-left: 2px solid #ffffff; 
+        padding-left: 5rem; 
+        transform: translateX(0rem); }
     .timeline {
         margin: 5rem;
         max-width: 100%;
@@ -553,12 +556,25 @@ i {
         }
     }
 
+    .skill-section {
+        position: relative;
+        margin: 0;
+        width: auto; 
+    }
+    .skills-container {
+        width: 65%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        color: #ffffff;
+    }
+
     section {
         /* width: 100vw; */
 
         p {
             font-size: 1.2rem;
-            width: 50vw;
+            width: 80vw;
         }
     }
 }
@@ -600,7 +616,7 @@ background-color: #bfc0c4;
   }
 
 .col01-section01 {
-    padding: 10rem;
+    padding: 5rem;
    
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.486);
     border-radius: 20px;
@@ -610,8 +626,8 @@ background-color: #bfc0c4;
 }
 
 .col02-section01 {
-    padding-top: 5em;
-    /* padding-bottom: 5em; */
+    padding-top: 10em;
+   /*  padding-bottom: 10em; */
    
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
@@ -624,13 +640,24 @@ background-color: #bfc0c4;
     height: auto;
     display: block;
     flex-direction: column;
-    padding-top: calc(15vh + 200px);
+    padding-top: calc(35vh + 200px);
     background-color: #3795bd;
     width: 105vw;
+   
+  }
+
+  .contact form {
+    width: 700px !important;
+    text-align: center;
+    height: 550px !important;
   }
 
 /* .......Section-catalog */
 .map > div p:nth-child(2) {
+    font-size: 10px !important;
+  }
+
+  .section > div {
     font-size: 10px !important;
   }
 
@@ -684,7 +711,7 @@ background-color: #bfc0c4;
         padding-bottom: 5em; */
         box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.486);
         border-radius: 20px;
-        height: 65vh;
+        height: 70vh;
         overflow-y: auto;
         overflow-x: auto;
         padding: 0em 0em 0em 20em;
@@ -845,7 +872,7 @@ background-color: #bfc0c4;
       }
 
       .hobby-list {
-        height: 40vh;
+        height: auto;
         padding: 0rem 0 0 4rem;
         list-style: none;
         display: flex;
