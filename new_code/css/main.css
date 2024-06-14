@@ -122,7 +122,6 @@ body, html {
     }
 
     section {
-        /* width: 100vw; */
 
         p {
             font-size: 1.2rem;
@@ -626,7 +625,7 @@ background-color: #bfc0c4;
 }
 
 .col02-section01 {
-    padding-top: 10em;
+    padding-top: 15em;
    /*  padding-bottom: 10em; */
    
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);

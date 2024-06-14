@@ -7,7 +7,7 @@
     --color-section-5:#EEF5FF;
     --color-section-6:#B4D4FF;
     --color-section-7:#86B6F6;
-    --color-section-8:#176B87;
+    --color-section-8:#A4EBF3;
 }
 
 @font-face {
@@ -228,6 +228,11 @@
     
 }
 
+.section-8 {
+    height: 700px;
+    
+}
+
 
 .whitespace {
     width: 100%;
@@ -255,6 +260,10 @@
   }
   .s-7, .section-7 .header01, .section-7 .copy {
     background: var(--color-section-7);
+  }
+
+  .s-8, .section-8 .header01, .section-8 .copy {
+    background: var(--color-section-8);
   }
  
 
